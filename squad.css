@@ -1,1 +1,22 @@
+html,body {
+    height:100%
+}
 
+.nav {
+    height:7%;
+    margin:0;
+    background-color:black;
+    color:white;
+}
+
+.navlogo {
+    height:100%;
+}
+
+p {
+    margin: 0;
+}
+
+.navlink {
+    height:100%;
+}
