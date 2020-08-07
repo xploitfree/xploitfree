@@ -3,7 +3,7 @@ html,body {
 }
 
 .nav {
-    height:7%;
+    height:13%;
     margin:0;
     background-color:black;
     color:white;
@@ -11,6 +11,13 @@ html,body {
 
 .navlogo {
     height:100%;
+    font-family:'Roboto', sans-serif;
+    font-weight:900;
+    font-size:26px;
+}
+
+.row {
+    margin:0;
 }
 
 p {
@@ -19,4 +26,39 @@ p {
 
 .navlink {
     height:100%;
+    font-family: 'Roboto', sans-serif;
+    font-size:17px;
+    font-weight:700;
+}
+
+.hero1 {
+    height:87%;
+}
+
+.secure {
+    height:70%;
+}
+
+.audit{
+    height:100%;
+}
+
+.herobtn {
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    background-color:#0001;
+    border: 5px solid #1E8130;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding-left:1.5%;
+    padding-right:1.5%;
+    padding-top: .5%;
+    padding-bottom: .5%;
+}
+
+#securetext {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:6rem;
 }
