@@ -4,9 +4,12 @@ html,body {
 
 .nav {
     height:13%;
+    width: 100%;
     margin:0;
-    background-color:black;
+    background-color:#0e0d10;
     color:white;
+    position: absolute;
+    z-index: 5;
 }
 
 .navlogo {
@@ -14,6 +17,7 @@ html,body {
     font-family:'Roboto', sans-serif;
     font-weight:900;
     font-size:26px;
+    letter-spacing: 5px;;
 }
 
 .row {
@@ -31,16 +35,25 @@ p {
     font-weight:700;
 }
 
+.navlinkp {
+    text-align:center;
+    letter-spacing: 2px;
+}
+
 .hero1 {
-    height:87%;
+    height:100%;
+    background-image: url("./images/Hacker_edited.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .secure {
-    height:70%;
+    height:100%;
 }
 
 .audit{
-    height:100%;
+    height:67%;
 }
 
 .herobtn {
@@ -49,16 +62,18 @@ p {
     font-weight: bold;
     font-size: 18px;
     background-color:#0001;
-    border: 5px solid #1E8130;
+    border: 3px solid #1E8130;
     box-sizing: border-box;
     border-radius: 5px;
-    padding-left:1.5%;
-    padding-right:1.5%;
-    padding-top: .5%;
-    padding-bottom: .5%;
+    padding-left:15%;
+    padding-right:15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    color: white;
 }
 
 #securetext {
     font-family: 'Open Sans Condensed', sans-serif;
     font-size:6rem;
+    color:white;
 }
