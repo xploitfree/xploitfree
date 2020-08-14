@@ -180,6 +180,14 @@ p {
     background-repeat: no-repeat;
 }
 
+.picfoot {
+    height:10%;
+    background-image: url("./images/bg\ 4.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .testimony {
     height:80%;
     background-color:#fff;
@@ -274,5 +282,27 @@ p {
     padding-left: 0;
 }
 
+.aboutxfhead {
+    padding-top: 9%;
+    height:25%;
+    margin-left:8.5%;
+}
+
+.aboutxfhead p {
+    background-color: #0e0d10;
+    height:100%;
+    width: 100%;
+    color:white;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 3rem;
+    line-height: 70px;
+}
+
+.infosec {
+    height:100%;
+    background-color:white ;
+}
 
 
