@@ -57,18 +57,20 @@
                         </p>
                     </div>
                     <div class="col-1 navlink d-flex flex-column justify-content-center">
-                        <p class="navlinkp">Service</p>
+                        <a href=""><p class="navlinkp">Service</p></a>
                     </div>
                     <div class="col-1 navlink d-flex flex-column justify-content-center">
-                        <p class="navlinkp">Trainings</p>
+                        <a href=""><p class="navlinkp">Trainings</p></a>
                     </div>
                     <div class="col-1 navlink d-flex flex-column justify-content-center">
-                        <p class="navlinkp">About us</p>
+                        <a href="./aboutxf.php"><p class="navlinkp">About us</p></a>
                     </div>
                     <div class="col-1 navlink d-flex flex-column justify-content-center">
-                        <p class="navlinkp">Contact us</p>
+                        <a href="./c2c.php"><p class="navlinkp">Contact us</p></a>
                     </div>
                     <div class="col-1 navlink d-flex flex-column justify-content-center">
-                        <p class="navlinkp">Blog</p>
+                        <a href=""><p class="navlinkp">Blog</p></a>
                     </div>
 </div>
+
+
