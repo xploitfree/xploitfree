@@ -4,7 +4,7 @@
             <title>Contact us</title>
             <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Dancing+Script:400,700|Frank+Ruhl+Libre:400,500,700|Gloria+Hallelujah|Liu+Jian+Mao+Cao|Ruge+Boogie|Sacramento|Turret+Road:400,500&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-            <link rel="stylesheet" href="./style.css">
+            <link rel="stylesheet" href="./styl.css">
             <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
 
 
@@ -25,14 +25,14 @@
 
 <div class="c2ccont">
 <div class="row c2cdetail justify-content-between">
-    <div class="col-4 d-flex flex-column align-items-start">
+    <div class="col-7 d-flex flex-column align-items-start">
         <p class="forbusi">For queries:-</p>
         <p class="fordata"><span style="padding-right: 2%;"><img src="./images/phnblack.png" alt=""></span>(+91) 8800880088</p>
         <p class="fordata"><span style="padding-right: 2%;"><img src="./images/emailbl.png" alt=""></span>xploitfreesecurity@gmail.com</p>
     </div>
-    <div class="col-4 d-flex flex-column align-items-start">
+    <div class="col-5 d-flex flex-column align-items-start">
         <p class="forbusi">For Business:-</p>
-        <p class="fordata"><span style="padding-right: 2%;"><img src="./images/phnblack.png" alt=""></span>(+91) 8800880088</p>
+        <p class="fordata"><span style="padding-right: 1%;"><img src="./images/phnblack.png" alt=""></span>(+91) 8800880088</p>
         <p class="fordata"><span style="padding-right: 2%;"><img src="./images/emailbl.png" alt=""></span>xploitfreesecurity@gmail.com</p>
     </div>
 </div>

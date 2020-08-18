@@ -57,6 +57,7 @@ p {
 
 .secure {
     height:100%;
+    
 }
 
 .audit{
@@ -85,12 +86,11 @@ p {
 
 #securetext {
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size:6rem;
     position:absolute;
     color:white;
     top:20%;
     left:12%;
-
+    font-size:96px;
 }
 
 .hero2 {
@@ -150,7 +150,6 @@ p {
     font-style: normal;
     font-weight: 300;
     font-size: 85px;
-    line-height: 116px;
     color: #FEF1F1;
 
 }
@@ -246,7 +245,7 @@ p {
     font-family: Roboto;
     font-style: italic;
     font-weight: 300;
-    font-size: 30px;
+    font-size: min(2.96vmin,30px);
     text-align: center;
     letter-spacing: 0.02em;
     color: #0009;
@@ -258,37 +257,56 @@ p {
 
 .footcol {
     height:70%;
+    padding:0;
 }
 
 .contact {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 35px;
     line-height: 40px;
-    margin-bottom:5%;
+    margin-bottom:7%;
     color:white;
+    
 }
 
 .number{
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
+    font-size: 32px;
+    padding-bottom: 2%;
+    color:white;
+    font-size: min(2vw,32px);
+    width:100%;
+}
+
+.email {
+    font-family: "Roboto";
+    width:100%;
+    margin-bottom:7%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: min(2vw,32px);
+    color:white;
+}
+
+.cformcol {
+    font-style: normal;
+    font-weight: normal;
     font-size: 28px;
     color:white;
 }
 
-.email {
-    font-family: "Roboto";.cformcol {
+.joinimgs {
+    width:75%;
+}
 
-        height:100%;
-        
+@media screen and (max-width:1450px){
+    .joinimgs {
+        width:100%;
     }
-    font-style: normal;
-    font-weight: normal;
-    font-size: 28px;
-    margin-bottom: 5%;
-    color:white;
 }
 
 .join {
@@ -306,25 +324,23 @@ p {
 }
 
 .aboutxfhead {
-    padding-top: 9%;
-    height:25%;
+    padding-top: max(12.5vmax,170px);
     margin-left:8.5%;
 }
 
 .aboutxfhead p {
     background-color: #0e0d10;
-    height:100%;
     width: 100%;
     color:white;
     font-family: Roboto;
     font-style: normal;
     font-weight: 900;
-    font-size: 3rem;
+    font-size: min(11.72vw,55px);
     line-height: 70px;
 }
 
 .infosec {
-    height:100%;
+    height:min(117.1875vw,900px);
     background-color:white ;
     padding:10%;
     padding-top:5%;
@@ -337,7 +353,7 @@ p {
     font-family: Roboto;
     font-style: normal;
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: min(1.95vw,24px);
     letter-spacing: 0.05em;
 }
 
@@ -350,7 +366,7 @@ p {
     font-family: Roboto;
     font-style: normal;
     font-weight: 900;
-    font-size: 1.5rem;
+    font-size: min(1.95vw,24px);
     letter-spacing: 0.05em;
     padding:1%;
     padding-top:0;
@@ -360,7 +376,7 @@ p {
 }
 
 .vulhead {
-    height:20%;
+    height:min(19vw,180px);
     background-color: white;
 } 
 
@@ -368,7 +384,7 @@ p {
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
-    font-size: 64px;
+    font-size: min(5vw,64px);
     line-height: 75px;
     text-align: center;
     color: #000000;
@@ -388,12 +404,12 @@ p {
 }
 
 .compgr {
-    height:20%;
+    height:min(17vw,180px);
     background-color: white;
 }
 
 .companies {
-    height:100%;
+    height:min(117.1875vw,900px);
     background-color: white;
     padding-bottom:3%;
 }
@@ -417,12 +433,12 @@ p {
 
 .c2ccont {
     background-color:white;
-    height:100%;
+    height:min(117.1875vw,900px);
 }
 .c2cdetail {
     height:30%;
     margin-left:10%;
-    margin-right:10%;
+    margin-right:5%;
     padding-top:2%;
 }
 
@@ -442,7 +458,7 @@ p {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 28px;
+    font-size: min(2vw,32px);
     line-height: 33px;
     color: #000000;
     margin:.5%;
@@ -460,7 +476,7 @@ p {
 }
 
 .cform {
-    height:60%;
+    height:57%;
     margin-left:10%;
     margin-right:10%;
 }
@@ -496,8 +512,8 @@ p {
 }
 
 .cforminp1 {
-    margin-top:1%;
     height:100%;
+    font-size: 25px;
     border:2px solid #0005;
     box-shadow: 3px 3px 3px  rgba(0,0,0,.5);
     width:100%;
@@ -506,7 +522,7 @@ p {
 }
 
 .biginp {
-    height:60%;
+    height:min(117.1875vw,540px);
     background-color:white;
     padding-top:3%;
 }
@@ -534,6 +550,7 @@ p {
     box-shadow: 3px 3px 3px  rgba(0,0,0,.5); 
     border-radius: 5px;
     padding:2%;
+    font-size: 25px;
 }
 
 .c2ccolb {
@@ -547,6 +564,7 @@ p {
     box-sizing: border-box;
     background-color:white;
     font-weight: 900;
+    font-size:22px;
     border-radius: 5px;
 }
 

@@ -62,10 +62,10 @@
                     <div class="col-1 navlink d-flex flex-column justify-content-center">
                         <a href=""><p class="navlinkp">Trainings</p></a>
                     </div>
-                    <div class="col-1 navlink d-flex flex-column justify-content-center">
-                        <a href="./aboutxf.php"><p class="navlinkp">About us</p></a>
+                    <div style="padding:0" class="col-1 navlink d-flex flex-column justify-content-center">
+                        <a href="./aboutxf.php"><p  class="navlinkp">About us</p></a>
                     </div>
-                    <div class="col-1 navlink d-flex flex-column justify-content-center">
+                    <div style="padding:0" class="col-1 navlink d-flex flex-column justify-content-center">
                         <a href="./c2c.php"><p class="navlinkp">Contact us</p></a>
                     </div>
                     <div class="col-1 navlink d-flex flex-column justify-content-center">
