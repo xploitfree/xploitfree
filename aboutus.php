@@ -4,7 +4,7 @@
             <title>About us</title>
             <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Dancing+Script:400,700|Frank+Ruhl+Libre:400,500,700|Gloria+Hallelujah|Liu+Jian+Mao+Cao|Ruge+Boogie|Sacramento|Turret+Road:400,500&display=swap" rel="stylesheet">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-            <link rel="stylesheet" href="./styl.css">
+            <link rel="stylesheet" href="./css/styl.css">
             <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
 
 
@@ -13,16 +13,12 @@
 
 
 <?php
-    include 'header.php';
+    include 'shared/header.php';
 ?>
 
+<!-- main -->
 
-<div class="row aboutxfhead">
-    <p>About XploitFree</p>
-</div>
-<div class="picfoot">
-
-</div>
+<div class="pichead"></div>
 
 <!-- info section -->
 
@@ -100,14 +96,10 @@
     </div>
 </div>
 
-
-
-
-
-
+<div class="picfoot"></div>
 
 <?php
-    include 'footer.php';
+    include 'shared/footer.php';
 ?>
 
     </body>

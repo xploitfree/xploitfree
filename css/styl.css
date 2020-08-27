@@ -1,0 +1,433 @@
+:root{
+    font-family:'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+html,body {
+    height:100%;
+    margin:0;
+}
+
+.content{
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    padding: 1.5em 0 0 0;
+    align-items: center;
+}
+
+.navheader, .navfooter{
+    width: 100%;
+    background-color:#0c0c0c;
+    color:white;
+    z-index: 5;
+}
+
+.navlogo {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 26px;
+    align-items: center;
+}
+
+.navlogo-section{
+    flex: 1.5;
+}
+
+.navmenu{
+    display: flex;
+    flex: 1.5;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row {
+    margin:0;
+}
+
+p {
+    margin: 0;
+}
+
+.navlink {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.navlink:hover{
+    transition: color 0.2s ease-in-out;
+    color: white;
+    text-decoration: none;
+}
+
+.menutext{
+    font-size:17px;
+    font-weight:700;
+    letter-spacing: 2px;
+}
+
+.navitem, .navitem > svg{
+    transform: scale(1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.navitem:hover, .navitem:hover > svg{
+    transform: scale(1.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.hero1 {
+    height:100%;
+    background-image: url("../images/Hacker_edited.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom:10%;
+}
+
+.secure {
+    height:100%;
+}
+
+.audit{
+    height:84%;
+}
+
+.herobtn {
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    background-color:#0001;
+    border: 3px solid #1E8130;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding-left:15%;
+    padding-right:15%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    color: white;
+}
+
+#securetext {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:6rem;
+    color:white;
+}
+
+.hero2 {
+    height:100%;
+    background-image: url("../images/xyz.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.prevention {
+    height:100%;
+}
+
+#preventiontext {
+    font-family: Open Sans Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 85px;
+    line-height: 116px;
+    color:whitesmoke;
+}
+
+.preventionsub {
+    font-family: Open Sans Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 170%;
+    color:whitesmoke;
+}
+
+.hero3 {
+    height:132%;
+    background-image: url("../images/abot.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
+}
+
+.hero3box {
+    margin-left:12%;
+    margin-right:12%;
+}
+
+.whowe {
+    height:35%;
+    width:100%;
+}
+
+.whoweare {
+    width:100%;
+    font-family: Open Sans Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 85px;
+    line-height: 116px;
+    color: #FEF1F1;
+
+}
+
+.whoweinfo {
+    height:15%;
+    width:75%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 171.2%;
+    color: #FFFFFF;
+}
+
+.whowebtn {
+    height:5%;
+    width:75%;
+}
+
+.whowebttn {
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    background-color:#0001;
+    border: 3px solid #1E8130;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding-left:3%;
+    padding-right:3%;
+    color: white;
+    height:100%;
+}
+
+.picfoot {
+    height:20%;
+    background-image: url("../images/foot.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.pichead {
+    height:20%;
+    background-image: url("../images/head.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.testimony {
+    height:80%;
+    background-color:#fff;
+}
+
+.testhead {
+    height:20%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 79px;
+    line-height: 93px;
+    color: #000000;
+}
+
+.testimg{
+    height:10%;
+}
+
+.testname {
+    height:10%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+    color: #000000;
+}
+
+.testdata {
+
+    height:40%;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 135%;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #0009;
+}
+
+.footer {
+
+    height:65%;
+
+}
+
+.footcol {
+    padding: 2em 1em;
+    flex: 35%;
+}
+
+.cinfo{
+    flex: 25%;
+}
+
+.footcolhead {
+    font-weight: bold;
+    font-size: 1.8em;
+    margin-bottom: 0.7em;
+    color:white;
+}
+
+.contact, .socialmedia{
+    margin-bottom: 1em;
+}
+
+.number{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    color:white;
+}
+
+.email {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    margin-bottom: 5%;
+    color:white;
+}
+
+.headtext{
+    font-style: inherit;
+    color:white;
+    font-weight: 600;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+}
+
+.infosec {
+    height:100%;
+    background-color:white ;
+    padding:10%;
+    padding-top:5%;
+    padding-bottom:0;
+    color:black;
+}
+
+.infosdata {
+    height:65%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.brandname{
+    margin-left: 0.3em;
+    color: white;
+    letter-spacing: 0.1em;
+}
+
+.infosimg {
+   height:60%;
+}
+
+.spartinfo {
+    height:35%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    padding:1%;
+    padding-top:0;
+    padding-bottom:0;
+    color: #000000;
+
+}
+
+.vulhead {
+    height:20%;
+    background-color: white;
+} 
+
+.vulhead div p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 75px;
+    text-align: center;
+    color: #000000;
+}
+
+.vulnerability {
+    height:30%;
+    width:100%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 75px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.compgr {
+    height:20%;
+    background-color: white;
+}
+
+.companies {
+    height:100%;
+    background-color: white;
+    padding-bottom:3%;
+}
+
+
+.compr {
+    height:29%;
+    margin-bottom:3%;
+}
+
+.compc {
+    height:100%;
+    padding:0;
+}
+
+.compimg {
+    height:100%;
+    width:100%; 
+}
+
+.pagehead{
+    margin-left: 1em;
+}
+
+.footcoltext{
+    font-size: 1.25em;
+}
+
+.footcolitem{
+    margin-bottom: 0.5em;
+    display: flex;
+}
+
+.footcolicon{
+    margin-right: 0.5em;
+}

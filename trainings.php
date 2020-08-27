@@ -31,34 +31,27 @@
                 <div class="sec-row">
                     <a href="/" class="card-link">
                         <div class="card">
-                            <img src="./images/red-teaming.jpg"></img>
-                            <div class="card-name">Red Teaming</div>
+                            <img src="./images/web-training.jpg"></img>
+                            <div class="card-name">Secure Web Development</div>
                             <div class="card-overlay"></div>
                         </div>
                     </a>
                     <a href="/" class="card-link">
                         <div class="card">
-                            <img src="./images/network-security.jpg"></img>
-                            <div class="card-name">Network Security</div>
+                            <img src="./images/android-training.jpg"></img>
+                            <div class="card-name">Secure Android Development</div>
                             <div class="card-overlay"></div>
                         </div>
                     </a>
                 </div>
                 <div class="sec-row logo-sec">
-                    <?php include_once "./svgs/servicesvg.svg"; ?>
+                    <?php include_once "./svgs/trainingsvg.svg"; ?>
                 </div>
                 <div class="sec-row">
                     <a href="/" class="card-link">
                         <div class="card">
-                            <img src="./images/web-security.jpg"></img>
-                            <div class="card-name">Web Security</div>
-                            <div class="card-overlay"></div>
-                        </div>
-                    </a>
-                    <a href="/" class="card-link">
-                        <div class="card">
-                            <img src="./images/social-engg.jpg"></img>
-                            <div class="card-name">Social Engineering</div>
+                            <img src="./images/hacking-training.jpg"></img>
+                            <div class="card-name">Ethical Hacking</div>
                             <div class="card-overlay"></div>
                         </div>
                     </a>
