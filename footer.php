@@ -16,19 +16,19 @@
                             <p class="join">Join us</p>
                             <div class="row joinimgs" style="height:20%;">
                                 <div class="col-2 joinimg">
-                                    <img src="./images/facebook.png" alt="">
+                                    <img class="socialimg" src="./images/facebook.png" alt="">
                                 </div>
                                 <div class="col-2 joinimg">
-                                    <img src="./images/linkedin.png" alt="">
+                                    <img class="socialimg" src="./images/linkedin.png" alt="">
                                 </div>
                                 <div class="col-2 joinimg">
-                                    <img src="./images/twitter.png" alt="">
+                                    <img class="socialimg" src="./images/twitter.png" alt="">
                                 </div>
                                 <div class="col-2 joinimg">
-                                    <img src="./images/instagram.png" alt="">
+                                    <img class="socialimg" src="./images/instagram.png" alt="">
                                 </div>
                                 <div class="col-2 joinimg">
-                                    <img src="./images/mail.png" alt="">
+                                    <img class="socialimg" src="./images/mail.png" alt="">
                                 </div>
                             </div>
                     </div>
