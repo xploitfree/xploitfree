@@ -39,7 +39,7 @@
     perspective-origin: center;
     transition: box-shadow 0.5s ease-in-out;
     animation: zoomin 0.4s ease-in-out backwards;
-    animation-delay: 0.7s;
+    animation-delay: 0.6s;
 }
 
 @keyframes zoomin{
@@ -63,7 +63,7 @@
 }
 
 .card-link:hover .card > img{
-    transform: scale(1.05);
+    transform: scale(1.03);
     transition: transform 0.5s ease-in-out;
 }
 
