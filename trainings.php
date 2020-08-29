@@ -32,28 +32,91 @@
                     <a href="/" class="card-link">
                         <div class="card">
                             <img src="./images/web-training.jpg"></img>
-                            <div class="card-name">Secure Web Development</div>
-                            <div class="card-overlay"></div>
+                            <div class="card-name"><span class="card-btn">Secure Web Development</span></div>
+                            <div class="card-overlay">
+                                <ul class="card-list">
+                                    <li class="list-item">
+                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-text">Learn Html5, CSS3, Javascript, Php</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-text">Develop Secure Website</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-text">Live Deployment</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-text">Get Certification</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-action"><span class="card-btn btn-action">Register Now</span></div>
                         </div>
                     </a>
                     <a href="/" class="card-link">
                         <div class="card">
                             <img src="./images/android-training.jpg"></img>
-                            <div class="card-name">Secure Android Development</div>
-                            <div class="card-overlay"></div>
+                           <div class="card-name"><span class="card-btn">Secure Android Development</span></div>
+                            <div class="card-overlay">
+                                <ul class="card-list">
+                                    <li class="list-item">
+                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-text">Learn Html5, CSS3, Javascript, Php</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-text">Develop Secure Website</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-text">Live Deployment</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-text">Get Certification</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-action"><span class="card-btn btn-action">Register Now</span></div>
                         </div>
                     </a>
                 </div>
                 <div class="sec-row logo-sec">
-                    <?php include_once "./svgs/trainingsvg.svg"; ?>
+                    <?php trainingsvg(238, 148) ?>
                 </div>
                 <div class="sec-row">
                     <a href="/" class="card-link">
                         <div class="card">
                             <img src="./images/hacking-training.jpg"></img>
-                            <div class="card-name">Ethical Hacking</div>
-                            <div class="card-overlay"></div>
+                            <div class="card-name"><span class="card-btn">Ethical Hacking</span></div>
+                            <div class="card-overlay">
+                                <ul class="card-list">
+                                    <li class="list-item">
+                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-text">Learn Html5, CSS3, Javascript, Php</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-text">Develop Secure Website</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-text">Live Deployment</span>
+                                    </li>
+                                    <li class="list-item">
+                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-text">Get Certification</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-action"><span class="card-btn btn-action">Register Now</span></div>
                         </div>
+                    </a>
+                    <a href="/" class="card-link">
+                        
                     </a>
                 </div>
             </div>

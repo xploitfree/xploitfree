@@ -1,12 +1,15 @@
 <?php
     include_once "funcs.php";
+    include_once './svgs.php'; 
 ?>
 <header class="navheader">
     <div class="content">
         <div class="navlogo-section">
-            <a class="navlink navlogo" href="home.php">
-                <span class="brandlogo"><?php include_once './svgs/logo.svg'; ?></span>
-                <span class="brandname">XploitFree</span>
+            <a class="navlink" href="home.php">
+                <div class="navlogo">
+                    <span class="brandlogo"><?php logosvg(70, 70); ?></span>
+                    <span class="brandname">XploitFree</span>
+                </div>
             </a>
         </div>
         <div class="navmenu">

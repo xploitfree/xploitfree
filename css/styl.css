@@ -10,10 +10,10 @@ html,body {
 
 .content{
     display: flex;
+    flex-wrap: wrap;
     width: 90%;
     margin: 0 auto;
     padding: 1.5em 0 0 0;
-    align-items: center;
 }
 
 .navheader, .navfooter{
@@ -32,12 +32,15 @@ html,body {
 }
 
 .navlogo-section{
-    flex: 1.5;
+    flex: 40%;
+    display: flex;
+    justify-content: left;
 }
 
 .navmenu{
+    padding: 2em 0;
     display: flex;
-    flex: 1.5;
+    flex: 60%;
     justify-content: space-between;
     align-items: center;
 }
@@ -62,17 +65,22 @@ p {
 }
 
 .menutext{
-    font-size:17px;
+    font-size:1em;
     font-weight:700;
     letter-spacing: 2px;
 }
 
-.navitem, .navitem > svg{
+.navitem, .navitem > svg, .navitem span{
     transform: scale(1);
     transition: transform 0.2s ease-in-out;
 }
 
-.navitem:hover, .navitem:hover > svg{
+.navitem .menutext{
+    margin: 0 0.5em;
+}
+
+.navitem:hover, .navitem:hover > svg, .navitem:hover span{
+    z-index: 10;
     transform: scale(1.2);
     transition: transform 0.2s ease-in-out;
 }
@@ -274,12 +282,8 @@ p {
 }
 
 .footcol {
-    padding: 2em 1em;
-    flex: 35%;
-}
-
-.cinfo{
-    flex: 25%;
+    padding: 1em 0.4em;
+    flex: 20%;
 }
 
 .footcolhead {
@@ -424,10 +428,51 @@ p {
 }
 
 .footcolitem{
-    margin-bottom: 0.5em;
     display: flex;
+    white-space: nowrap;
+    margin: 0.5em 0;
 }
 
 .footcolicon{
+    position: relative;
     margin-right: 0.5em;
 }
+
+.footcollist{
+    padding: 0;
+}
+
+.ainfo{
+    flex: 3;
+}
+
+.sinfo{
+    flex: 1.5;
+}
+
+.tinfo{
+    flex: 2;
+}
+
+.cinfo{
+    flex: 1;
+}
+
+.xinfo{
+    /* margin-left: 2.5em; */
+}
+
+.footlogo{
+    animation: rotation 2s infinite;
+    animation-play-state: running;
+}
+
+@keyframes rotation{
+    from{
+        transform: rotateY(0deg);
+    }
+    to{
+        transform: rotateY(360deg);
+    }
+}
+

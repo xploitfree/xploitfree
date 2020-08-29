@@ -1,7 +1,7 @@
-<svg width="40" height="40" viewBox="0 0 52 52" fill="none"">
-<rect x="1" y="1" width="50" height="50" rx="5" fill="white"/>
-<path d="M33.3833 19.658C36.1548 19.658 38.8128 20.7808 40.7726 22.7796C42.7323 24.7783 43.8333 27.4892 43.8333 30.3159V42.7501H36.8667V30.3159C36.8667 29.3737 36.4997 28.47 35.8464 27.8038C35.1932 27.1375 34.3072 26.7632 33.3833 26.7632C32.4595 26.7632 31.5735 27.1375 30.9202 27.8038C30.267 28.47 29.9 29.3737 29.9 30.3159V42.7501H22.9333V30.3159C22.9333 27.4892 24.0343 24.7783 25.9941 22.7796C27.9538 20.7808 30.6118 19.658 33.3833 19.658Z" fill="black" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M15.9667 21.4341H9V42.7499H15.9667V21.4341Z" fill="black" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.4833 16.1053C14.4071 16.1053 15.9667 14.5147 15.9667 12.5526C15.9667 10.5906 14.4071 9 12.4833 9C10.5595 9 9 10.5906 9 12.5526C9 14.5147 10.5595 16.1053 12.4833 16.1053Z" fill="black" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<rect x="1" y="1" width="50" height="50" rx="5" stroke="white"/>
+<svg width='40' height='40' viewBox='0 0 52 52' fill='none'>
+<rect x='1' y='1' width='50' height='50' rx='5' fill='white'/>
+<path d='M33.3833 19.658C36.1548 19.658 38.8128 20.7808 40.7726 22.7796C42.7323 24.7783 43.8333 27.4892 43.8333 30.3159V42.7501H36.8667V30.3159C36.8667 29.3737 36.4997 28.47 35.8464 27.8038C35.1932 27.1375 34.3072 26.7632 33.3833 26.7632C32.4595 26.7632 31.5735 27.1375 30.9202 27.8038C30.267 28.47 29.9 29.3737 29.9 30.3159V42.7501H22.9333V30.3159C22.9333 27.4892 24.0343 24.7783 25.9941 22.7796C27.9538 20.7808 30.6118 19.658 33.3833 19.658Z' fill='black' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
+<path d='M15.9667 21.4341H9V42.7499H15.9667V21.4341Z' fill='black' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
+<path d='M12.4833 16.1053C14.4071 16.1053 15.9667 14.5147 15.9667 12.5526C15.9667 10.5906 14.4071 9 12.4833 9C10.5595 9 9 10.5906 9 12.5526C9 14.5147 10.5595 16.1053 12.4833 16.1053Z' fill='black' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/>
+<rect x='1' y='1' width='50' height='50' rx='5' stroke='white'/>
 </svg>

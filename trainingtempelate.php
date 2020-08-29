@@ -38,19 +38,19 @@
                             <div class="card-overlay">
                                 <ul class="card-list">
                                     <li class="list-item">
-                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-icon"> <?php include "./svgs/tick.svg" ?> </span>
                                         <span class="item-text">Detailed Report</span>
                                     </li>
                                     <li class="list-item">
-                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-icon"> <?php include "./svgs/tick.svg" ?> </span>
                                         <span class="item-text">Remediation</span>
                                     </li>
                                     <li class="list-item">
-                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-icon"> <?php include "./svgs/tick.svg" ?> </span>
                                         <span class="item-text">In-Depth Analysis</span>
                                     </li>
                                     <li class="list-item">
-                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-icon"> <?php include "./svgs/tick.svg" ?> </span>
                                         <span class="item-text">Affordable Price</span>
                                     </li>
                                 </ul>
@@ -65,19 +65,19 @@
                             <div class="card-overlay">
                                 <ul class="card-list">
                                     <li class="list-item">
-                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-icon"> <?php include "./svgs/tick.svg" ?> </span>
                                         <span class="item-text">Detailed Report</span>
                                     </li>
                                     <li class="list-item">
-                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-icon"> <?php include "./svgs/tick.svg" ?> </span>
                                         <span class="item-text">Remediation</span>
                                     </li>
                                     <li class="list-item">
-                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-icon"> <?php include "./svgs/tick.svg" ?> </span>
                                         <span class="item-text">In-Depth Analysis</span>
                                     </li>
                                     <li class="list-item">
-                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-icon"> <?php include "./svgs/tick.svg" ?> </span>
                                         <span class="item-text">Affordable Price</span>
                                     </li>
                                 </ul>
@@ -87,7 +87,7 @@
                     </a>
                 </div>
                 <div class="sec-row logo-sec">
-                    <?php servicesvg(null, null) ?>
+                    <?php include_once "./svgs/servicesvg.svg"; ?>
                 </div>
                 <div class="sec-row">
                     <a href="/" class="card-link">
@@ -97,19 +97,19 @@
                             <div class="card-overlay">
                                 <ul class="card-list">
                                     <li class="list-item">
-                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-icon"> <?php include "./svgs/tick.svg" ?> </span>
                                         <span class="item-text">Detailed Report</span>
                                     </li>
                                     <li class="list-item">
-                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-icon"> <?php include "./svgs/tick.svg" ?> </span>
                                         <span class="item-text">Remediation</span>
                                     </li>
                                     <li class="list-item">
-                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-icon"> <?php include "./svgs/tick.svg" ?> </span>
                                         <span class="item-text">In-Depth Analysis</span>
                                     </li>
                                     <li class="list-item">
-                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-icon"> <?php include "./svgs/tick.svg" ?> </span>
                                         <span class="item-text">Affordable Price</span>
                                     </li>
                                 </ul>
@@ -124,19 +124,19 @@
                             <div class="card-overlay">
                                 <ul class="card-list">
                                     <li class="list-item">
-                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-icon"> <?php include "./svgs/tick.svg" ?> </span>
                                         <span class="item-text">Detailed Report</span>
                                     </li>
                                     <li class="list-item">
-                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-icon"> <?php include "./svgs/tick.svg" ?> </span>
                                         <span class="item-text">Remediation</span>
                                     </li>
                                     <li class="list-item">
-                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-icon"> <?php include "./svgs/tick.svg" ?> </span>
                                         <span class="item-text">In-Depth Analysis</span>
                                     </li>
                                     <li class="list-item">
-                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-icon"> <?php include "./svgs/tick.svg" ?> </span>
                                         <span class="item-text">Affordable Price</span>
                                     </li>
                                 </ul>
