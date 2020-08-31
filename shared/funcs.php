@@ -15,8 +15,8 @@
                 return "Contact to connect";
             case "trainings":
                 return "Trainings";
-            case "contactus":
-                return "Contact to connect";
+            case "socialengg":
+                return "Social Engineering";
             case "contactus":
                 return "Contact to connect";
         }

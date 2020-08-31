@@ -1,3 +1,4 @@
+<div class="picfoot"></div>
 <footer class="navfooter">
     <div class="content">
 

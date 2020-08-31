@@ -18,7 +18,7 @@ html,body {
 
 .navheader, .navfooter{
     width: 100%;
-    background-color:#0c0c0c;
+    background-color:#050505;
     color:white;
     z-index: 5;
 }
