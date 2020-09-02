@@ -8,11 +8,13 @@
 
 .sub-section1{
     opacity: 0;
+    transform: translateY(50px);
 }
 
-.sub-section1.animation-active{
+.sub-section1.animated{
     opacity: 1;
-    transition: opacity 1.5s ease-in-out;
+    transform: translateY(0);
+    transition: opacity 1.2s ease-out, transform 1.5s ease-out;
 }
 
 .sub-section2{
@@ -46,22 +48,13 @@
     transform-style: preserve-3d;
     perspective: 200px;
     perspective-origin: center;
-    transition: box-shadow 0.5s ease-in-out;
+    transition: box-shadow 0.5s ease-in;
     transform: scale(0);
-}
-
-@keyframes zoomin{
-    from{
-        transform: scale(0);
-    }
-    to{
-        transform: scale(1);
-    }
 }
 
 .card:hover{
     box-shadow: 0px 0px 4px 0px black;
-    transition: box-shadow 0.5s ease-in-out;
+    transition: box-shadow 0.5s ease-in;
 }
 
 .card:hover .card-overlay{
@@ -93,22 +86,15 @@
     transform: scale(4);
 }
 
-.sub-section2.animation-active .logo-sec svg{
-    animation: zoomout 0.6s cubic-bezier(0.43, -0.86, 0.58, 1) forwards;
+.sub-section2.animated .logo-sec svg{
+    transform: scale(1);
+    transition: transform 0.6s cubic-bezier(0.43, -2, 0.58, 1);
 }
 
-.sub-section2.animation-active .sec-row .card{
-    animation: zoomin 0.3s ease-out forwards;
-    animation-delay: 0.25s;
-}
-
-@keyframes zoomout{
-    from{
-        transform: scale(4);
-    }
-    to{
-        transform: scale(1);
-    }
+.sub-section2.animated .sec-row .card{
+    transform: scale(1);
+    transition: transform 0.3s ease-out;
+    transition-delay: 0.25s;
 }
 
 .card-overlay{

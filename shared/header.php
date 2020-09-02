@@ -13,11 +13,11 @@
             </a>
         </div>
         <div class="navmenu">
-            <a class="navlink navitem" href="services.php"><span class="menutext">Services</span></a>
-            <a class="navlink navitem" href="trainings.php"><span class="menutext">Trainings</span></a>
-            <a class="navlink navitem" href="aboutus.php"><span class="menutext">About us</span></a>
-            <a class="navlink navitem" href="contactus.php"><span class="menutext">Contact us</span></a>
-            <a class="navlink navitem" href="blog.php"><span class="menutext">Blog</span></a>
+            <a class="navlink navitem" href="services"><span class="menutext">Services</span></a>
+            <a class="navlink navitem" href="trainings"><span class="menutext">Trainings</span></a>
+            <a class="navlink navitem" href="aboutus"><span class="menutext">About us</span></a>
+            <a class="navlink navitem" href="contactus"><span class="menutext">Contact us</span></a>
+            <a class="navlink navitem" href="blog"><span class="menutext">Blog</span></a>
         </div>
     </div>
     <div class="content">

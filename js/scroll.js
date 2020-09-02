@@ -1,8 +1,8 @@
-function createObserver(thresholdValue = 1.0){
+function createObserver(thresholdValue = 1.0, classname, callback=handleObserver){
 
     let observer;
 
-    targets = document.getElementsByClassName("scroll-animated");
+    targets = document.getElementsByClassName(classname);
 
     let options = {
         root: null,
@@ -10,7 +10,7 @@ function createObserver(thresholdValue = 1.0){
         threshold: thresholdValue
     }
 
-    observer = new IntersectionObserver(handleObserver, options);
+    observer = new IntersectionObserver(callback, options);
 
     Array.from(targets).forEach((target) => {
         observer.observe(target);
@@ -20,7 +20,7 @@ function createObserver(thresholdValue = 1.0){
 function handleObserver(entries){
     entries.forEach((entry) => {
         if(entry.isIntersecting){
-            entry.target.classList.add("animation-active");
+            entry.target.classList.add("animated");
         }
     })
 }

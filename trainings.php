@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styl.css">
-    <link rel="stylesheet" href="./css/mainmenu.css">
+    <link rel="stylesheet" href="./css/menu.css">
     <title>Services</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
     
     <div class="content">
         <div class="section">
-            <div class="sub-section1 scroll-animated">
+            <div class="sub-section1">
                 <div class="section-head">
                     <h1 class="section-head-text">
                         Battle Harden your network with no threat to your data
@@ -29,7 +29,7 @@
                     </p>
                 </div>
             </div>
-            <div class="sub-section2 scroll-animated">
+            <div class="sub-section2">
                 <div class="sec-row">
                     <a href="/" class="card-link">
                         <div class="card">
@@ -129,7 +129,8 @@
 
 <script src="./js/scroll.js"></script>
 <script>
-    createObserver(0.6);
+    createObserver(0.6, "sub-section1");
+    createObserver(0.6, "sub-section2");
 </script>
 
 </html>

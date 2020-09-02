@@ -1,0 +1,227 @@
+.se-section{
+    background: url('../images/ssimg.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    color: white
+}
+
+.section-main{
+    width: 90%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.service-head{
+    opacity: 0;
+    transform: translateX(-50px);
+    line-height: 1.5;
+    font-size: 2.3em;
+}
+
+.section-main.animated .service-head{
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 1.2s ease-out, transform 1.5s ease-out;
+}
+
+.service-btn{  
+    outline: none;
+    padding: 0.5em;
+    background: #00AEEF;
+    border: 2px solid #00AEEF;
+    color: inherit;
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 1.05em;
+    transition: box-shadow 0.3s ease-in;
+}
+
+.service-btn:hover{
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-out;
+}
+
+.top-btn{
+    opacity: 0;
+    transform: translateX(50px);
+    font-size: 1.3em;
+    margin-top: 1em;
+    box-shadow: 0px 0px 8px 2px #343434;
+    float: right;
+    transition: box-shadow 0.15s ease-out;
+}
+
+.top-btn:hover{
+    box-shadow: 0px 0px 5px 1px #343434;
+}
+
+.section-main.animated .top-btn{
+    opacity: 1;
+    transform: translateX(0px);
+    transition: opacity 1.2s ease-out, transform 1.5s ease-out, box-shadow 0.15s ease-out;
+}
+
+.bottom-btn{
+    opacity: 0;
+    transform: translateY(30px);
+    font-size: 1.2em;
+    box-shadow: 0px 0px 8px 3px #494848;
+    margin: 5em 0;
+    transition: box-shadow 0.15s ease-out;
+}
+
+.bottom-btn:hover{
+    box-shadow: 0px 0px 3px 1px #494848;
+}
+
+.bottom-btn.animated{
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 1.2s ease-out, transform 1.5s ease-out, box-shadow 0.15s ease-out;
+}
+
+.section-sec{
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.section-what{
+    margin: 5em 0;
+}
+
+.section-q{
+    font-size: 2em;
+    margin-bottom: 1em;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.section-a{
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.section-what.animated .section-a{
+    opacity: 1;
+    transform: translateY(0);   
+    transition: opacity 1s ease-out, transform 1.5s ease-out; 
+}
+
+.what{
+    display: inline-block;
+    transform: scale(6);
+}
+
+.section-what.animated .what{
+    transform: scale(1);
+    transition: transform 0.6s ease-out;
+}
+
+.how{
+    display: inline-block;
+    color: #737373;
+    background: white;
+    padding: 0.4em 1em;
+    transform: translateY(-50px);
+    opacity: 0;
+    border-radius: 40px;
+}
+
+.section-how.animated .how{ 
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 1s ease-out, transform 1.5s ease-out;
+}
+
+.steps{
+    display: flex;
+    margin-top: 5em;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: nowrap;
+}
+
+.step{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.step-title{
+    margin-top: 0.5em;
+    font-size: 1.5em;
+}
+
+.step-info{
+    margin-top: 0.5em;
+    font-size: 1em;
+}
+
+.steps > svg{
+    height: 2em;
+    width: 0;
+    transform: translate(-20px, -2em);
+    animation: grow 0.5s ease-out forwards;
+}
+
+.section-how.animated .steps > svg{
+    transform: translate(0px, -2em);
+    width: 5em;
+    transition: width 0.5s ease-out, transform 0.9s ease-out;
+}
+
+.step p{
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.section-how.animated .steps .step p{
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 1.2s ease-out, transform 1.5s ease-out;
+    transition-delay: 4s;
+}
+
+.step svg{
+    transform: scale(0);
+}
+
+.section-how.animated .steps .step svg{
+    transform: scale(1);
+    transition: transform 0.5s cubic-bezier(0, 0, 0, 2);
+}
+
+.section-how.animated .steps .rarrow1{
+    transition-delay: 0.6s;
+}
+
+.section-how.animated .steps .rarrow2{
+    transition-delay: 1.8s;
+}
+
+.section-how.animated .steps .rarrow3{
+    transition-delay: 3s;
+}
+
+.section-how.animated .steps .step .sicon1{
+    transition-delay: 0s;
+}
+
+.section-how.animated .steps .step .sicon2{
+    transition-delay: 1.2s;
+}
+
+.section-how.animated .steps .step .sicon3{
+    transition-delay: 2.4s;
+}
+
+.section-how.animated .steps .step .sicon4{
+    transition-delay: 3.6s;
+}
