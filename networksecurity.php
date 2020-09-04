@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styl.css">
     <link rel="stylesheet" href="./css/services.css">
-    <title>Social Engineering|XploitFree Services</title>
+    <title>Network Security|XploitFree Services</title>
 </head>
 
-<body class="se-section">
+<body class="ns-section">
     <?php include_once "shared/header.php" ?>
 
     <div class="service-section">
@@ -23,11 +23,10 @@
             <section class="section-sec">
                 <div class="section-what">
                     <div class="section-q">
-                        <p><span class="what">What is Social Engineering test ?</span></p>
+                        <p><span class="what">What is Network Vulnerability and Assessment test ?</span></p>
                     </div>
                     <div class="section-a">
-                        <p>Social engineering attacks target the weakest link in an organization's security human
-                            beings.Users are commonly referred to as the “weakest link” when it comes to security but yet users still have more than the necessary permissions to perform their jobs.
+                        <p>Network vulnerability assessment and penetration testing is an offensive assessment to identify security vulnerability in organizational network. The primary objective of a network VAPT is to identify exploitable security loopholes in systems and network devices so that security vulnerabilities can be fixed before adversaries identify and exploit them. This assessment will focus to deliver complete security assessment and penetration testing of your network through our unique offering of Attacker Simulated Exploitation.
                         </p>
                         <div>
                             <div class="flowchart"></div>
@@ -41,31 +40,31 @@
                     </div>
                     <div class="steps">
                         <div class="step step1">
-                            <?php rts1svg(100, 100, "sicon1") ?>
-                            <p class="step-title">Set Objective</p>
-                            <p class="step-info">Our team will set objectives of attack by discussing with you</p>
+                            <?php nss1svg(100, 100, "sicon1") ?>
+                            <p class="step-title">Vulnerability identification</p>
+                            <p class="step-info">Our team will perform automated vulnerability scanning to detect potential vulnerabilities.</p>
                         </div>
                         <?php rtarrowsvg("rarrow1") ?>
                         <div class="step step2">
-                            <?php rts2svg(100, 100, "sicon2") ?>
-                            <p class="step-title">Gather information</p>
-                            <p class="step-info">You will provide us with relevant information</p>
+                            <?php nss2svg(100, 100, "sicon2") ?>
+                            <p class="step-title">Analysis & Exploitation</p>
+                            <p class="step-info">Our team will simulate exploitation to identify security vulnerabilities. Then we’ll analys the simulation.</p>
                         </div>
                         <?php rtarrowsvg("rarrow2") ?>
                         <div class="step step3">
-                            <?php rts3svg(100, 100, "sicon3") ?>
-                            <p class="step-title">Simulate attack</p>
-                            <p class="step-info">Our team will simulate attack on your employees</p>
+                            <?php nss3svg(100, 100, "sicon3") ?>
+                            <p class="step-title">Risk Assesment</p>
+                            <p class="step-info">We will then make assessment of identified vulnerabilities to determine the likelihood and impact on the organization.</p>
                         </div>
                         <?php rtarrowsvg("rarrow3") ?>
                         <div class="step step4">
-                            <?php rts4svg(100, 100, "sicon4") ?>
-                            <p class="step-title">Report Findings</p>
-                            <p class="step-info">We will submit you detailed report of loopholes in your website</p>
+                            <?php nss4svg(100, 100, "sicon4") ?>
+                            <p class="step-title">Report Submission</p>
+                            <p class="step-info">We will then provide an in-depth report on all the issues and provide proof of Concepts, exploitation techniques, demos and fix recommendations.</p>
                         </div>
                     </div>
                 </div>
-                <button class="service-btn bottom-btn">Do S.E.P Testing for me</button>
+                <button class="service-btn bottom-btn">Do Network V.A.P.T for me</button>
             </section>
         </div>
     </div>
@@ -76,7 +75,7 @@
 <script src="./js/scroll.js"></script>
 <script src="./js/services.js"></script>
 <script>
-    document.documentElement.style.setProperty('--how-color', '#737373')
+    document.documentElement.style.setProperty('--how-color', '#6FB5BF')
 </script>
 
 </html>

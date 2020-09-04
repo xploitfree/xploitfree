@@ -1,0 +1,199 @@
+.main-content{
+    flex: 55%;
+    margin-right: 5em;
+}
+
+.training-card{    
+    top: 3em;
+    flex-basis: 30%;
+    position: sticky;
+    overflow: hidden;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: -2px -2px 10px -2px rgba(0, 0, 0, 0.5), 2px 2px 10px -2px black;
+    transform-style: preserve-3d;
+    perspective: 200px;
+    perspective-origin: center;
+    transition: box-shadow 0.5s ease-in;
+    margin: 2em 0;
+    transform: translateX(50px);
+    opacity: 0;
+}
+
+.training-card > img{
+    width: 100%;
+    height: auto;
+}
+
+.training-head{
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+}
+
+.section-main{
+    transform: translateX(-50px);
+    opacity: 0;
+}
+
+.section-main.animated, .training-card.animated{
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 1.2s ease-out, transform 1.5s ease-out;
+}
+
+.training-info{
+    font-size: 1.5em;
+}
+
+.perks-head{
+    margin: 1.5em 0 0 0;
+}
+
+.perks{
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: nowrap;
+}
+
+.perk{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.perk svg{
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+.perk.animated svg{
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease-out, transform 0.7s ease-out;
+}
+
+.p1.animated svg{
+    transition-delay: 0s;
+}
+
+.p1.animated svg:hover path{
+    transition: 0.5s;
+    /* transition-delay: 1s; */
+    d: path("M223.482 35.3729C220.314 34.4732 218.137 32.7583 218.401 31.3716L219.987 23.0513C220.515 20.2778 213.455 17.9067 203.425 17.9809L177.493 18.2881C173.336 18.2034 168.453 17.5472 165.286 16.6474L147.273 10.4338C142.655 8.39079 136.056 7.978 130.909 8.70845C129.194 8.95193 125.762 9.43889 124.773 10.254L106.823 16.849L101.676 17.5794C99.9606 17.8229 98.245 18.0664 95.8036 17.7382L69.8713 18.0454C67.4299 17.7173 63.9986 18.2043 62.2829 18.4477C57.136 19.1782 53.4404 21.0519 52.1863 23.2537L53.7682 32.4737C55.2196 33.617 53.2398 35.2472 50.5342 36.3058L30.1436 42.5726C24.0066 44.1181 24.204 47.4632 31.2639 49.8343L50.9924 55.8045C54.1595 56.7042 56.3367 58.4191 56.0725 59.8058L54.4872 68.1261C53.9588 70.8995 61.0188 73.2706 71.0486 73.1965L96.9808 72.8893C101.138 72.9739 106.021 73.6302 109.188 74.53L127.201 80.7436C131.819 82.7866 138.418 83.1994 143.565 82.4689C145.28 82.2254 146.996 81.982 147.986 81.1669L165.935 74.5719C167.651 74.3284 168.641 73.5133 170.356 73.2698C172.072 73.0263 173.788 72.7829 176.229 73.111L202.887 73.3754C205.328 73.7036 207.044 73.4601 208.76 73.2166C213.907 72.4861 217.602 70.6125 218.856 68.4107L218 59.7622C218.264 58.3755 220.244 56.7453 222.95 55.6867L241.625 49.6634C247.036 47.5462 248.554 43.9577 242.22 42.1582L223.482 35.3729ZM166.266 68.4534C128.522 73.81 84.5765 67.9036 68.6105 55.328C52.6445 42.7524 70.4633 28.0806 108.208 22.724C145.952 17.3674 189.897 23.2738 205.863 35.8494C221.829 48.425 204.011 63.0968 166.266 68.4534Z");
+    fill: url(#studymatpaint0_linear);
+}
+
+.p2.animated svg{
+    transition-delay: 0.5s;
+}
+
+.p3.animated svg{
+    transition-delay: 1s;
+}
+
+.p4.animated svg{
+    transition-delay: 1.5s;
+}
+
+.perk-icon{
+    width: 12em;
+    height: 12em;
+}
+
+.perk-name{
+    color: #A1CE22;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.content-list{
+    list-style-type: devanagari;
+    font-size: 1.2em;
+}
+
+.topics{
+    padding-bottom: 0.5em;
+}
+
+.topic-sublist{
+    padding-top: 0.5em;
+    list-style-type: inherit;
+}
+
+.subtopics{
+    padding-bottom: 0.2em;
+}
+
+.topics, .subtopics{
+    opacity: 0;
+}
+
+.topics.animated, .subtopics.animated{
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+    transition-delay: 0.3s;
+}
+
+.training-name, .training-action{
+    width: 100%;
+    text-align: center;
+    font-size: 1.2em;
+    color: white;
+    position: absolute;
+    z-index: 12;
+}
+
+.training-name{
+    top: 5%;
+    transform: rotate3d(1, 0, 0, -45deg);
+}
+
+.training-action{
+    top: 88%;
+    transform: rotate3d(1, 0, 0, 45deg);
+}
+
+.btn-action{
+    transition: background 0.2s ease-in-out, box-shadow 0.2s ease-out;
+}
+
+.btn-action:hover{
+    cursor: pointer;
+    background: white;
+    box-shadow: 0px 2px 2px 0px;
+    transition: background 0.2s ease-in-out, box-shadow 0.2s ease-out;
+}
+
+.training-btn{
+    box-shadow: 0px 2px 7px 0px;
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+    padding: 0.3em;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.card-body{
+    text-align: center;
+    padding: 1em;
+    margin-bottom: 5em;
+}
+
+.body-head{
+    margin-bottom: 1em;
+}
+
+.head-main{    
+    font-size: 2.3em;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.head-sec{
+    font-size: 1.3em;
+    opacity: 0.7;
+}

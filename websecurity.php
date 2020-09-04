@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styl.css">
     <link rel="stylesheet" href="./css/services.css">
-    <title>Social Engineering|XploitFree Services</title>
+    <title>Web Security|XploitFree Services</title>
 </head>
 
-<body class="se-section">
+<body class="ws-section">
     <?php include_once "shared/header.php" ?>
 
     <div class="service-section">
@@ -23,11 +23,10 @@
             <section class="section-sec">
                 <div class="section-what">
                     <div class="section-q">
-                        <p><span class="what">What is Social Engineering test ?</span></p>
+                        <p><span class="what">What is Web Application Security test ?</span></p>
                     </div>
                     <div class="section-a">
-                        <p>Social engineering attacks target the weakest link in an organization's security human
-                            beings.Users are commonly referred to as the “weakest link” when it comes to security but yet users still have more than the necessary permissions to perform their jobs.
+                        <p>Web Application Security Testing Service aims at identifying business logic and complex technical vulnerabilities in your web applications from a hacker’s point of view and providing you remediation guidelines to fix the identified issues.
                         </p>
                         <div>
                             <div class="flowchart"></div>
@@ -65,7 +64,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="service-btn bottom-btn">Do S.E.P Testing for me</button>
+                <button class="service-btn bottom-btn">Do  W.A.P.T for me</button>
             </section>
         </div>
     </div>
@@ -76,7 +75,7 @@
 <script src="./js/scroll.js"></script>
 <script src="./js/services.js"></script>
 <script>
-    document.documentElement.style.setProperty('--how-color', '#737373')
+    document.documentElement.style.setProperty('--how-color', '#BE531D')
 </script>
 
 </html>

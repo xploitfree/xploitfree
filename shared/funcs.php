@@ -17,8 +17,12 @@
                 return "Trainings";
             case "socialengg":
                 return "Social Engineering";
-            case "contactus":
-                return "Contact to connect";
+            case "redteaming":
+                return "Red Teaming";
+            case "websecurity":
+                return "Web Security";
+            case "networksecurity":
+                return "Network Security";
         }
     }
 ?>

@@ -12,7 +12,7 @@
 
     <div class="content">
         <div class="section">
-            <div class="sub-section1">
+            <section class="sub-section1">
                 <div class="section-head">
                     <h1 class="section-head-text">
                         Battle Harden your network with no threat to your data
@@ -28,11 +28,11 @@
                     discovered and exploited.
                     </p>
                 </div>
-            </div>
-            <div class="sub-section2">
+            </section>
+            <section class="sub-section2">
                 <div class="sec-row">
-                    <a href="/" class="card-link">
-                        <div class="card" aria-label="Red Teaming">
+                    <a href="redteaming" class="card-link">
+                        <div class="card left" aria-label="Red Teaming">
                             <img src="./images/red-teaming.jpg" alt="red teaming"></img>
                             <div class="card-name"><span class="card-btn">Red Teaming</span></div>
                             <div class="card-overlay">
@@ -58,8 +58,8 @@
                             <div class="card-action"><span class="card-btn btn-action">Audit Now</span></div>
                         </div>
                     </a>
-                    <a href="/" class="card-link">
-                        <div class="card">
+                    <a href="networksecurity" class="card-link">
+                        <div class="card right">
                             <img src="./images/network-security.jpg"></img>
                             <div class="card-name"><span class="card-btn">Network Security</span></div>
                             <div class="card-overlay">
@@ -90,8 +90,8 @@
                     <?php servicesvg(null, null) ?>
                 </div>
                 <div class="sec-row">
-                    <a href="/" class="card-link">
-                        <div class="card">
+                    <a href="websecurity" class="card-link">
+                        <div class="card left">
                             <img src="./images/web-security.jpg"></img>
                             <div class="card-name"><span class="card-btn">Web Security</span></div>
                             <div class="card-overlay">
@@ -118,7 +118,7 @@
                         </div>
                     </a>
                     <a href="socialengg" class="card-link">
-                        <div class="card">
+                        <div class="card right">
                             <img src="./images/social-engg.jpg"></img>
                             <div class="card-name"><span class="card-btn">Social Engineering</span></div>
                             <div class="card-overlay">
@@ -145,7 +145,7 @@
                         </div>
                     </a>
                 </div>
-            </div>
+            </section>
         </div>
     </div>
 
@@ -154,8 +154,9 @@
 
 <script src="./js/scroll.js"></script>
 <script>
-    createObserver(0.6, "sub-section1");
-    createObserver(0.6, "sub-section2");
+    createObserver(1, "section-head");
+    createObserver(1, "section-para");
+    createObserver(0.1, "card");
 </script>
 
 </html>

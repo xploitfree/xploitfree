@@ -1,6 +1,7 @@
 :root{
     font-family:'Roboto', sans-serif;
     box-sizing: border-box;
+    color: #2e2f3e;
 }
 
 html,body {
@@ -10,10 +11,13 @@ html,body {
 
 .content{
     display: flex;
-    flex-wrap: wrap;
     width: 90%;
     margin: 0 auto;
     padding: 1.5em 0 0 0;
+}
+
+.content-wrap{
+    flex-wrap: wrap;
 }
 
 .navheader, .navfooter{
@@ -81,8 +85,9 @@ p {
 
 .navitem:hover, .navitem:hover > svg, .navitem:hover span{
     z-index: 10;
+    color: #A1CE22;
     transform: scale(1.2);
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-out, color 0.2s ease-out;
 }
 
 .hero1 {
@@ -458,9 +463,9 @@ p {
     flex: 1;
 }
 
-.xinfo{
-    /* margin-left: 2.5em; */
-}
+/* .xinfo{
+    margin-left: 2.5em;
+} */
 
 .footlogo{
     animation: rotation 2s infinite;

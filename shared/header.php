@@ -3,7 +3,7 @@
     include_once './svgs.php'; 
 ?>
 <header class="navheader">
-    <div class="content">
+    <div class="content content-wrap">
         <div class="navlogo-section">
             <a class="navlink" href="home.php">
                 <div class="navlogo">
@@ -20,7 +20,7 @@
             <a class="navlink navitem" href="blog"><span class="menutext">Blog</span></a>
         </div>
     </div>
-    <div class="content">
+    <div class="content content-wrap">
         <div class="pagehead">
             <p class="headtext">
                 <?php 

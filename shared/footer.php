@@ -1,6 +1,6 @@
 <div class="picfoot"></div>
 <footer class="navfooter">
-    <div class="content">
+    <div class="content content-wrap">
 
         <div class="footcol ainfo">
             <div class="navlogo-section">

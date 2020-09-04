@@ -12,7 +12,7 @@
     
     <div class="content">
         <div class="section">
-            <div class="sub-section1">
+            <section class="sub-section1">
                 <div class="section-head">
                     <h1 class="section-head-text">
                         Battle Harden your network with no threat to your data
@@ -28,11 +28,11 @@
                     discovered and exploited.
                     </p>
                 </div>
-            </div>
-            <div class="sub-section2">
+            </section>
+            <section class="sub-section2">
                 <div class="sec-row">
-                    <a href="/" class="card-link">
-                        <div class="card">
+                    <a href="trainingtemplate" class="card-link">
+                        <div class="card left">
                             <img src="./images/web-training.jpg"></img>
                             <div class="card-name"><span class="card-btn">Secure Web Development</span></div>
                             <div class="card-overlay">
@@ -58,8 +58,8 @@
                             <div class="card-action"><span class="card-btn btn-action">Register Now</span></div>
                         </div>
                     </a>
-                    <a href="/" class="card-link">
-                        <div class="card">
+                    <a href="trainingtemplate" class="card-link">
+                        <div class="card right">
                             <img src="./images/android-training.jpg"></img>
                            <div class="card-name"><span class="card-btn">Secure Android Development</span></div>
                             <div class="card-overlay">
@@ -90,8 +90,8 @@
                     <?php trainingsvg(238, 148) ?>
                 </div>
                 <div class="sec-row">
-                    <a href="/" class="card-link">
-                        <div class="card">
+                    <a href="trainingtemplate" class="card-link">
+                        <div class="card left">
                             <img src="./images/hacking-training.jpg"></img>
                             <div class="card-name"><span class="card-btn">Ethical Hacking</span></div>
                             <div class="card-overlay">
@@ -121,7 +121,7 @@
                         
                     </a>
                 </div>
-            </div>
+            </section>
         </div>
     </div>
     <?php include_once "shared/footer.php" ?>
@@ -129,8 +129,9 @@
 
 <script src="./js/scroll.js"></script>
 <script>
-    createObserver(0.6, "sub-section1");
-    createObserver(0.6, "sub-section2");
+    createObserver(1, "section-head");
+    createObserver(1, "section-para");
+    createObserver(0.1, "card");
 </script>
 
 </html>

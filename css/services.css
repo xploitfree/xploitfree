@@ -1,10 +1,29 @@
-.se-section{
-    background: url('../images/ssimg.jpg');
+:root{
+    --how-color: #E31F23
+}
+
+.se-section, .rt-section, .ns-section, .ws-section{
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
     /* background-attachment: fixed; */
     color: white
+}
+
+.se-section{
+    background: url('../images/ssimg.jpg');
+}
+
+.rt-section{
+    background: url('../images/rtimg.jpg');
+}
+
+.ns-section{
+    background: url('../images/nsimg.jpg');
+}
+
+.ws-section{
+    background: url('../images/wsimg.jpg');
 }
 
 .section-main{
@@ -29,8 +48,8 @@
 .service-btn{  
     outline: none;
     padding: 0.5em;
-    background: #00AEEF;
-    border: 2px solid #00AEEF;
+    background: #A1CE22;
+    border: 2px solid #A1CE22;
     color: inherit;
     font-weight: 600;
     border-radius: 5px;
@@ -84,7 +103,7 @@
 
 .section-sec{
     text-align: center;
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
 }
 
@@ -124,7 +143,7 @@
 
 .how{
     display: inline-block;
-    color: #737373;
+    color: var(--how-color);
     background: white;
     padding: 0.4em 1em;
     transform: translateY(-50px);

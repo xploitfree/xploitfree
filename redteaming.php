@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styl.css">
     <link rel="stylesheet" href="./css/services.css">
-    <title>Social Engineering|XploitFree Services</title>
+    <title>Red Teaming|XploitFree Services</title>
 </head>
 
-<body class="se-section">
+<body class="rt-section">
     <?php include_once "shared/header.php" ?>
 
     <div class="service-section">
@@ -23,11 +23,10 @@
             <section class="section-sec">
                 <div class="section-what">
                     <div class="section-q">
-                        <p><span class="what">What is Social Engineering test ?</span></p>
+                        <p><span class="what">What is Red Teaming test ?</span></p>
                     </div>
                     <div class="section-a">
-                        <p>Social engineering attacks target the weakest link in an organization's security human
-                            beings.Users are commonly referred to as the “weakest link” when it comes to security but yet users still have more than the necessary permissions to perform their jobs.
+                        <p>Red Teaming is a full-scope, multi-layered cyber attack designed to measure how well a company’s people and networks, applications and physical security controls can withstand an attack from a real-life adversary. 
                         </p>
                         <div>
                             <div class="flowchart"></div>
@@ -65,7 +64,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="service-btn bottom-btn">Do S.E.P Testing for me</button>
+                <button class="service-btn bottom-btn">Do Red teming test for me </button>
             </section>
         </div>
     </div>
@@ -76,7 +75,7 @@
 <script src="./js/scroll.js"></script>
 <script src="./js/services.js"></script>
 <script>
-    document.documentElement.style.setProperty('--how-color', '#737373')
+    document.documentElement.style.setProperty('--how-color', '#E31F23')
 </script>
 
 </html>
