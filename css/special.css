@@ -1,0 +1,57 @@
+.steps-row{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-top: 2em;
+    align-items: baseline;
+}
+
+.step{
+    flex: 0 0 25%;
+}
+
+.step3{
+    margin-bottom: 2em;
+}
+
+.row-end{
+    justify-content: flex-end;
+}
+
+.column{
+    flex-direction: column;
+}
+
+.steps-row > svg{
+    width: 0;
+    animation: grow 0.5s ease-out forwards;
+}
+
+.section-how.animated .rarrow1, .section-how.animated .rarrow4{
+    width: 17em;
+    transition: width 0.5s ease-out, transform 0.9s ease-out;
+}
+
+.section-how.animated .rarrow3{
+    width: 15em;
+}
+
+.section-how.animated .rarrow2{
+    width: 16em;
+}
+
+.rarrow1{
+    transform: translate(0px, -3em);
+}
+
+.rarrow2{
+    transform: rotate(50deg) translate(0em, 6em);
+}
+
+.rarrow3{
+    transform: rotate(150deg) translate(-1em, 8em);
+}
+
+.rarrow4{
+    transform: translate(0px, -3em) rotate(180deg);
+}

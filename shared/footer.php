@@ -41,7 +41,7 @@
             <div class="contact">
                 <p class="footcolhead">Contact us</p>
                 <p class="footcolitem">
-                    <span class="footcolicon"><?php phnsvg(30, 30) ?></span>
+                    <span class="footcolicon"><?php phnsvg(30, 30, "white") ?></span>
                     <span class="footcoltext">(+91) 9900990099</span>
                 </p>
                 <a class="footcolitem navlink" href="mailto:xploitfreesecurity@gmail.com">

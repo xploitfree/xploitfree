@@ -6,7 +6,8 @@
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
             <link rel="stylesheet" href="./css/styl.css">
             <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
-
+            <!-- <link href="./styl.css" rel="stylesheet"> -->
+            <link rel="stylesheet" href="./css/styl.css">
 
         </head>
 <body>  
@@ -20,13 +21,13 @@
 <div class="row c2cdetail justify-content-between">
     <div class="col-7 d-flex flex-column align-items-start">
         <p class="forbusi">For queries:-</p>
-        <p class="fordata"><span style="padding-right: 2%;"><img src="./images/phnblack.png" alt=""></span>(+91) 8800880088</p>
-        <p class="fordata"><span style="padding-right: 2%;"><img src="./images/emailbl.png" alt=""></span>xploitfreesecurity@gmail.com</p>
+        <p class="fordata"><span style="padding-right: 2%;"><?php phnsvg(40, 40, "black") ?></span>(+91) 8800880088</p>
+        <p class="fordata"><span style="padding-right: 2%;"><?php mailsvg(40, 40, "black") ?></span>xploitfreesecurity@gmail.com</p>
     </div>
     <div class="col-5 d-flex flex-column align-items-start">
         <p class="forbusi">For Business:-</p>
-        <p class="fordata"><span style="padding-right: 1%;"><img src="./images/phnblack.png" alt=""></span>(+91) 8800880088</p>
-        <p class="fordata"><span style="padding-right: 2%;"><img src="./images/emailbl.png" alt=""></span>xploitfreesecurity@gmail.com</p>
+        <p class="fordata"><span style="padding-right: 1%;"><?php phnsvg(40, 40, "black") ?></span>(+91) 8800880088</p>
+        <p class="fordata"><span style="padding-right: 2%;"><?php mailsvg(40, 40, "black") ?></span>xploitfreesecurity@gmail.com</p>
     </div>
 </div>
 

@@ -2,14 +2,6 @@
     --how-color: #E31F23
 }
 
-.se-section, .rt-section, .ns-section, .ws-section{
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: cover;
-    /* background-attachment: fixed; */
-    color: white
-}
-
 .se-section{
     background: url('../images/ssimg.jpg');
 }
@@ -24,6 +16,14 @@
 
 .ws-section{
     background: url('../images/wsimg.jpg');
+}
+
+.se-section, .rt-section, .ns-section, .ws-section{
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    color: white
 }
 
 .section-main{
@@ -205,7 +205,7 @@
     opacity: 1;
     transform: translateY(0px);
     transition: opacity 1.2s ease-out, transform 1.5s ease-out;
-    transition-delay: 4s;
+    transition-delay: 4.5s;
 }
 
 .step svg{
@@ -229,6 +229,10 @@
     transition-delay: 3s;
 }
 
+.section-how.animated .steps .rarrow4{
+    transition-delay: 4.2s;
+}
+
 .section-how.animated .steps .step .sicon1{
     transition-delay: 0s;
 }
@@ -243,4 +247,8 @@
 
 .section-how.animated .steps .step .sicon4{
     transition-delay: 3.6s;
+}
+
+.section-how.animated .steps .step .sicon5{
+    transition-delay: 4.8s;
 }

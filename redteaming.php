@@ -44,19 +44,19 @@
                             <p class="step-title">Set Objective</p>
                             <p class="step-info">Our team will set objectives of attack by discussing with you</p>
                         </div>
-                        <?php rtarrowsvg("rarrow1") ?>
+                        <?php rtsmarrowsvg("rarrow1") ?>
                         <div class="step step2">
                             <?php rts2svg(100, 100, "sicon2") ?>
                             <p class="step-title">Gather information</p>
                             <p class="step-info">You will provide us with relevant information</p>
                         </div>
-                        <?php rtarrowsvg("rarrow2") ?>
+                        <?php rtsmarrowsvg("rarrow2") ?>
                         <div class="step step3">
                             <?php rts3svg(100, 100, "sicon3") ?>
                             <p class="step-title">Simulate attack</p>
                             <p class="step-info">Our team will simulate attack on your employees</p>
                         </div>
-                        <?php rtarrowsvg("rarrow3") ?>
+                        <?php rtsmarrowsvg("rarrow3") ?>
                         <div class="step step4">
                             <?php rts4svg(100, 100, "sicon4") ?>
                             <p class="step-title">Report Findings</p>

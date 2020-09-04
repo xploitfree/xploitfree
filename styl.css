@@ -1,0 +1,829 @@
+html,body {
+    height:100%;
+    background-color:#0e0d10 ;
+    margin:0;
+}
+
+.nav {
+    height:13%;
+    width: 100%;
+    margin:0;
+    background-color:#0e0d10;
+    color:white;
+    position: absolute;
+    z-index: 5;
+}
+
+.navlogo {
+    height:100%;
+    font-family:'Roboto', sans-serif;
+    font-weight:900;
+    font-size:26px;
+    letter-spacing: 5px;;
+}
+
+.row {
+    margin:0;
+}
+
+p {
+    margin: 0;
+}
+
+.navlink {
+    height:100%;
+    font-family: 'Roboto', sans-serif;
+    
+    font-weight:700;
+    
+}
+
+.navlinkp {
+    text-align:center;
+    letter-spacing: 1px;
+    color:white;
+    font-size: min(1.34vw,18px)
+}
+
+.hero1 {
+    height:max(109vmin,900px);
+    background-image: url("./images/Hacker_edited.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom:10%;
+    position: relative;
+}
+
+.secure {
+    height:100%;
+    
+}
+
+.audit{
+    position: absolute;
+    top:61%;
+    left:51%;
+
+}
+
+.herobtn {
+    
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    background-color:#0001;
+    border: 3px solid #1E8130;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding-left:40px;
+    padding-right:40px;
+    padding-top: 12px;
+    padding-bottom:12px;
+    color: white;
+}
+
+#securetext {
+    font-family: 'Open Sans Condensed', sans-serif;
+    position:absolute;
+    color:white;
+    top:20%;
+    left:12%;
+    font-size: min(10vw,96px)
+}
+
+.hero2 {
+    height:max(109vmin,900px);
+    background-image: url("./images/xyz.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.prevention {
+    position: absolute;
+    top:15%;
+    left:12%;
+}
+
+#preventiontext {
+    font-family: Open Sans Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: min(10vw,96px);
+    line-height: 116px;
+    color:whitesmoke;
+}
+
+.preventionsub {
+    font-family: Open Sans Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 170%;
+    margin-top:10%;
+    color:whitesmoke;
+}
+
+.hero3 {
+    height:max(109vmin,1300px);
+    background-image: url("./images/abot.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+.whowe {
+    position: absolute;
+    top: 15%;
+    left:12%;
+    
+}
+
+.whoweare {
+    width:100%;
+    font-family: Open Sans Condensed;
+    font-style: normal;
+    font-weight: 300;
+    font-size: min(10vw,96px);
+    color: #FEF1F1;
+
+}
+
+.whoweinfo {
+    position: absolute;
+    top:35%;
+    left:12%;
+    width:60%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+
+.whowebtn {
+    position: absolute;
+    top:60%;
+    left:55%;
+}
+
+.whowebttn {
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    background-color:#0001;
+    border: 3px solid #1E8130;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding-left:40px;
+    padding-right:40px;
+    padding-top: 12px;
+    padding-bottom:12px;
+    color: white;
+    height:100%;
+}
+
+.pichead {
+    height:10%;
+    background-image: url("./images/bg\ 2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.picfoot {
+    height:10%;
+    background-image: url("./images/bg\ 4.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.testimony {
+    height:100%;
+    background-color:#fff;
+    position: relative;
+}
+
+.testhead {
+    height:100%;
+    width:100%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 79px;
+    color: #000000;
+    top:5%;
+}
+
+
+
+.testimg{
+  height:15%;
+}
+
+.testname {
+    height:10%;
+    width:100%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    text-align: center;
+    color: #000000;
+}
+
+.testdata {
+    width:100%;
+    height:30%;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 300;
+    font-size: min(2.96vmin,30px);
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #0009;
+}
+
+.footer {
+    height:min(70vmin,480px);
+}
+
+.footcol {
+    height:70%;
+    padding:0;
+}
+
+.contact {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 40px;
+    margin-bottom:5%;
+    color:white;
+    
+}
+
+.number{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    padding-bottom: .5%;
+    color:white;
+    font-size: min(2vw,32px);
+    width:100%;
+}
+
+.email {
+    font-family: "Roboto";
+    width:100%;
+    margin-bottom:5%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: min(2vw,32px);
+    color:white;
+}
+
+.cformcol {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 28px;
+    color:white;
+}
+
+.joinimgs {
+    width:75%;
+}
+
+@media screen and (max-width:1450px){
+    .joinimgs {
+        width:100%;
+    }
+
+    .joinimg {
+        padding: 6px;
+    }
+
+    .socialimg {
+        height:100%;
+        width:100%;
+    }
+}
+
+.join {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 37px;
+    color:white;
+    margin-bottom:2%
+}
+
+
+
+.aboutxfhead {
+    padding-top: max(12.5vmax,170px);
+    margin-left:8.5%;
+}
+
+.aboutxfhead p {
+    background-color: #0e0d10;
+    width: 100%;
+    color:white;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: min(11.72vw,45px);
+    line-height: 70px;
+}
+
+.infosec {
+    height:min(117.1875vw,900px);
+    background-color:white ;
+    padding:10%;
+    padding-top:5%;
+    padding-bottom:0;
+    color:black;
+}
+
+.infosdata {
+    height:65%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: min(1.95vw,24px);
+    letter-spacing: 0.05em;
+}
+
+.infosimg {
+   height:60%;
+}
+
+.spartinfo {
+    height:35%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: min(1.95vw,24px);
+    letter-spacing: 0.05em;
+    padding:1%;
+    padding-top:0;
+    padding-bottom:0;
+    color: #000000;
+
+}
+
+.vulhead {
+    height:min(19vw,180px);
+    background-color: white;
+} 
+
+.vulhead div p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: min(5vw,64px);
+    line-height: 75px;
+    text-align: center;
+    color: #000000;
+}
+
+.vulnerability {
+    height:30%;
+    width:100%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 75px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.compgr {
+    height:min(17vw,180px);
+    background-color: white;
+}
+
+.companies {
+    height:min(117.1875vw,900px);
+    background-color: white;
+    padding-bottom:3%;
+}
+
+
+.compr {
+    height:29%;
+    margin-bottom:3%;
+}
+
+.compc {
+    height:100%;
+    padding:0;
+}
+
+.compimg {
+    height:100%;
+    width:100%;
+    
+}
+
+.c2ccont {
+    background-color:white;
+    height:min(117.1875vw,900px);
+}
+.c2cdetail {
+    height:30%;
+    margin-left:10%;
+    margin-right:5%;
+    padding-top:2%;
+}
+
+.forbusi {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+    color: #000000;
+    margin-bottom:2%;
+
+}
+
+.fordata {
+    width:100%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: min(2vw,32px);
+    line-height: 33px;
+    color: #000000;
+    margin:.5%;
+}
+
+
+.dropp {
+    height:20%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 45px;
+    color: #000000;
+}
+
+.cform {
+    height:57%;
+    margin-left:10%;
+    margin-right:10%;
+}
+
+.cformcol {
+
+    height:100%;
+
+}
+
+.cformcolimg {
+    height:100%;
+    background-image: url("./images/contact\ 1.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cforminp {
+    box-shadow: 3px 3px 3px  rgba(0,0,0,.5);
+    width:95%;
+    padding:3%;
+    height:15%;
+    border:2px solid #0005;
+    border-radius: 5px;
+    margin-bottom:10%;
+}
+
+.cformr2 {
+    height:9%;
+    margin-left:10%;
+    margin-right:10%;
+}
+
+.cforminp1 {
+    height:100%;
+    font-size: 25px;
+    border:2px solid #0005;
+    box-shadow: 3px 3px 3px  rgba(0,0,0,.5);
+    width:100%;
+    border-radius: 5px;
+    padding:2%;
+}
+
+.biginp {
+    height:min(117.1875vw,540px);
+    background-color:white;
+    padding-top:3%;
+}
+
+.biginpr {
+    margin-left:10%;
+    margin-right:10%;
+    height:80%;
+}
+
+.biginprb {
+    margin-left:10%;
+    margin-right:10%;
+    height:20%;
+}
+
+.biginpc {
+    height:100%;
+}
+
+.txtara {
+    height:90%;
+    width:100%;
+    border:2px solid #0005;
+    box-shadow: 3px 3px 3px  rgba(0,0,0,.5); 
+    border-radius: 5px;
+    padding:2%;
+    font-size: 25px;
+}
+
+.c2ccolb {
+    height:100%;
+}
+.c2csub {
+    height:65%;
+    width:100%;
+    padding:2%;
+    border: 5px solid #2761F7;
+    box-sizing: border-box;
+    background-color:white;
+    font-weight: 900;
+    font-size:22px;
+    border-radius: 5px;
+}
+
+.redback {
+    height:min(130.1875vw,3000px);
+    background-image: url('images/redteamingbg\ 1.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.recont {
+    height:100%;
+    position: relative;
+    margin-left:12%;
+    margin-right:12%;
+}
+
+.resometxt {
+    position: relative;
+    width:100%;
+    letter-spacing: 1px;
+    top: 7%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: min(3vw,40px);
+    color: #FFFFFF;
+    
+}
+
+.reregister {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: min(2vw,20px);
+    line-height: 42px;
+    width:25%;
+    color: #FFFCFC;
+    background-color: #0001;
+    border: 4px solid #00AEEF;
+    box-sizing: border-box;
+    border-radius: 15px;
+    position: absolute;
+    top:115%;
+    right:0;
+}
+
+.rewhatis {
+    position:absolute;
+    top:25%;
+    color:white;
+}
+
+.rewhatisinfo {
+    font-size: min(2vw,33px);
+    margin-top:2%;
+    letter-spacing: 1px;
+    margin-bottom:10%;
+    text-align:center;
+}
+
+.reexpose {
+    position: absolute;
+    height:20%;
+    width:100%;
+    top:41%;
+    background-image:url('./images/expose.svg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.redone {
+    position: absolute;
+    height:20%;
+    width:100%;
+    top:66%;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.redotstd {
+    position: absolute;
+    top:92%;
+    width:100%;
+    text-align: center;
+}
+
+.netdotstd {
+    position: absolute;
+    top:100%;
+    width:100%;
+    text-align: center;
+}
+
+.redotest {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 42px;
+    width:35%;
+    color: #FFFCFC;
+    background-color: #0001;
+    border: 4px solid #00AEEF;
+    box-sizing: border-box;
+    border-radius: 15px;
+    
+}
+
+.netback {
+    height:min(140.1875vw,3000px);
+    background-image: url('images/networkbg\ 1.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.netcont {
+    height:100%;
+    position: relative;
+    margin-left:12%;
+    margin-right:12%;
+}
+
+.netregister {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: min(2vw,20px);
+    line-height: 42px;
+    width:25%;
+    color: #FFFCFC;
+    background-color: #0001;
+    border: 4px solid #fff9;
+    box-sizing: border-box;
+    border-radius: 15px;
+    position: absolute;
+    top:115%;
+    right:0;
+}
+
+.netwhatis {
+    position:absolute;
+    top:25%;
+    color:white;
+}
+
+.netexpose {
+    position: absolute;
+    height:19%;
+    width:100%;
+    top:46%;
+    background-image: url('./images/diagram.svg');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.netdone {
+    position: absolute;
+    height:20%;
+    width:100%;
+    top:70%;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.rearr {
+    position: absolute;
+    left:20%;
+    width:min(7vw,115px);
+    top:51%;
+    animation: slide 10.5s infinite;
+    animation-fill-mode: backwards;
+    animation-delay: 1.5s;
+}
+.rearr1 {
+    position: absolute;
+    left:46%;
+    width:min(7vw,115px);
+    animation: slide 10.5s infinite;
+    animation-delay: 3.5s;
+    animation-fill-mode: both;
+    top:51%;
+}
+.rearr2 {
+    position: absolute;
+    left:71%;
+    top:51%;
+    width:min(7vw,115px);
+    animation: slide 10.5s infinite;
+    animation-delay: 5.5s;
+    animation-fill-mode: both;
+}
+
+.setobj {
+    animation: slide 10.5s infinite;
+    animation-fill-mode: both;
+   
+}
+
+.gather {
+    animation: slide 10.5s infinite;
+    animation-delay: 2.5s;
+    animation-fill-mode: both;
+}
+
+.simulate {
+    animation: slide 10.5s infinite;
+    animation-delay: 4.5s;
+    animation-fill-mode: both;
+}
+
+.report {
+    animation: slide 10.5s infinite;
+    animation-delay: 6.5s;
+    animation-fill-mode: both;
+}
+
+@keyframes slide {
+    0% {
+        transform: translate(-150px,0);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    14.28% {
+        transform: translate(0,0);
+        opacity: 100%;
+        
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

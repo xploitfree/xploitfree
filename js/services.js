@@ -1,6 +1,6 @@
 createObserver(1, "section-main");
 createObserver(1, "bottom-btn");
-createObserver(0.7, "section-how");
+createObserver(0.3, "section-how");
 createObserver(1, "section-what", showWhatFunc);
 
 var what = document.getElementsByClassName("what")[0];

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styl.css">
     <link rel="stylesheet" href="./css/services.css">
+    <link rel="stylesheet" href="./css/special.css">
     <title>Web Security|XploitFree Services</title>
 </head>
 
@@ -16,7 +17,8 @@
         <div class="content content-wrap">
             <section class="section-main">
                 <div class="service-head">
-                    <p>Worried choosing someone for phising vishing and Smishing? <br />Don’t you worry we handle them with utmost care.</br><em><b>OUR RENUNCIATION FOR YOUR SALVATION !</b></em></p>
+                    <p>Worried choosing someone for phising vishing and Smishing? <br />Don’t you worry we handle them
+                        with utmost care.</br><em><b>OUR RENUNCIATION FOR YOUR SALVATION !</b></em></p>
                 </div>
                 <button class="service-btn top-btn">Register Now</button>
             </section>
@@ -26,45 +28,63 @@
                         <p><span class="what">What is Web Application Security test ?</span></p>
                     </div>
                     <div class="section-a">
-                        <p>Web Application Security Testing Service aims at identifying business logic and complex technical vulnerabilities in your web applications from a hacker’s point of view and providing you remediation guidelines to fix the identified issues.
+                        <p>Web Application Security Testing Service aims at identifying business logic and complex
+                            technical vulnerabilities in your web applications from a hacker’s point of view and
+                            providing you remediation guidelines to fix the identified issues.
                         </p>
                         <div>
                             <div class="flowchart"></div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="section-how">
                     <div class="section-q">
                         <span class="how">How is it done ?</span>
                     </div>
-                    <div class="steps">
-                        <div class="step step1">
-                            <?php rts1svg(100, 100, "sicon1") ?>
-                            <p class="step-title">Set Objective</p>
-                            <p class="step-info">Our team will set objectives of attack by discussing with you</p>
+                    <div class="steps column">
+
+                        <div class="steps-row">
+                            <div class="step step1">
+                                <?php wss1svg(150, 150, "sicon1") ?>
+                                <p class="step-title">Application profiling and reconnassiance</p>
+                                <p class="step-info">Our team will set objectives and will reconnassiance</p>
+                            </div>
+                            <?php rtbgarrowsvg("rarrow1") ?>
+                            <div class="step step2">
+                                <?php wss2svg(150, 150, "sicon2") ?>
+                                <p class="step-title">Web-application mapping and test case generation</p>
+                                <p class="step-info">•We create an in-depth map of your web-aplcation, business logic and workflow for through manual assessment</p>
+                            </div>
+                            <?php rtbgarrowsvg("rarrow2") ?>
                         </div>
-                        <?php rtarrowsvg("rarrow1") ?>
-                        <div class="step step2">
-                            <?php rts2svg(100, 100, "sicon2") ?>
-                            <p class="step-title">Gather information</p>
-                            <p class="step-info">You will provide us with relevant information</p>
+
+                        <div class="steps-row row-end">
+                            <div class="step step3">
+                                <?php wss3svg(150, 150, "sicon3") ?>
+                                <p class="step-title">Vulneribility assessment and business logic testing</p>
+                                <p class="step-info">Our testing includes identifying both technical (OWASP Top 10, WASC 25) and business logic vulnerabilities through proprietary, open-source and commercial tools</p>
+                            </div>
                         </div>
-                        <?php rtarrowsvg("rarrow2") ?>
-                        <div class="step step3">
-                            <?php rts3svg(100, 100, "sicon3") ?>
-                            <p class="step-title">Simulate attack</p>
-                            <p class="step-info">Our team will simulate attack on your employees</p>
+                        
+                        <div class="steps-row">
+                            <div class="step step5">
+                                <?php wss5svg(150, 150, "sicon5") ?>
+                                <p class="step-title">Reporting</p>
+                                <p class="step-info">Our reports provide step-by-step POCs and detailed fix recommendations</p>
+                            </div>
+                            <?php rtbgarrowsvg("rarrow4") ?>
+                            <div class="step step4">
+                                <?php wss4svg(150, 150, "sicon4") ?>
+                                <p class="step-title">Exploitation</p>
+                                <p class="step-info">Our team will simulate exploitation to identify security vulnerabilities. Then we’ll analys the simulation</p>
+                            </div>
+                            <?php rtbgarrowsvg("rarrow3") ?>
                         </div>
-                        <?php rtarrowsvg("rarrow3") ?>
-                        <div class="step step4">
-                            <?php rts4svg(100, 100, "sicon4") ?>
-                            <p class="step-title">Report Findings</p>
-                            <p class="step-info">We will submit you detailed report of loopholes in your website</p>
-                        </div>
+
                     </div>
                 </div>
-                <button class="service-btn bottom-btn">Do  W.A.P.T for me</button>
+                <button class="service-btn bottom-btn">Do W.A.P.T for me</button>
             </section>
         </div>
     </div>

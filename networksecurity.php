@@ -44,19 +44,19 @@
                             <p class="step-title">Vulnerability identification</p>
                             <p class="step-info">Our team will perform automated vulnerability scanning to detect potential vulnerabilities.</p>
                         </div>
-                        <?php rtarrowsvg("rarrow1") ?>
+                        <?php rtsmarrowsvg("rarrow1") ?>
                         <div class="step step2">
                             <?php nss2svg(100, 100, "sicon2") ?>
                             <p class="step-title">Analysis & Exploitation</p>
                             <p class="step-info">Our team will simulate exploitation to identify security vulnerabilities. Then we’ll analys the simulation.</p>
                         </div>
-                        <?php rtarrowsvg("rarrow2") ?>
+                        <?php rtsmarrowsvg("rarrow2") ?>
                         <div class="step step3">
                             <?php nss3svg(100, 100, "sicon3") ?>
                             <p class="step-title">Risk Assesment</p>
                             <p class="step-info">We will then make assessment of identified vulnerabilities to determine the likelihood and impact on the organization.</p>
                         </div>
-                        <?php rtarrowsvg("rarrow3") ?>
+                        <?php rtsmarrowsvg("rarrow3") ?>
                         <div class="step step4">
                             <?php nss4svg(100, 100, "sicon4") ?>
                             <p class="step-title">Report Submission</p>
