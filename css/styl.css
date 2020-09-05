@@ -4,10 +4,25 @@
     color: #2e2f3e;
 }
 
-#preloader{
+#loader{
     display: flex;
     align-items: center;
     justify-content: center;
+    visibility: hidden;
+    animation: zoomout 0.5s ease-in;
+}
+
+.active{
+    visibility: visible;
+}
+
+@keyframes zoomout{
+    from{
+        transform: scaleX(1) scaleY(1);
+    }
+    to{
+        transform: scaleX(6) scaleY(10);
+    }
 }
 
 html,body {
@@ -171,8 +186,6 @@ p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
-    
 }
 
 .hero3box {
@@ -229,7 +242,6 @@ p {
 
 .picfoot {
     height:20vh;
-    width: 100vw;
     background-image: url("../images/foot.png");
     background-size: cover;
     background-position: center;
@@ -238,7 +250,6 @@ p {
 
 .pichead {
     height:20vh;
-    width: 100vw;
     background-image: url("../images/head.png");
     background-size: cover;
     background-position: center;

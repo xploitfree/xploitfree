@@ -1,3 +1,20 @@
+<?php
+
+    include_once "back/dbconn.php";
+
+    $db_connection = new Db_Connect();
+    $conn = $db_connection->get_connection();
+
+    $id = $_GET['id'];
+
+    $query = "select * from trainings where id = $id";
+
+    $data = $conn->query($query);
+
+    $training = $data->fetch_array(MYSQLI_ASSOC);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/styl.css">
     <link rel="stylesheet" href="./css/trainings.css">
-    <title>Training</title>
+    <title><?php echo $training['name'] ?></title>
 </head>
 
 <body>
@@ -16,8 +33,8 @@
         <div class="main-content">
 
             <section class="section-main">
-                <div class="training-head"><p>Secure Web Development</p></div>
-                <div class="training-info"><p>Today, anyone can build a website easily, but students or practitiones forget a major concern in the industry, i.e to make their website secure. Secure not in terms of validating data, but in the terms of cybersecurity.Yes, have you ever heard about OWASP's Top 10 vulnerablities, go and search for it. You will come to know how the websites get attacted by hackers to steal your confidential data and harm your digital presence.Dont worry, we've got your back. Attend the workshop and get to know how to build a secured website, deploy it on server, attack and prevent your website.</p></div>
+                <div class="training-head"><p><?php echo $training['name'] ?></p></div>
+                <div class="training-info"><p><?php echo $training['description'] ?></p></div>
             </section>
 
             <section class="section-sec">
@@ -45,57 +62,30 @@
                 <div class="training-content">
                     <h2 class="content-head">Contents of training</h2>
                     <ul class="content-list">
-                        <li class="topics">HTML5
-                            <ul class="topic-sublist">
-                                <li class="subtopics">Dive into HTML5</li>
-                                <li class="subtopics">Introduction</li>
-                                <li class="subtopics">HTML5 Elements</li>
-                                <li class="subtopics">Headings</li>
-                                <li class="subtopics">Paragraphs</li>
-                                <li class="subtopics">Links</li>
-                                <li class="subtopics">Images</li>
-                                <li class="subtopics">Tables</li>
-                                <li class="subtopics">List</li>
-                                <li class="subtopics">Forms</li>
-                            </ul>
-                        </li>
-                        <li class="topics">CSS3
-                            <ul class="topic-sublist">
-                                <li class="subtopics">Dive into CSS3</li>
-                                <li class="subtopics">Introduction</li>
-                                <li class="subtopics">CSS Components</li>
-                                <li class="subtopics">CSS Classes</li>
-                            </ul>
-                        </li>
-                        <li class="topics">Javascript
-                            <ul class="topic-sublist">
-                                <li class="subtopics">Introduction</li>
-                                <li class="subtopics">Variables</li>
-                                <li class="subtopics">Functions</li>
-                                <li class="subtopics">JS Form Validation</li>
-                                <li class="subtopics">Cookies</li>
-                                <li class="subtopics">Local Storage</li>
-                            </ul>
-                        </li>
-                        <li class="topics">PHP
-                            <ul class="topic-sublist">
-                                <li class="subtopics">Get Post methods</li>
-                                <li class="subtopics">PHP Super Global variables</li>
-                                <li class="subtopics">PHP OOP</li>
-                                <li class="subtopics">Ways of XSS attacks and Preventions</li>
-                                <li class="subtopics">CSRF attack and Preventions</li>
-                                <li class="subtopics">SQL Injection and Preventions</li>
-                                <li class="subtopics">PHP filters</li>
-                                <li class="subtopics">PHP form Handling</li>
-                                <li class="subtopics">PHP form Filtering</li>
-                                <li class="subtopics">Working with database</li>
-                                <li class="subtopics">PHP URL Validation</li>
-                                <li class="subtopics">Http and Https (SSL certificate)</li>
-                                <li class="subtopics">Session</li>
-                                <li class="subtopics">Data encryption and decryption</li>
-                                <li class="subtopics">Deployment of website</li>
-                            </ul>
-                        </li>
+                        <?php
+                            $head_query = "select * from content_heads where training_id ='".$training["id"]."'";
+
+                            $head_data = $conn->query($head_query);
+
+                            while($head = $head_data->fetch_array(MYSQLI_ASSOC)){
+                        ?>
+                            <li class="topics"><?php echo $head['head_name'] ?>
+
+                                <ul class="topic-sublist">
+                                    <?php
+                                        $content_query = "select * from content where head_id ='".$head["id"]."'";
+
+                                        $content_data = $conn->query($content_query);
+
+                                        while($content = $content_data->fetch_array(MYSQLI_ASSOC)){
+                                    ?>
+                                        <li class="subtopics"><?php echo $content['content_name'] ?></li>
+                                    <?php } ?>
+                                </ul>
+
+                            </li>
+
+                        <?php } ?>
                     </ul>
                 </div>
 
@@ -104,10 +94,10 @@
         </div>
 
         <div class="training-card">
-            <img src="./images/web-training.jpg"></img>
-            <div class="training-name"><span class="training-btn">Secure Web Development</span></div>
+            <img src=<?php echo $training['img_url'] ?>></img>
+            <div class="training-name"><span class="training-btn"><?php echo $training['name'] ?></span></div>
             <div class="card-body">
-                <p class="body-head"><strike class="head-sec">&#8377;800</strike><span class="head-main">&#8377;500/--</span></p>
+                <p class="body-head"><strike class="head-sec">&#8377;<?php echo $training['cp'] ?></strike><span class="head-main">&#8377;<?php echo $training['sp'] ?>/--</span></p>
                 <p class="body-para">Starts from 10th September to 15th September</p>
                 <p class="body-para">2hrs/Day</p>
             </div>
