@@ -4,8 +4,14 @@
     color: #2e2f3e;
 }
 
+#preloader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 html,body {
-    height:100%;
+    overflow-x: hidden;
     margin:0;
 }
 
@@ -64,7 +70,7 @@ p {
 
 .navlink:hover{
     transition: color 0.2s ease-in-out;
-    color: white;
+    color: #A1CE22;
     text-decoration: none;
 }
 
@@ -222,7 +228,8 @@ p {
 }
 
 .picfoot {
-    height:20%;
+    height:20vh;
+    width: 100vw;
     background-image: url("../images/foot.png");
     background-size: cover;
     background-position: center;
@@ -230,7 +237,8 @@ p {
 }
 
 .pichead {
-    height:20%;
+    height:20vh;
+    width: 100vw;
     background-image: url("../images/head.png");
     background-size: cover;
     background-position: center;

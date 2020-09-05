@@ -9,6 +9,7 @@
 </head>
 <body>
     <?php include_once "shared/header.php" ?>
+    <?php include_once "shared/preloader.php" ?>
 
     <div class="content">
         <div class="section">
@@ -153,6 +154,7 @@
 </body>
 
 <script src="./js/scroll.js"></script>
+<script src="./js/preloader.js"></script>
 <script>
     createObserver(1, "section-head");
     createObserver(1, "section-para");
