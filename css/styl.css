@@ -4,30 +4,56 @@
     color: #2e2f3e;
 }
 
-#loader{
+html,body {
+    margin:0;
+}
+
+.loading{
+    visibility: hidden;
+    opacity: 0;
+}
+
+.loaded{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+    transition-delay: 0.2s;
+}
+
+#preloader{
     display: flex;
     align-items: center;
     justify-content: center;
-    visibility: hidden;
-    animation: zoomout 0.5s ease-in;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
 }
 
 .active{
+    opacity: 1;
     visibility: visible;
 }
 
-@keyframes zoomout{
-    from{
-        transform: scaleX(1) scaleY(1);
-    }
-    to{
-        transform: scaleX(6) scaleY(10);
-    }
+.inactivated{
+    animation: zoomout 0.7s ease-out forwards;
 }
 
-html,body {
-    overflow-x: hidden;
-    margin:0;
+@keyframes zoomout{
+    0%{
+        transform: scale(1);
+        display: block;
+    }
+    99.9%{
+        transform: scale(15);
+        display: none;
+        visibility: hidden;
+    }
+    100%{
+        transform: scale(1);
+        display: none;
+        visibility: hidden;
+    }
 }
 
 .content{

@@ -18,8 +18,6 @@
 
 <!-- main -->
 
-<div class="pichead"></div>
-
 <!-- info section -->
 
 <div class="row infosec">
@@ -95,8 +93,6 @@
     </div>
     </div>
 </div>
-
-<div class="picfoot"></div>
 
 <?php
     include 'shared/footer.php';

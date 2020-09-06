@@ -1,6 +1,6 @@
 <?php
     include_once "funcs.php";
-    include_once './svgs.php'; 
+    include_once './shared/svgs.php'; 
 ?>
 <header class="navheader">
     <div class="content content-wrap">

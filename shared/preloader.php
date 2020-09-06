@@ -1,3 +1,3 @@
-<div id="loader">
-    <?php monitorsvg(300, 300, "preloader") ?>
+<div id="preloader">
+    <?php monitorsvg(300, 300, "loader") ?>
 </div>
