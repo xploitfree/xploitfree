@@ -84,7 +84,9 @@
                                         <?php } ?>
                                     </ul>
                                 </div>
-                                <div class="card-action"><span class="card-btn btn-action">Register Now</span></div>
+                                <div class="card-action">
+                                    <span class="card-btn btn-action" onclick="btnClickHandler(this)">Register Now</span>
+                                </div>
                             </div>
                         </a>
 
@@ -113,12 +115,16 @@
         </div>
 
         <?php include_once "shared/footer.php" ?>
+        <?php include_once "shared/register.php"; ?>
+
     </div>
+
     <?php include_once "shared/preloader.php" ?>
 
 </body>
 <script src="./js/scroll.js"></script>
 <script src="./js/preloader.js"></script>
+<script src="./js/modal.js"></script>
 <script>
     createObserver(1, "section-head");
     createObserver(1, "section-para");

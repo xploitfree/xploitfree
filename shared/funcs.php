@@ -2,7 +2,7 @@
     
     $current_page = explode('.', array_slice(explode('/', $_SERVER['REQUEST_URI']), -1)[0])[0];
     
-    function give_heading(){
+    function get_heading(){
         
         global $current_page;
         

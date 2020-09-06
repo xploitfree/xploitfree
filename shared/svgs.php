@@ -781,4 +781,12 @@
         ";
     }
 
+    function xsvg($width, $height, $class=""){
+        echo "<svg class=$class width=$width height=$height viewBox='0 0 80 78' fill='none'>
+        <path d='M60 19.5L20 58.5' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/>
+        <path d='M20 19.5L60 58.5' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/>
+        </svg>
+        ";
+    }
+
 ?>

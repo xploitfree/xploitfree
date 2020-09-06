@@ -107,18 +107,22 @@
                     <p class="body-para">Starts from 10th September to 15th September</p>
                     <p class="body-para">2hrs/Day</p>
                 </div>
-                <div class="training-action"><span class="training-btn btn-action">Register Here</span></div>
+                <div class="training-action"><span class="training-btn btn-action" onclick="btnClickHandler(this)">Register Here</span></div>
             </div>
 
         </div>
 
         <?php include_once "shared/footer.php" ?>
+        <?php include_once "shared/register.php"; ?>
+
     </div>
+    
     <?php include_once "shared/preloader.php" ?>
 </body>
 
 <script src="./js/scroll.js"></script>
 <script src="./js/preloader.js"></script>
+<script src="./js/modal.js"></script>
 <script>
     createObserver(1, "section-main");
     createObserver(0.3, "training-card");

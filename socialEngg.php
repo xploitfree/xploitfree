@@ -20,7 +20,7 @@
                         <p>Worried choosing someone for phising vishing and Smishing? <br />Don’t you worry we handle
                             them with utmost care.</br><em><b>OUR RENUNCIATION FOR YOUR SALVATION !</b></em></p>
                     </div>
-                    <button class="service-btn top-btn">Register Now</button>
+                    <button class="service-btn top-btn" onclick="btnClickHandler(this)">Register Now</button>
                 </section>
                 <section class="section-sec">
                     <div class="section-what">
@@ -68,12 +68,13 @@
                             </div>
                         </div>
                     </div>
-                    <button class="service-btn bottom-btn">Do S.E.P Testing for me</button>
+                    <button class="service-btn bottom-btn" onclick="btnClickHandler(this)">Do S.E.P Testing for me</button>
                 </section>
             </div>
         </div>
 
         <?php include_once "shared/footer.php" ?>
+        <?php include_once "shared/register.php"; ?>
     </div>
     <?php include_once "shared/preloader.php" ?>
 </body>
@@ -81,6 +82,7 @@
 <script src="./js/scroll.js"></script>
 <script src="./js/preloader.js"></script>
 <script src="./js/services.js"></script>
+<script src="./js/modal.js"></script>
 <script>
     document.documentElement.style.setProperty('--how-color', '#737373')
 </script>

@@ -24,7 +24,7 @@
         <div class="pagehead">
             <p class="headtext">
                 <?php 
-                        echo give_heading();
+                        echo get_heading();
                 ?>
             </p>
         </div>
