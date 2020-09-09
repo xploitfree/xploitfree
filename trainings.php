@@ -85,7 +85,7 @@
                                     </ul>
                                 </div>
                                 <div class="card-action">
-                                    <span class="card-btn btn-action" onclick="btnClickHandler(this)">Register Now</span>
+                                    <span class="card-btn btn-action" onclick="btnClickHandler(this, event)" title="Register Now">Register Now</span>
                                 </div>
                             </div>
                         </a>

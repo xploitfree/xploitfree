@@ -1,5 +1,6 @@
 :root{
     box-sizing: border-box;
+    font-size: 16px;
 }
 .section{
     display: flex;
@@ -7,7 +8,7 @@
 }
 
 .sub-section2{
-    margin: 3em auto;
+    margin: 3rem auto;
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -24,7 +25,7 @@
 
 .card-link{
     text-decoration: none;
-    margin: 2em;
+    margin: 2rem;
     flex: 1;
     flex-basis: 42%;
 }
@@ -107,7 +108,7 @@
 .card-name, .card-action{
     width: 100%;
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: white;
     position: absolute;
     z-index: 12;
@@ -144,7 +145,7 @@
     opacity: 0;
     transform: translateY(-50px);
     text-align: center;
-    padding: 0 0.5em 1em 0.5em;
+    padding: 0 0.5rem 1rem 0.5rem;
 }
 
 .section-head.animated{
@@ -155,13 +156,13 @@
 
 .section-head-text{
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2.5rem;
 }
 
 .section-para{
     opacity: 0;
     transform: translateY(50px);
-    padding: 0 0.5em;
+    padding: 0 0.5rem;
     text-align: center;
 }
 
@@ -172,14 +173,14 @@
 }
 
 .section-para-text{
-    font-size: 1.4em;
+    font-size: 1.4rem;
 }
 
 .card-btn{
     box-shadow: 0px 2px 7px 0px;
     background: rgba(255, 255, 255, 0.8);
     color: black;
-    padding: 0.3em;
+    padding: 0.3rem;
     border-radius: 5px;
     font-weight: 600;
 }
@@ -208,11 +209,11 @@
 }
 
 .item-text{
-    font-size: 1.2em;
-    letter-spacing: 0.03em;
+    font-size: 1.2rem;
+    letter-spacing: 0.03rem;
 }
 
 .list-item{
     display: flex;
-    margin: 0.3em;
+    margin: 0.3rem;
 }

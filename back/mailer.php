@@ -31,8 +31,6 @@
         {
            echo $e->errorMessage();
         }
-    }
-
-    send_mail();
+    };
 
 ?>

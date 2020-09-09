@@ -1,5 +1,6 @@
 :root{
-    --how-color: #E31F23
+    --how-color: #E31F23;
+    font-size: 16px;
 }
 
 .se-section{
@@ -36,7 +37,7 @@
     opacity: 0;
     transform: translateX(-50px);
     line-height: 1.5;
-    font-size: 2.3em;
+    font-size: 2.3rem;
 }
 
 .section-main.animated .service-head{
@@ -47,13 +48,13 @@
 
 .service-btn{  
     outline: none;
-    padding: 0.5em;
+    padding: 0.5rem;
     background: #A1CE22;
     border: 2px solid #A1CE22;
     color: inherit;
     font-weight: 600;
     border-radius: 5px;
-    font-size: 1.05em;
+    font-size: 1.05rem;
     transition: box-shadow 0.3s ease-in;
 }
 
@@ -65,15 +66,15 @@
 .top-btn{
     opacity: 0;
     transform: translateX(50px);
-    font-size: 1.3em;
-    margin-top: 1em;
-    box-shadow: 0px 0px 8px 2px #343434;
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    box-shadow: 0px 3px 3px 0px black;
     float: right;
     transition: box-shadow 0.15s ease-out;
 }
 
 .top-btn:hover{
-    box-shadow: 0px 0px 5px 1px #343434;
+    box-shadow: 0px 1px 1px 0px black;
 }
 
 .section-main.animated .top-btn{
@@ -85,14 +86,14 @@
 .bottom-btn{
     opacity: 0;
     transform: translateY(30px);
-    font-size: 1.2em;
-    box-shadow: 0px 0px 8px 3px #494848;
-    margin: 5em 0;
+    font-size: 1.2rem;
+    box-shadow: 0px 3px 3px 0px black;
+    margin: 5rem 0;
     transition: box-shadow 0.15s ease-out;
 }
 
 .bottom-btn:hover{
-    box-shadow: 0px 0px 3px 1px #494848;
+    box-shadow: 0px 1px 1px 0px black;;
 }
 
 .bottom-btn.animated{
@@ -108,18 +109,18 @@
 }
 
 .section-what{
-    margin: 5em 0;
+    margin: 5rem 0;
 }
 
 .section-q{
-    font-size: 2em;
-    margin-bottom: 1em;
+    font-size: 2rem;
+    margin-bottom: 1rem;
     font-weight: 600;
     letter-spacing: 1px;
 }
 
 .section-a{
-    font-size: 1.3em;
+    font-size: 1.3rem;
     letter-spacing: 1px;
     opacity: 0;
     transform: translateY(50px);
@@ -145,7 +146,7 @@
     display: inline-block;
     color: var(--how-color);
     background: white;
-    padding: 0.4em 1em;
+    padding: 0.4rem 1rem;
     transform: translateY(-50px);
     opacity: 0;
     border-radius: 40px;
@@ -159,7 +160,7 @@
 
 .steps{
     display: flex;
-    margin-top: 5em;
+    margin-top: 5rem;
     justify-content: center;
     align-items: baseline;
     flex-wrap: nowrap;
@@ -174,25 +175,25 @@
 }
 
 .step-title{
-    margin-top: 0.5em;
-    font-size: 1.5em;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
 }
 
 .step-info{
-    margin-top: 0.5em;
-    font-size: 1em;
+    margin-top: 0.5rem;
+    font-size: 1rem;
 }
 
 .steps > svg{
-    height: 2em;
+    height: 2rem;
     width: 0;
-    transform: translate(-20px, -2em);
+    transform: translate(-20px, -2rem);
     animation: grow 0.5s ease-out forwards;
 }
 
 .section-how.animated .steps > svg{
-    transform: translate(0px, -2em);
-    width: 5em;
+    transform: translate(0px, -2rem);
+    width: 5rem;
     transition: width 0.5s ease-out, transform 0.9s ease-out;
 }
 

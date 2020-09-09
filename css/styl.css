@@ -2,6 +2,7 @@
     font-family:'Roboto', sans-serif;
     box-sizing: border-box;
     color: #2e2f3e;
+    font-size: 16px;
 }
 
 html,body {
@@ -60,7 +61,7 @@ html,body {
     display: flex;
     width: 90%;
     margin: 0 auto;
-    padding: 1.5em 0 0 0;
+    padding: 1.5rem 0 0 0;
 }
 
 .content-wrap{
@@ -89,7 +90,7 @@ html,body {
 }
 
 .navmenu{
-    padding: 2em 0;
+    padding: 2rem 0;
     display: flex;
     flex: 60%;
     justify-content: space-between;
@@ -116,7 +117,7 @@ p {
 }
 
 .menutext{
-    font-size:1em;
+    font-size:1rem;
     font-weight:700;
     letter-spacing: 2px;
 }
@@ -127,7 +128,7 @@ p {
 }
 
 .navitem .menutext{
-    margin: 0 0.5em;
+    margin: 0 0.5rem;
 }
 
 .navitem:hover, .navitem:hover > svg, .navitem:hover span{
@@ -321,7 +322,7 @@ p {
     font-size: 30px;
     line-height: 135%;
     text-align: center;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.02rem;
     color: #0009;
 }
 
@@ -332,19 +333,19 @@ p {
 }
 
 .footcol {
-    padding: 1em 0.4em;
+    padding: 1rem 0.4rem;
     flex: 20%;
 }
 
 .footcolhead {
     font-weight: bold;
-    font-size: 1.8em;
-    margin-bottom: 0.7em;
+    font-size: 1.8rem;
+    margin-bottom: 0.7rem;
     color:white;
 }
 
 .contact, .socialmedia{
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
 }
 
 .number{
@@ -369,7 +370,7 @@ p {
     color:white;
     font-weight: 600;
     font-size: 2rem;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.05rem;
 }
 
 .infosec {
@@ -387,13 +388,13 @@ p {
     font-style: normal;
     font-weight: 900;
     font-size: 1.5rem;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.05rem;
 }
 
 .brandname{
-    margin-left: 0.3em;
+    margin-left: 0.3rem;
     color: white;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.1rem;
 }
 
 .infosimg {
@@ -406,7 +407,7 @@ p {
     font-style: normal;
     font-weight: 900;
     font-size: 1.5rem;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.05rem;
     padding:1%;
     padding-top:0;
     padding-bottom:0;
@@ -470,22 +471,22 @@ p {
 }
 
 .pagehead{
-    margin-left: 1em;
+    margin-left: 1rem;
 }
 
 .footcoltext{
-    font-size: 1.25em;
+    font-size: 1.25rem;
 }
 
 .footcolitem{
     display: flex;
     white-space: nowrap;
-    margin: 0.5em 0;
+    margin: 0.5rem 0;
 }
 
 .footcolicon{
     position: relative;
-    margin-right: 0.5em;
+    margin-right: 0.5rem;
 }
 
 .footcollist{
@@ -509,7 +510,7 @@ p {
 }
 
 /* .xinfo{
-    margin-left: 2.5em;
+    margin-left: 2.5rem;
 } */
 
 .footlogo{
@@ -560,11 +561,15 @@ p {
     flex-direction: column;
 }
 
+.modal-body{
+    position: relative;
+}
+
 .modal-head{
-    padding: 0.5em;
+    padding: 0.5rem;
     background: #a1ce22;
     color: white;    
-    box-shadow: 0px 0px 5px 0px;
+    box-shadow: 0px 0px 5px 0px black;
     font-weight: 500;
     display: flex;
     align-items: center;
@@ -572,9 +577,18 @@ p {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.modal-name{
+.modal-heading{
     flex: 8;
     text-align: center;
+    padding: 0.3rem;
+}
+
+.heading{
+    font-size: 1.5rem;
+}
+
+.subheading{
+    padding-top: 0.2rem;
 }
 
 .modal-close{
@@ -596,25 +610,26 @@ p {
 }
 
 .modal-form{
-    padding: 1em;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
 }
 
 .form-field{
+    color: #2e2f3e;
     flex: 1;
     width: 100%;
-    margin-bottom: 0.7em;
+    margin-bottom: 0.7rem;
 }
 
 .form-label{
     display: block;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.5rem;
 }
 
 .form-input, .form-select{
     display: block;
-    padding: 0.7em 0.5em;
+    padding: 0.7rem 0.5rem;
 }
 
 .form-input{
@@ -625,12 +640,22 @@ p {
     width: 100%;
 }
 
+.form-msg{
+    color: #e90000;
+    margin-bottom: 1rem;
+    padding: 1rem 0;
+    font-weight: 600;
+    border-radius: 5px;
+    display: none;
+}
+
 .form-input:focus, .form-select:focus{
     outline: 1px solid rgb(4, 176, 255);
 }
 
 .form-btn{
-    margin: 1em 0.2em 0 0;
+    margin: 1rem 0.2rem 0 0;
+    box-shadow: 0px 2px 3px 0px black;
     width: 20%;
     padding: 10px;
     border: none;
@@ -639,14 +664,15 @@ p {
     background: #a1ce22cf;
     outline: none;
     float: right;
-    font-size: 1.1em;
-    transition: background 0.1s ease;
+    font-size: 1.1rem;
+    transition: background 0.1s ease, box-shadow 0.1s ease;
 }
 
 .form-btn:hover{
     cursor: pointer;
     background: #a1ce22;
-    transition: background 0.1s ease;
+    box-shadow: 0px 0px 1px 0px black;
+    transition: background 0.1s ease, box-shadow 0.1s ease;
 }
 
 .modal-active{
@@ -656,4 +682,35 @@ p {
 .modal-inactive{
     opacity: 0;
     display: none;
+}
+
+.invalid{
+    outline: 1px solid red;
+}
+
+.submit-msg{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateX(40rem);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.slide-out{
+    transform: translateX(-40rem);
+    opacity: 0;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.slide-in{
+    transform: translateX(0rem);
+    visibility: visible;
+    opacity: 1;
+    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 }

@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
-    margin-top: 2em;
+    margin-top: 2rem;
     align-items: baseline;
 }
 
@@ -11,7 +11,7 @@
 }
 
 .step3{
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
 }
 
 .row-end{
@@ -28,30 +28,30 @@
 }
 
 .section-how.animated .rarrow1, .section-how.animated .rarrow4{
-    width: 17em;
+    width: 17rem;
     transition: width 0.5s ease-out, transform 0.9s ease-out;
 }
 
 .section-how.animated .rarrow3{
-    width: 15em;
+    width: 15rem;
 }
 
 .section-how.animated .rarrow2{
-    width: 16em;
+    width: 16rem;
 }
 
 .rarrow1{
-    transform: translate(0px, -3em);
+    transform: translate(0px, -3rem);
 }
 
 .rarrow2{
-    transform: rotate(50deg) translate(0em, 6em);
+    transform: rotate(50deg) translate(0rem, 6rem);
 }
 
 .rarrow3{
-    transform: rotate(150deg) translate(-1em, 8em);
+    transform: rotate(150deg) translate(-1rem, 8rem);
 }
 
 .rarrow4{
-    transform: translate(0px, -3em) rotate(180deg);
+    transform: translate(0px, -3rem) rotate(180deg);
 }

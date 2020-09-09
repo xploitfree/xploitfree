@@ -19,8 +19,7 @@
             <div class="content content-wrap">
                 <section class="section-main">
                     <div class="service-head">
-                        <p>Worried choosing someone for phising vishing and Smishing? <br />Don’t you worry we handle
-                            them with utmost care.</br><em><b>OUR RENUNCIATION FOR YOUR SALVATION !</b></em></p>
+                        <p>Take our word next time someone tries to breach you, <br />you will leave the attacker in APATHY and DESPAIR!</p>
                     </div>
                     <button class="service-btn top-btn" onclick="btnClickHandler(this)">Register Now</button>
                 </section>
