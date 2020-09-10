@@ -1,3 +1,7 @@
+:root{
+    font-size: 16px;
+}
+
 .c2ccont {
     background-color:white;
     height:min(117.1875vw,700px);
@@ -56,7 +60,6 @@
 }
 
 .cformcolimg {
-    height:100%;
     background-image: url("../images/contact.png");
     background-size: contain;
     background-position: center;
@@ -128,6 +131,7 @@
 }
 
 .txtara {
+    resize: none;
     height:90%;
     width:100%;
     border:2px solid #0005;
