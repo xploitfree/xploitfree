@@ -1,63 +1,72 @@
 <?php
-    $response = array();
-    $name = "";
-    $_message = "";
-    $_email = "";
-    $sub = "";
-    $phone = "";
     $con = mysqli_connect("localhost","root","","xploitfree") or die(mysqli_error($con));
+    $response = array();
+    $body= file_get_contents('php://input');
+    $string=json_decode($body);
+    $name = $string->name;
+    $message = $string->message;
+    $email = $string->email;
+    $sub = $string->sub;
+    $phone = $string->phone;
     //check when submitted
-    if(isset ($_POST['submit'])){
-        if ($_POST['name'] != "") {
-            $_POST['name'] = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-            if ($_POST['name'] == "") {
-                echo 'Please enter a valid name.<br/><br/>';
-            }else {
-                $name = $_POST['name'];
+    if($name!="" && $message!="" && $email!="" && $sub!="" && $phone!=""){
+        if ($name != "") {
+            $name = filter_var($message, FILTER_SANITIZE_STRING);
+            if ($name == "") {
+                $response['name'] = "Invalid Name";
+                echo json_encode($response);
             }
         } else{
-            echo  'Please enter your name.<br/>';
+            $response['name'] = "Invalid Name";
+                echo json_encode($response);
         }
          //message
-        if ($_POST['message'] != "") {
-            $_POST['message'] = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
-            if ($_POST['message'] == "") {
-                echo 'Please enter a message to send.<br/>';
-            }else{
-                $message = $_POST['message'];
+        if ($message != "") {
+            $message = filter_var($message, FILTER_SANITIZE_STRING);
+            if ($message == "") {
+                $response['message'] = "Invalid message";
+                echo json_encode($response);
             }
         } else {
-            echo 'Please enter a message to send.<br/>';
+            $response['message'] = "Invalid message";
+                echo json_encode($response);
         }
         //email
-        if ($_POST['email'] != "") {
-            $_POST['email'] = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-            if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-                echo "$email is <strong>NOT</strong> a valid email address.<br/><br/>";
-            }else {
-                $email = $_POST['email'];
+        if ($email != "") {
+            $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $response = "$email is <strong>NOT</strong> a valid email address.<br/><br/>";
+                echo json_encode($response);
             }
         } else {
-            echo 'Please enter your email address.<br/>';
+            $response = "$email is <strong>NOT</strong> a valid email address.<br/><br/>";
+            echo json_encode($response);
         }
         //phone
-        if($_POST['phone'] != ""){
-            $_POST['phone'] = (int)$_POST['phone'];
-            if (!filter_var($_POST['phone'], FILTER_SANITIZE_NUMBER_INT)) {
-                echo "Number is <strong>NOT</strong> valid.<br/><br/>";
+        if($phone != ""){
+            $phone = (int)$phone;
+            $phone = filter_var($phone, FILTER_SANITIZE_NUMBER_INT);
+            if (strlen($phone > 10)) {
+                $response = "$phone is <strong>NOT</strong> valid.<br/><br/>";
+                echo json_encode($response);
             }else {
-                $phone = (string)$_POST['phone'];
+                $phone = (string)$phone;
             }
         }else {
-            echo 'Please enter your Number.<br/>';
+            $response = 'Please enter your Number.<br/>';
+            echo json_encode($response);
         }
         //subject
-   if($_POST['subject'] != ""){
-    $sub = $_POST['subject'];
+   if($sub != ""){
+    //as it is
    }else {
-       $errors .= "Subject cannot be null";
+       $response = "Subject cannot be null";
+       echo json_encode($response);
    }
 
+}else {
+    $response = "credentials cannot be null";
+    echo json_encode($response);
 }
     if ($name != "" && $phone != "" && $email != "" && $sub != ""){
     $query1 = "INSERT INTO messagesTable1Num(phone,name,email) VALUES ('$phone','$name','$email')";
@@ -68,8 +77,8 @@
     }
 
     if($query_result1 && $query_result2){
-        $response['success'] = "success";
-        $response['message'] = "Your query has benn submitted";   
+        $response['success'] = true;
+        $response['message'] = "Your query has been submitted";   
     }
     else{
         

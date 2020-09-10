@@ -4,7 +4,7 @@
 
 .c2ccont {
     background-color:white;
-    height:min(117.1875vw,700px);
+    /* height:min(117.1875vw,700px); */
 }
 .c2cdetail {
     height:30%;

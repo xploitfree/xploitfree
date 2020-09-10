@@ -21,7 +21,7 @@
         </div>
         <div class="modal-body">
             <form method="POST" name="registration_form" class="modal-form" onsubmit="formValidation(event)">
-                <p class="form-msg "></p>
+                <p class="form-msg error-msg"></p>
                 <?php if(get_heading() == "Trainings"){ ?>
                     <div class="form-field">
                         <label for="cname" class="form-label">Your Name(To be printed on Certificate):</label>
