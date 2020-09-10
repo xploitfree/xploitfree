@@ -1,0 +1,139 @@
+.infosdata {
+    height:65%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    opacity:0;
+    transform: translateX(-100px);
+}
+
+.infosdata.animated {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity .5s ease-out, transform 1.5s ease-out;
+}
+
+.infosimg {
+    height:60%;
+    transform: translateX(100px);
+    opacity: 0;
+ }
+
+.infosimg.animated {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity .5s ease-out, transform 1.5s ease-out;
+}
+
+.spartinfo {
+    height:35%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    padding:1%;
+    padding-top:1%;
+    padding-bottom:0;
+    color: #000000;
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.spartinfo.animated {
+    opacity:1;
+    transform: translateX(0);
+    transition: opacity .5s ease-out, transform 1.5s ease-out;
+}
+
+.vulhead {
+    padding-top:4% ;
+    height:20%;
+    background-color: white;
+    
+} 
+
+.vulhead div p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 64px;
+    line-height: 75px;
+    text-align: center;
+    color: #000000;
+}
+
+.vulhead1 {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+.vulhead1.animated{
+    opacity:1;
+    transform: translateX(0);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.companies {
+    height:100%;
+    background-color: white;
+    padding-bottom:3%;
+}
+
+.compgr {
+    padding-top:3%;
+    height:20%;
+    background-color: white;
+    
+}
+
+.compgoogle {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.compgoogle.animated {
+    opacity:1;
+    transform: translateX(0);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.compleft {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+.compleft.animated {
+    opacity:1;
+    transform: translateX(0);
+    transition: opacity 1s ease-out, transform 1s ease-out
+}
+
+.compright {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.compright.animated {
+    opacity:1;
+    transform: translateX(0);
+    transition: opacity 1s ease-out, transform 1s ease-out
+}
+
+.compr {
+    height:29%;
+    padding-top:1%;
+    margin-bottom:3%;
+}
+
+.compc {
+    height:100%;
+    padding:0;
+}
+
+.compimg {
+    height:100%;
+    width:100%; 
+}
