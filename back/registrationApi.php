@@ -81,6 +81,7 @@
             echo json_encode($response);
             exit();
         }
+        //training
     if(isset($string->training)){ 
     if($training != ""){
     $training = filter_var($training, FILTER_SANITIZE_STRING);
@@ -91,7 +92,7 @@
                 exit();
         }
         }else {
-       $response['message'] = "Cannot be null";
+       $response['message'] = "training cannot be null";
        $response['success'] = false;
        echo json_encode($response);
        exit();
@@ -128,20 +129,25 @@
         $query2 = "INSERT INTO StudentInterests(name,interest,phone) values('$name','$training','$phone')";
         $query_result1 = mysqli_query($con,$query1);
         $query_result2 = mysqli_query($con,$query2);
+        
 
         if($query_result1 || $query_result2){
-            if(send_mail($email,"Registration Successfull!" , "Thankyou for register ".$training." training. We are happy to have you for our training.")){
+            
+            if(send_mail($email,"Registration Successfull!" , "You are successfully registered for ".$training.". Our team will contact you in 24hrs. for further details.")){
+            $response['success'] = true;
+            $response['message'] = "Thank you for registering with our training. Our team will soon contact you";  
+            echo json_encode($response);
+            }else{
                 $response['success'] = true;
-                $response['message'] = "hankyou for registering our training. Our team will soon contact you";  
-            } 
-            else{
-                $response['success'] = true;
-                $response['message'] = "Regsitration successful but we were unable to send you email due to technical error!";  
+                $response['message'] = "Regsitration successful but we were unable to send you email due to technical error!";
+                echo json_encode($response);
             }
+            
         }
         else{
             $response['success'] = false;
             $response['message'] = "could not register";
+            echo json_encode($response);
         }
     }
 
@@ -169,7 +175,7 @@
     }
 }else {
     $response['message'] = "credentials cannot be null";
-    
+    echo "hello";
     echo json_encode($response);
 }
 

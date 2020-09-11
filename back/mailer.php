@@ -23,12 +23,11 @@
         $mail->Username = 'xploitfree@gmail.com';
         $mail->Password = 'hcgrprhhthbyiyfq';  
          
-        try {
+        try{
             $mail->send();
             return true;
         }
-        catch (Exception $e)
-        {
+        catch (Exception $e){
            return false;
         }
     };

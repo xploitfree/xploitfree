@@ -56,7 +56,6 @@
                 <?php if(get_heading() == "Trainings"){ ?>
                     <div class="form-field">
                         <label for="training" class="form-label">Training:</label>
-                        <
                         <select name="training" class="form-select form-input">
                             <option>Secure Web Development</option>
                             <option>Secure Android Development</option>

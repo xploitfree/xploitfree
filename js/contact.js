@@ -5,7 +5,7 @@ function formValidation(event){
 
     const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     const phnRegExp = /^[0-9]+$/;
-    const textRegExp = /^[A-Za-z]+$/;
+    const textRegExp = /^[A-Za-z0-9_ ]+$/;
 
     const emailField = document.forms['contact_form']['email'];
     const phnField = document.forms['contact_form']['phone'];

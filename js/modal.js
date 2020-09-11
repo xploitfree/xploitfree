@@ -39,7 +39,7 @@ function formValidation(event){
 
     const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     const phnRegExp = /^[0-9]+$/;
-    const nameRegExp = /^[A-Za-z]+$/;
+    const nameRegExp = /^[A-Za-z ]+$/;
     const urlRegExp = /^((?!-)[A-Za-z0-9-]{1, 63}(?<!-)\\.)+[A-Za-z]{2, 6}$/;
 
     const fields = document.getElementsByClassName("form-input");
@@ -102,7 +102,7 @@ function formValidation(event){
             }).then((response) => (response.json())).then((data) => {
 
                 if(data["success"]){
-                    document.querySelector(".spinner").style.display = "inline";
+                    document.querySelector(".spinner").style.display = "none";
                     document.querySelector(".form-msg").style.display = "block";
                     document.querySelector(".form-msg").classList.remove("error-msg");
                     document.querySelector(".form-msg").classList.add("success-msg");
@@ -111,7 +111,7 @@ function formValidation(event){
                     document.querySelector(".modal-form").classList.add("slide-out");
                 }
                 else{
-                    document.querySelector(".spinner").style.display = "inline";
+                    document.querySelector(".spinner").style.display = "none";
                     document.querySelector(".form-msg").style.display = "block";
                     document.querySelector(".form-msg").classList.add("error-msg");
                     document.querySelector(".form-msg").classList.remove("success-msg");
