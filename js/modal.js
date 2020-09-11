@@ -32,33 +32,23 @@ function formValidation(event){
     const nameRegExp = /^[A-Za-z]+$/;
     const urlRegExp = /^((?!-)[A-Za-z0-9-]{1, 63}(?<!-)\\.)+[A-Za-z]{2, 6}$/;
 
+    const fields = document.getElementsByClassName("form-input");
+
     const emailField = document.forms['registration_form']['email'];
     const phnField = document.forms['registration_form']['phn'];
-    const nameField = document.forms['registration_form']['cname'];
+    const nameField = document.forms['registration_form']['name'];
     const domainField = document.forms['registration_form']['domain'];
     const trainingField = document.forms['registration_form']['training'];
     const serviceField = document.forms['registration_form']['service'];
 
-    if(emailField != undefined){
-        emailField.classList.remove("invalid");
-    }
-    if(nameField != undefined){
-        nameField.classList.remove("invalid");
-    }
-    if(phnField != undefined){
-        phnField.classList.remove("invalid");
-    }
-    if(domainField != undefined){
-        domainField.classList.remove("invalid");
-    }
-    if(trainingField != undefined){
-        trainingField.classList.remove("invalid");
-    }
-    if(serviceField != undefined){
-        serviceField.classList.remove("invalid");
+    for(i=0; i<fields.length; i++){
+        fields[i].classList.remove("invalid");
     }
 
     if(emailField != undefined && emailField.value == '' || phnField != undefined && phnField.value == '' || nameField != undefined && nameField.value == '' || domainField != undefined && domainField.value == '' || trainingField != undefined && trainingField.value == '' || serviceField != undefined && serviceField.value == ''){
+        for(i=0; i<fields.length; i++){
+            fields[i].classList.add("invalid");
+        }
         document.querySelector(".form-msg").style.display = "block";
         document.querySelector(".form-msg").textContent = "Please provide all details or else we won't be able to contact you.";
     }
@@ -96,23 +86,8 @@ function formValidation(event){
 
         data = {};
 
-        if(emailField != undefined){
-            data.email = emailField.value
-        }
-        if(nameField != undefined){
-            data.name = nameField.value
-        }
-        if(phnField != undefined){
-            data.phn = phnField.value
-        }
-        if(domainField != undefined){
-            data.domain = domainField.value
-        }
-        if(trainingField != undefined){
-            data.training = trainingField.value
-        }
-        if(serviceField != undefined){
-            data.service = serviceField.value
+        for(i=0; i<fields.length; i++){
+            data[fields[i].name] = fields[i].value;
         }
 
         fetch('../back/registration', {

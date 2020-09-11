@@ -5,15 +5,34 @@
     $db_connection = new Db_Connect();
     $conn = $db_connection->get_connection();
 
-    $id = $_GET['id'];
-
-    $query = "select * from trainings where id = $id";
+    $query = "select * from trainings";
 
     $data = $conn->query($query);
 
+    $rows = $data->num_rows;
+
+    $id = $_GET['id'];
+
+    filter_var($id, FILTER_SANITIZE_STRING);
+
+    if(gettype($id) != "string" && (strlen($id) > $rows || strlen($id) <= 0)){
+        $row_returned = 0;
+    }
+    else{
+        $query = "select * from trainings where id = $id";
+    
+        $data = $conn->query($query);
+    
+        $row_returned = $data->num_rows;
+    }
+
+
+    if($row_returned){
+        
     $training = $data->fetch_array(MYSQLI_ASSOC);
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -29,6 +48,8 @@
 <body>
     <div id="page-wrapper">
         <?php include_once "shared/header.php" ?>
+
+ 
 
         <div class="content content-wrap">
             <div class="main-content">
@@ -107,16 +128,19 @@
                     <p class="body-para">Starts from 10th September to 15th September</p>
                     <p class="body-para">2hrs/Day</p>
                 </div>
-                <div class="training-action"><span class="training-btn btn-action" onclick="btnClickHandler(this)" title="Register Here">Register Here</span></div>
+                <div class="training-action"><span class="training-btn btn-action" onclick="btnClickHandler(this)"
+                        title="Register Here">Register Here</span></div>
             </div>
 
         </div>
 
-        <?php include_once "shared/footer.php" ?>
         <?php include_once "shared/register.php"; ?>
 
+
+        <?php include_once "shared/footer.php" ?>
+
     </div>
-    
+
     <?php include_once "shared/preloader.php" ?>
 </body>
 
@@ -132,3 +156,9 @@
 </script>
 
 </html>
+
+<?php 
+    }else{
+        include_once "shared/notfound.php";
+    }
+?>

@@ -25,7 +25,7 @@
                 <?php if(get_heading() == "Trainings"){ ?>
                     <div class="form-field">
                         <label for="cname" class="form-label">Your Name(To be printed on Certificate):</label>
-                        <input type="text" name="cname" class="form-input" placeholder="Enter name"/>
+                        <input type="text" name="name" class="form-input" placeholder="Enter name"/>
                     </div>
                 <?php } ?>
                 <div class="form-field">
@@ -42,7 +42,7 @@
                         <input type="url" name="domain" class="form-input" placeholder="Your Domain"/>
                     </div>
                 <?php } ?>
-                <!-- <?php if(get_heading() == "Services"){ ?>
+                <?php if(get_heading() == "Services"){ ?>
                     <div class="form-field">
                         <label for="training" class="form-label">Service:</label>
                         <select name="service" class="form-select">
@@ -62,7 +62,7 @@
                             <option class="form-input">Ethical Hacking</option>
                         </select>
                     </div>
-                <?php } ?> -->
+                <?php } ?>
                 <div class="form-field">
                     <input type="submit" class="form-btn"/>
                 </div>
