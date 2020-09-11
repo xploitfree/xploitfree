@@ -100,21 +100,21 @@
 
     if($query_result1 || $query_result2){
         $response['success'] = true;
-        $response['message'] = "Your query has been submitted";  
+        $response['message'] = "Thank You for contacting us! Your message was successfully received.";  
         echo json_encode($response); 
         exit();
     }
     else{
         
         $response['success'] = false;
-        $response['message'] = "wrong credentials";
+        $response['message'] = "Something went wrong";
         echo json_encode($response);
         exit();
     }
 
     }
 }else {
-    $response['message'] = "credentials cannot be null";
+    $response['message'] = "Please fill all fields or else we won't be able to contact you";
     echo json_encode($response);
 }
 

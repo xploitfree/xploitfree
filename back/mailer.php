@@ -25,11 +25,11 @@
          
         try {
             $mail->send();
-            echo "You are successfully Registered!";
+            return true;
         }
         catch (Exception $e)
         {
-           echo $e->errorMessage();
+           return false;
         }
     };
 

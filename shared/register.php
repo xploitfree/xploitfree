@@ -65,7 +65,7 @@
                     </div>
                 <?php } ?>
                 <div class="form-field">
-                    <input type="submit" class="form-btn"/>
+                    <button type="submit" class="form-btn">Submit&nbsp<?php smspinner(20, 20, "spinner") ?></button>
                 </div>
             </form>
             <div class="submit-msg">

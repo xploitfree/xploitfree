@@ -1,4 +1,5 @@
 <?php
+    include_once "mailer.php";
     $response = array();
     $con = mysqli_connect("localhost","root","","xploitfree") or die(mysqli_error($con));
     $body= file_get_contents('php://input');
@@ -129,8 +130,14 @@
         $query_result2 = mysqli_query($con,$query2);
 
         if($query_result1 || $query_result2){
-            $response['success'] = true;
-            $response['message'] = "hankyou for registering our training. Our team will soon contact you";   
+            if(send_mail($email,"Registration Successfull!" , "Thankyou for register ".$training." training. We are happy to have you for our training.")){
+                $response['success'] = true;
+                $response['message'] = "hankyou for registering our training. Our team will soon contact you";  
+            } 
+            else{
+                $response['success'] = true;
+                $response['message'] = "Regsitration successful but we were unable to send you email due to technical error!";  
+            }
         }
         else{
             $response['success'] = false;
@@ -145,8 +152,14 @@
     
     
         if($query_result1){
-            $response['success'] = true;
-            $response['message'] = "Thankyou for registering our service. Our team will soon contact you";   
+            if(send_mail($email,"Registration Successfull!" , "You are successfully registered for ".$service." service. Our team will contact you in 24hrs. for further details.")){
+                $response['success'] = true;
+                $response['message'] = "Thankyou for registering our service. Our team will soon contact you.";   
+            }
+            else{
+                $response['success'] = true;
+                $response['message'] = "Regsitration successful but we were unable to send you email due to technical error!";  
+            }
         }
         else{
             $response['success'] = false;

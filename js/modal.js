@@ -12,6 +12,7 @@ document.addEventListener("click", (event) => {
             for(i=0; i<fields.length; i++){
                 fields[i].classList.remove("invalid");
             }
+            document.forms["registration_form"].reset();
         }
     }
 
@@ -26,6 +27,7 @@ document.addEventListener("click", (event) => {
         for(i=0; i<fields.length; i++){
             fields[i].classList.remove("invalid");
         }
+        document.forms["registration_form"].reset();
     }
 
 })
@@ -55,7 +57,8 @@ function formValidation(event){
 
     if(emailField != undefined && emailField.value == '' || phnField != undefined && phnField.value == '' || nameField != undefined && nameField.value == '' || domainField != undefined && domainField.value == '' || trainingField != undefined && trainingField.value == '' || serviceField != undefined && serviceField.value == ''){
         for(i=0; i<fields.length; i++){
-            fields[i].classList.add("invalid");
+            if(fields[i].value =='')
+                fields[i].classList.add("invalid");
         }
         document.querySelector(".form-msg").style.display = "block";
         document.querySelector(".form-msg").textContent = "Please provide all details or else we won't be able to contact you.";
@@ -88,7 +91,7 @@ function formValidation(event){
             data[fields[i].name] = fields[i].value;
         }
 
-        console.log(JSON.stringify(data));
+        document.querySelector(".spinner").style.display = "inline";
 
         fetch('./back/registrationApi.php', {
             method: 'POST',
@@ -99,6 +102,7 @@ function formValidation(event){
             }).then((response) => (response.json())).then((data) => {
 
                 if(data["success"]){
+                    document.querySelector(".spinner").style.display = "inline";
                     document.querySelector(".form-msg").style.display = "block";
                     document.querySelector(".form-msg").classList.remove("error-msg");
                     document.querySelector(".form-msg").classList.add("success-msg");
@@ -107,6 +111,7 @@ function formValidation(event){
                     document.querySelector(".modal-form").classList.add("slide-out");
                 }
                 else{
+                    document.querySelector(".spinner").style.display = "inline";
                     document.querySelector(".form-msg").style.display = "block";
                     document.querySelector(".form-msg").classList.add("error-msg");
                     document.querySelector(".form-msg").classList.remove("success-msg");
