@@ -34,32 +34,33 @@
                 </div>
                 <div class="form-field">
                     <label for="phn" class="form-label">Contact number:</label>
-                    <input type="tel" name="phn" class="form-input" placeholder="Enter phone"/>
+                    <input type="tel" name="phone" class="form-input" placeholder="Enter phone"/>
                 </div>
-                <?php if(get_heading() == "Services"){ ?>
+                <?php if(get_heading() == "Services" || get_heading() == "Red Teaming" || get_heading() == "Web Security" || get_heading() == "Network Security" || get_heading() == "Social Engineering"){ ?>
                     <div class="form-field">
                         <label for="domain" class="form-label">Business Domain:</label>
-                        <input type="url" name="domain" class="form-input" placeholder="Your Domain"/>
+                        <input type="text" name="domain" class="form-input" placeholder="Your Domain"/>
                     </div>
                 <?php } ?>
-                <?php if(get_heading() == "Services"){ ?>
+                <?php if(get_heading() == "Services" || get_heading() == "Red Teaming" || get_heading() == "Web Security" || get_heading() == "Network Security" || get_heading() == "Social Engineering"){ ?>
                     <div class="form-field">
-                        <label for="training" class="form-label">Service:</label>
-                        <select name="service" class="form-select">
-                            <option class="form-input">Red Teaming</option>
-                            <option class="form-input">Network Security</option>
-                            <option class="form-input">Web Security</option>
-                            <option class="form-input">Social Engineering</option>
+                        <label for="service" class="form-label">Service:</label>
+                        <select name="service" class="form-select form-input">
+                            <option>Red Teaming</option>
+                            <option>Network Security</option>
+                            <option>Web Security</option>
+                            <option>Social Engineering</option>
                         </select>
                     </div>
                 <?php } ?>
                 <?php if(get_heading() == "Trainings"){ ?>
                     <div class="form-field">
                         <label for="training" class="form-label">Training:</label>
-                        <select name="training" class="form-select">
-                            <option class="form-input">Secure Web Development</option>
-                            <option class="form-input">Secure Android Development</option>
-                            <option class="form-input">Ethical Hacking</option>
+                        <
+                        <select name="training" class="form-select form-input">
+                            <option>Secure Web Development</option>
+                            <option>Secure Android Development</option>
+                            <option>Ethical Hacking</option>
                         </select>
                     </div>
                 <?php } ?>

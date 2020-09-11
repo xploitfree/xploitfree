@@ -21,7 +21,7 @@
                         <p>Finding hard to check whether you are enough secured or not ? <br/>
 		                Just time to tell your attacker you're not that easy to take on, intead let them take this <em><b> RED PILL! </b></em></p>
                     </div>
-                    <button class="service-btn top-btn" onclick="btnClickHandler(this)">Register Now</button>
+                    <button data-name="Red Teaming" class="service-btn top-btn" onclick="btnClickHandler(this)">Register Now</button>
                 </section>
                 <section class="section-sec">
                     <div class="section-what">
@@ -69,7 +69,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="service-btn bottom-btn" onclick="btnClickHandler(this)">Do Red teming test for me </button>
+                    <button data-name="Red Teaming" class="service-btn bottom-btn" onclick="btnClickHandler(this)">Do Red teming test for me </button>
                 </section>
             </div>
         </div>

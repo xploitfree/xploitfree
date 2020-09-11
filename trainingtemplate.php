@@ -128,7 +128,7 @@
                     <p class="body-para">Starts from 10th September to 15th September</p>
                     <p class="body-para">2hrs/Day</p>
                 </div>
-                <div class="training-action"><span class="training-btn btn-action" onclick="btnClickHandler(this)"
+                <div class="training-action"><span data-name="<?php echo $training['name'] ?>" class="training-btn btn-action" onclick="btnClickHandler(this)"
                         title="Register Here">Register Here</span></div>
             </div>
 

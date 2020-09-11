@@ -2,22 +2,30 @@ document.addEventListener("click", (event) => {
 
     if(event.target == document.querySelector(".modal-overlay")){
         if(document.querySelector("body").classList.contains("modal-active")){
+            const fields = document.getElementsByClassName("form-input");
             document.querySelector("body").classList.remove("modal-active");
             document.querySelector(".modal-overlay").classList.add("modal-inactive");
             document.querySelector(".form-msg").style.display = "none";
             document.querySelector(".form-msg").textContent = "";
             document.querySelector(".submit-msg").classList.remove("slide-in");
             document.querySelector(".modal-form").classList.remove("slide-out");
+            for(i=0; i<fields.length; i++){
+                fields[i].classList.remove("invalid");
+            }
         }
     }
 
     if(event.target == document.querySelector(".modal-close") || event.target == document.querySelectorAll(".modal-close path")[0] || event.target == document.querySelectorAll(".modal-close path")[1]){
+        const fields = document.getElementsByClassName("form-input");
         document.querySelector("body").classList.remove("modal-active");
         document.querySelector(".modal-overlay").classList.add("modal-inactive");
         document.querySelector(".form-msg").style.display = "none";
         document.querySelector(".form-msg").textContent = "";
         document.querySelector(".submit-msg").classList.remove("slide-in");
         document.querySelector(".modal-form").classList.remove("slide-out");
+        for(i=0; i<fields.length; i++){
+            fields[i].classList.remove("invalid");
+        }
     }
 
 })
@@ -72,16 +80,6 @@ function formValidation(event){
     //     document.querySelector(".form-msg").style.display = "block";
     //     document.querySelector(".form-msg").textContent = "Please enter valid domain or else we wont be able to perform test.";
     // }
-    else if(serviceField != undefined && serviceField.value){
-        serviceField.classList.add("invalid");
-        document.querySelector(".form-msg").style.display = "block";
-        document.querySelector(".form-msg").textContent = "Enter valid email!";
-    }
-    else if(trainingField != undefined && trainingField.value){
-        trainingField.classList.add("invalid");
-        document.querySelector(".form-msg").style.display = "block";
-        document.querySelector(".form-msg").textContent = "Enter valid email!";
-    }
     else{
 
         data = {};
@@ -90,16 +88,32 @@ function formValidation(event){
             data[fields[i].name] = fields[i].value;
         }
 
-        fetch('../back/registration', {
+        console.log(JSON.stringify(data));
+
+        fetch('./back/registrationApi.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data),
-            }).then((response) => (response.json())).then((data) => console.log(data));
+            }).then((response) => (response.json())).then((data) => {
 
-        document.querySelector(".submit-msg").classList.add("slide-in");
-        document.querySelector(".modal-form").classList.add("slide-out");
+                if(data["success"]){
+                    document.querySelector(".form-msg").style.display = "block";
+                    document.querySelector(".form-msg").classList.remove("error-msg");
+                    document.querySelector(".form-msg").classList.add("success-msg");
+                    document.querySelector(".submit-msg h2").textContent = data["message"];
+                    document.querySelector(".submit-msg").classList.add("slide-in");
+                    document.querySelector(".modal-form").classList.add("slide-out");
+                }
+                else{
+                    document.querySelector(".form-msg").style.display = "block";
+                    document.querySelector(".form-msg").classList.add("error-msg");
+                    document.querySelector(".form-msg").classList.remove("success-msg");
+                    document.querySelector(".form-msg").textContent = data["message"];
+                }
+                
+            });
     }
     
 }
@@ -109,6 +123,9 @@ function btnClickHandler(btn, event){
     if(event != undefined){
         event.preventDefault();
     }
+
+    document.querySelector(".form-select").value = btn.dataset.name;
+
     document.querySelector(".modal-overlay").classList.remove("modal-inactive");
     document.querySelector("body").classList.add("modal-active");
 

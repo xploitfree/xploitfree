@@ -20,7 +20,7 @@
                     <div class="service-head">
                         <p>Want someone to diagnose your web app as you deal with the aesthetics of your business, you'll be fine with us.</p>
                     </div>
-                    <button class="service-btn top-btn" onclick="btnClickHandler(this)">Register Now</button>
+                    <button data-name="Web Security" class="service-btn top-btn" onclick="btnClickHandler(this)">Register Now</button>
                 </section>
                 <section class="section-sec">
                     <div class="section-what">
@@ -89,7 +89,7 @@
 
                         </div>
                     </div>
-                    <button class="service-btn bottom-btn" onclick="btnClickHandler(this)">Do W.A.P.T for me</button>
+                    <button data-name="Web Security" class="service-btn bottom-btn" onclick="btnClickHandler(this)">Do W.A.P.T for me</button>
                 </section>
             </div>
         </div>

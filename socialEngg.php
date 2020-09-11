@@ -20,7 +20,7 @@
                         <p>Worried choosing someone for phising vishing and Smishing? <br />Don’t you worry we handle
                             them with utmost care.</br><em><b>OUR RENUNCIATION FOR YOUR SALVATION !</b></em></p>
                     </div>
-                    <button class="service-btn top-btn" onclick="btnClickHandler(this)">Register Now</button>
+                    <button data-name="Social Engineering" class="service-btn top-btn" onclick="btnClickHandler(this)">Register Now</button>
                 </section>
                 <section class="section-sec">
                     <div class="section-what">
@@ -68,7 +68,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="service-btn bottom-btn" onclick="btnClickHandler(this)">Do S.E.P Testing for me</button>
+                    <button data-name="Social Engineering" class="service-btn bottom-btn" onclick="btnClickHandler(this)">Do S.E.P Testing for me</button>
                 </section>
             </div>
         </div>

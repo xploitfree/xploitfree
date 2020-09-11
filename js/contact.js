@@ -70,10 +70,10 @@ function formValidation(event){
             data.name = nameField.value
         }
         if(phnField != undefined){
-            data.phn = phnField.value
+            data.phone = phnField.value
         }
         if(subjectField != undefined){
-            data.subject = subjectField.value
+            data.sub = subjectField.value
         }
         if(messageField != undefined){
             data.message = messageField.value
@@ -85,7 +85,22 @@ function formValidation(event){
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data),
-            }).then((response) => (response.json())).then((data) => console.log(data));
+            }).then((response) => (response.json())).then((data) => {
+
+                if(data["success"]){
+                    document.querySelector(".form-msg").style.display = "block";
+                    document.querySelector(".form-msg").classList.remove("error-msg");
+                    document.querySelector(".form-msg").classList.add("success-msg");
+                    document.querySelector(".form-msg").textContent = data["message"];
+                }
+                else{
+                    document.querySelector(".form-msg").style.display = "block";
+                    document.querySelector(".form-msg").classList.add("error-msg");
+                    document.querySelector(".form-msg").classList.remove("success-msg");
+                    document.querySelector(".form-msg").textContent = data["message"];
+                }
+                
+            });
     }
     
 }

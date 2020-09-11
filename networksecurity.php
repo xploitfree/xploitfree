@@ -21,7 +21,7 @@
                     <div class="service-head">
                         <p>Take our word next time someone tries to breach you, <br />you will leave the attacker in APATHY and DESPAIR!</p>
                     </div>
-                    <button class="service-btn top-btn" onclick="btnClickHandler(this)">Register Now</button>
+                    <button data-name="Network Security" class="service-btn top-btn" onclick="btnClickHandler(this)">Register Now</button>
                 </section>
                 <section class="section-sec">
                     <div class="section-what">
@@ -78,7 +78,7 @@
                             </div>
                         </div>
                     </div>
-                    <button class="service-btn bottom-btn" onclick="btnClickHandler(this)">Do Network V.A.P.T for me</button>
+                    <button data-name="Network Security" class="service-btn bottom-btn" onclick="btnClickHandler(this)">Do Network V.A.P.T for me</button>
                 </section>
             </div>
         </div>
