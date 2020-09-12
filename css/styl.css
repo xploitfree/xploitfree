@@ -731,6 +731,10 @@ p {
     box-sizing: border-box;
 }
 
+.main-msg, .sec-msg{
+    text-align: center;
+}
+
 .spinner{
     animation: spin 1s linear infinite;
     display: none;

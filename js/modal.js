@@ -92,7 +92,9 @@ function formValidation(event){
                     document.querySelector(".form-msg").style.display = "block";
                     document.querySelector(".form-msg").classList.remove("error-msg");
                     document.querySelector(".form-msg").classList.add("success-msg");
-                    document.querySelector(".submit-msg h2").textContent = data["message"];
+                    msgs = data["message"].split(".");
+                    document.querySelector(".submit-msg h2").textContent = msgs[0];
+                    document.querySelector(".submit-msg p").textContent = msgs[1];
                     document.querySelector(".submit-msg").classList.add("slide-in");
                     document.querySelector(".modal-form").classList.add("slide-out");
                 }

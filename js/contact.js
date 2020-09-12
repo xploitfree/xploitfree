@@ -79,6 +79,8 @@ function formValidation(event){
             data.message = messageField.value
         }
 
+        document.querySelector(".spinner").style.display = "inline";
+
         fetch('./back/contactUsApi.php', {
             method: 'POST',
             headers: {
@@ -88,12 +90,14 @@ function formValidation(event){
             }).then((response) => (response.json())).then((data) => {
 
                 if(data["success"]){
+                    document.querySelector(".spinner").style.display = "none";
                     document.querySelector(".form-msg").style.display = "block";
                     document.querySelector(".form-msg").classList.remove("error-msg");
                     document.querySelector(".form-msg").classList.add("success-msg");
                     document.querySelector(".form-msg").textContent = data["message"];
                 }
                 else{
+                    document.querySelector(".spinner").style.display = "none";
                     document.querySelector(".form-msg").style.display = "block";
                     document.querySelector(".form-msg").classList.add("error-msg");
                     document.querySelector(".form-msg").classList.remove("success-msg");

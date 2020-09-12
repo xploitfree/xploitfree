@@ -66,7 +66,7 @@
                 </div>
                 <div class="row biginprb justify-content-end">
                     <div class="c2ccolb col-2 d-flex flex-column justify-content-start align-items-center">
-                        <button name="submit" class="c2csub">Submit</button>
+                        <button name="submit" class="c2csub">Submit&nbsp<?php smspinner(20, 20, "spinner") ?></button>
                     </div>
                 </div>
             </div>

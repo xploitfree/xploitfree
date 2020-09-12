@@ -68,9 +68,9 @@
                 </div>
             </form>
             <div class="submit-msg">
-                <?php successsvg(60, 60, "success-icon"); ?>
-                <h2 class="main-msg">Thankyou for registering.</h2>
-                <p class="sec-msg">Our team will soon contact you</p>
+                <?php successsvg(60, 60); ?>
+                <h2 class="main-msg"></h2>
+                <p class="sec-msg"></p>
                 <button class="k-btn">Back to site</button>
             </div>
         </div>
