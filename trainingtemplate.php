@@ -19,7 +19,7 @@
         $row_returned = 0;
     }
     else{
-        $query = "select * from trainings where id = $id";
+    $query = "select * from trainings where id = $id";
     
         $data = $conn->query($query);
     
@@ -28,8 +28,8 @@
 
 
     if($row_returned){
-        
-    $training = $data->fetch_array(MYSQLI_ASSOC);
+
+        $training = $data->fetch_array(MYSQLI_ASSOC);
 
 ?>
 
@@ -49,8 +49,6 @@
 <body>
     <div id="page-wrapper">
         <?php include_once "shared/header.php" ?>
-
- 
 
         <div class="content content-wrap">
             <div class="main-content">
@@ -89,7 +87,7 @@
                     <div class="training-content">
                         <h2 class="content-head">Contents of training</h2>
                         <ul class="content-list">
-                            <?php
+                        <?php
                             $head_query = "select * from content_heads where training_id ='".$training["id"]."'";
 
                             $head_data = $conn->query($head_query);
@@ -129,8 +127,9 @@
                     <p class="body-para">Starts from 10th September to 15th September</p>
                     <p class="body-para">2hrs/Day</p>
                 </div>
-                <div class="training-action"><span data-name="<?php echo $training['name'] ?>" class="training-btn btn-action" onclick="btnClickHandler(this)"
-                        title="Register Here">Register Here</span></div>
+                <div class="training-action"><span data-name="<?php echo $training['name'] ?>"
+                        class="training-btn btn-action" onclick="btnClickHandler(this)" title="Register Here">Register
+                        Here</span></div>
             </div>
 
         </div>

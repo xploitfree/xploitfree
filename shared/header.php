@@ -1,6 +1,10 @@
 <?php
     include_once "funcs.php";
     include_once './shared/svgs.php'; 
+    include_once "back/dbconn.php";
+
+    $db_connection = new Db_Connect();
+    $conn = $db_connection->get_connection();
 ?>
 <header class="navheader">
     <div class="content content-wrap">
@@ -12,22 +16,75 @@
                 </div>
             </a>
         </div>
-        <div class="navmenu">
-            <a class="navlink navitem" href="services"><span class="menutext">Services</span></a>
-            <a class="navlink navitem" href="trainings"><span class="menutext">Trainings</span></a>
-            <a class="navlink navitem" href="aboutus"><span class="menutext">About us</span></a>
-            <a class="navlink navitem" href="contactus"><span class="menutext">Contact us</span></a>
-            <a class="navlink navitem" href="blog"><span class="menutext">Blog</span></a>
-        </div>
+        <ul class="navmenu">
+            <li class="navitem">
+                <a class="navlink" href="services">
+                    <span class="menutext">Services</span>
+                </a>
+                <ul class="navitem-list">
+                    <a class="navlink" href="./redteaming.php">
+                        <li class="navitem-list-item">Red Teaming</li>
+                    </a>
+                    <a class="navlink" href="./websecurity.php">
+                        <li class="navitem-list-item">Web Security</li>
+                    </a>
+                    <a class="navlink" href="./networksecurity.php">    
+                        <li class="navitem-list-item">Network Security</li>
+                    </a>
+                    <a class="navlink" href="./socialengg.php">
+                        <li class="navitem-list-item">Social Engineering</li>
+                    </a>
+                </ul>
+            </li>
+            <li class="navitem">
+                <a class="navlink" href="trainings">
+                    <span class="menutext">Trainings</span>
+                </a>
+                <ul class="navitem-list">
+                    <?php
+                        $query_trainings = "select name, training_url from trainings";
+
+                        $trainings_data = $conn->query($query_trainings);
+
+                        while($trng = $trainings_data->fetch_array(MYSQLI_ASSOC)){
+                    ?>
+                        <a class="navlink" href="./<?php echo $trng["training_url"] ?>">
+                            <li class="navitem-list-item"><?php echo $trng["name"] ?></li>
+                        </a>
+                    <?php } ?>
+                </ul>
+            </li>
+            <li class="navitem">
+                <a class="navlink" href="aboutus">
+                    <span class="menutext">About us</span>
+                </a>
+            </li>
+            <li class="navitem">
+                <a class="navlink" href="contactus">
+                    <span class="menutext">Contact us</span>
+                </a>
+            </li>
+            <li class="navitem">
+                <a class="navlink" href="blog">
+                    <span class="menutext">Blog</span>
+                </a>
+            </li>
+        </ul>
     </div>
     <div class="content content-wrap">
         <div class="pagehead">
             <p class="headtext">
-                <?php 
+                <?php
+                    if( get_heading() != "home"){
                         echo get_heading();
+                    }
                 ?>
             </p>
         </div>
     </div>
 </header>
-<div class="pichead"></div>
+<?php 
+    if( get_heading() != "home"){
+        echo "<div class='pichead'></div>";
+    }
+?>

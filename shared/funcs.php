@@ -7,6 +7,8 @@
         global $current_page;
         
         switch($current_page){
+            case "home":
+                return "home";
             case "aboutus":
                 return "About XploitFree";
             case "services":
