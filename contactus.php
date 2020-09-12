@@ -4,38 +4,35 @@
 <head>
     <title>Contact us</title>
     <link rel="icon" href="images/xlogo.ico">
-    <link
-        href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Dancing+Script:400,700|Frank+Ruhl+Libre:400,500,700|Gloria+Hallelujah|Liu+Jian+Mao+Cao|Ruge+Boogie|Sacramento|Turret+Road:400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Dancing+Script:400,700|Frank+Ruhl+Libre:400,500,700|Gloria+Hallelujah|Liu+Jian+Mao+Cao|Ruge+Boogie|Sacramento|Turret+Road:400,500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link
         href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Roboto:wght@300&display=swap"
         rel="stylesheet">
-    <!-- <link href="./styl.css" rel="stylesheet"> -->
+    <link href="./css/styl.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/styl.css">
     <link rel="stylesheet" href="./css/contactus.css">
-
-
 </head>
 
 <body>
 
-
-    <?php
+<?php
     include 'shared/header.php';
 ?>
 
     <div class="c2ccont">
         <div class="row c2cdetail justify-content-between">
-            <div class="col-7 d-flex flex-column align-items-start">
+            <div class="col-4 d-flex flex-column align-items-start">
                 <p class="forbusi">For queries:-</p>
                 <p class="fordata"><span><?php phnsvg(30, 30, "black") ?></span>(+91) 8800880088</p>
                 <p class="fordata"><span><?php mailsvg(30, 30, "black") ?></span>xploitfreesecurity@gmail.com</p>
             </div>
-            <div class="col-5 d-flex flex-column align-items-start">
+            <div class="col-4 d-flex flex-column align-items-end">
                 <p class="forbusi">For Business:-</p>
-                <p class="fordata"><span><?php phnsvg(30, 30, "black") ?></span>(+91) 8800880088</p>
-                <p class="fordata"><span><?php mailsvg(30, 30, "black") ?></span>xploitfreesecurity@gmail.com</p>
+                <p class="fordata forde"><span><?php phnsvg(30, 30, "black") ?></span>(+91) 8800880088</p>
+                <p class="fordata forde"><span><?php mailsvg(30, 30, "black") ?></span>xploitfreesecurity@gmail.com</p>
             </div>
         </div>
         <form method="POST" name="contact_form" onsubmit="formValidation(event)">

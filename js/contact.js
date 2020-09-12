@@ -48,17 +48,6 @@ function formValidation(event){
         document.querySelector(".form-msg").style.display = "block";
         document.querySelector(".form-msg").textContent = "Enter valid contact!";
     }
-    else if(subjectField != undefined && !textRegExp.test(subjectField.value)){
-        subjectField.classList.add("invalid");
-        document.querySelector(".form-msg").style.display = "block";
-        document.querySelector(".form-msg").textContent = "Enter valid subject(text only).";
-    }
-    else if(messageField != undefined && !textRegExp.test(messageField.value)){
-        messageField.classList.add("invalid");
-        document.querySelector(".form-msg").style.display = "block";
-        document.querySelector(".form-msg").classList.add("error-msg");
-        document.querySelector(".form-msg").textContent = "Enter valid message(text only).";
-    }
     else{
 
         data = {};
