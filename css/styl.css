@@ -5,6 +5,10 @@
     font-size: 16px;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 html,body {
     margin:0;
 }
@@ -659,7 +663,7 @@ p {
     outline: 1px solid rgb(4, 176, 255);
 }
 
-.form-btn{
+.form-btn, .k-btn{
     display: flex;
     margin: 1rem 0.2rem 0 0;
     box-shadow: 0px 2px 3px 0px black;
@@ -674,7 +678,7 @@ p {
     transition: background 0.1s ease, box-shadow 0.1s ease;
 }
 
-.form-btn:hover{
+.form-btn:hover, .k-btn:hover{
     cursor: pointer;
     background: #a1ce22;
     box-shadow: 0px 0px 1px 0px black;
@@ -720,6 +724,11 @@ p {
     visibility: visible;
     opacity: 1;
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.submit-msg{
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
 .spinner{

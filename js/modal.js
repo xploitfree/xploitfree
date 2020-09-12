@@ -1,6 +1,6 @@
 document.addEventListener("click", (event) => {
 
-    if(event.target == document.querySelector(".modal-overlay")){
+    if(event.target == document.querySelector(".modal-overlay") || event.target == document.querySelector(".modal-close") || event.target == document.querySelectorAll(".modal-close path")[0] || event.target == document.querySelectorAll(".modal-close path")[1] || event.target == document.querySelector(".k-btn")){
         if(document.querySelector("body").classList.contains("modal-active")){
             const fields = document.getElementsByClassName("form-input");
             document.querySelector("body").classList.remove("modal-active");
@@ -14,20 +14,6 @@ document.addEventListener("click", (event) => {
             }
             document.forms["registration_form"].reset();
         }
-    }
-
-    if(event.target == document.querySelector(".modal-close") || event.target == document.querySelectorAll(".modal-close path")[0] || event.target == document.querySelectorAll(".modal-close path")[1]){
-        const fields = document.getElementsByClassName("form-input");
-        document.querySelector("body").classList.remove("modal-active");
-        document.querySelector(".modal-overlay").classList.add("modal-inactive");
-        document.querySelector(".form-msg").style.display = "none";
-        document.querySelector(".form-msg").textContent = "";
-        document.querySelector(".submit-msg").classList.remove("slide-in");
-        document.querySelector(".modal-form").classList.remove("slide-out");
-        for(i=0; i<fields.length; i++){
-            fields[i].classList.remove("invalid");
-        }
-        document.forms["registration_form"].reset();
     }
 
 })
