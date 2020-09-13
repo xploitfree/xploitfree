@@ -13,17 +13,15 @@
         
             $n = implode(' ',explode('_', $_GET['name']));
 
-            if(filter_var($n, FILTER_SANITIZE_STRING)){
+            $n = sanitizeStringOstyle($p_conn, $n);
 
-                $q = "select * from trainings where name = '$n'";
-            
-                $d = $p_conn->query($q);
-            
-                $r_r = $d->num_rows;
-            }
-            else{
-                $r_r = 0;
-            }
+            $n = filter_var($n, FILTER_SANITIZE_STRING);
+
+            $q = "select * from trainings where name = '$n'";
+        
+            $d = $p_conn->query($q);
+        
+            $r_r = $d->num_rows;
 
             if($r_r){
                 $t = $d->fetch_array(MYSQLI_ASSOC);
@@ -38,8 +36,6 @@
     
     
     function get_heading(){
-
-        // global $current_page;
         
         $current_page = get_page();
         
@@ -81,6 +77,25 @@
         if (get_magic_quotes_gpc())
             $var = stripslashes($var);
         return mysqli_real_escape_string($conn, $var);
+    }
+
+    function is_training_available($training_name){
+
+        $db_ta_conn = new Db_Connect();
+        $ta_conn = $db_ta_conn->get_connection();
+
+        $trng_nme = sanitizeStringOstyle($ta_conn, $training_name);
+
+        $trng_nme = filter_var($trng_nme, FILTER_SANITIZE_STRING);
+
+        $qry = "select isAvailable from trainings where name = '$trng_nme'";
+
+        $data = $ta_conn->query($qry);
+
+        $val = $data->fetch_array(MYSQLI_ASSOC);
+
+        return (int)$val["isAvailable"];
+
     }
     
 ?>

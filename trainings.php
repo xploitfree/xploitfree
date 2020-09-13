@@ -90,7 +90,7 @@
                                     </ul>
                                 </div>
                                 <div class="card-action">
-                                    <span data-name="<?php echo $training['name'] ?>" class="card-btn btn-action" onclick="btnClickHandler(this, event)" title="Register Now">Register Now</span>
+                                    <span data-name="<?php echo $training['name'] ?>" class="card-btn btn-action" onclick="btnClickHandler(this, <?php echo is_training_available($training['name']) ?>, event)" title="Register Now">Register Now</span>
                                 </div>
                             </div>
                         </a>
@@ -149,16 +149,13 @@
 
         $name = sanitizeStringOstyle($conn, $name);
 
-        if(filter_var($name, FILTER_SANITIZE_STRING)){
-            $query = "select * from trainings where name = '$name'";
-        
-            $data = $conn->query($query);
-        
-            $row_returned = $data->num_rows;
-        }
-        else{
-            $row_returned = 0;
-        }
+        $name = filter_var($name, FILTER_SANITIZE_STRING);
+
+        $query = "select * from trainings where name = '$name'";
+    
+        $data = $conn->query($query);
+    
+        $row_returned = $data->num_rows;
 
         if($row_returned){
 
@@ -262,9 +259,9 @@
                     <p class="body-para">Starts from 10th September to 15th September</p>
                     <p class="body-para">2hrs/Day</p>
                 </div>
-                <div class="training-action"><span data-name="<?php echo $training['name'] ?>"
-                        class="training-btn btn-action" onclick="btnClickHandler(this)" title="Register Here">Register
-                        Here</span></div>
+                <div class="training-action">
+                    <span data-name="<?php echo $training['name'] ?>" class="training-btn btn-action" onclick="btnClickHandler(this, <?php echo is_training_available($training['name']) ?>, event)" title="Register Here">Register Here</span>
+                </div>
             </div>
 
         </div>

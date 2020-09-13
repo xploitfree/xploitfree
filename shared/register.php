@@ -21,6 +21,7 @@
         </div>
         <div class="modal-body">
             <form method="POST" name="registration_form" class="modal-form" onsubmit="formValidation(event)">
+                <p class="notice">Training is not available right now. You can still register below and we will let you know when it will be available.</p>
                 <p class="form-msg error-msg"></p>
                 <?php if(get_heading() == "Trainings" || get_heading() == "Secure Web Development" || get_heading() == "Secure Android Development" || get_heading() == "Ethical Hacking"){ ?>
                     <div class="form-field">

@@ -111,7 +111,7 @@ function formValidation(event){
     
 }
 
-function btnClickHandler(btn, event){
+function btnClickHandler(btn, isAvailable, event){
 
     if(event != undefined){
         event.preventDefault();
@@ -121,5 +121,9 @@ function btnClickHandler(btn, event){
 
     document.querySelector(".modal-overlay").classList.remove("modal-inactive");
     document.querySelector("body").classList.add("modal-active");
+
+    if(!isAvailable){
+        document.querySelector(".notice").style.display = "block";
+    }
 
 }

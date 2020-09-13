@@ -683,7 +683,7 @@ p {
     width: 50%;
 }
 
-.form-msg{
+.form-msg, .notice{
     margin-bottom: 1rem;
     padding: 1rem 0;
     font-weight: 600;
@@ -697,6 +697,12 @@ p {
 
 .success-msg{
     color: rgb(16, 112, 16);
+}
+
+.notice{
+    background: indianred;
+    padding: 1rem;
+    color: white;
 }
 
 .form-input:focus, .form-select:focus{
