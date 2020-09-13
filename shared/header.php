@@ -1,5 +1,5 @@
 <?php
-    include_once "funcs.php";
+    include_once "./back/funcs.php";
     include_once './shared/svgs.php'; 
     include_once "back/dbconn.php";
 
@@ -18,7 +18,7 @@
         </div>
         <ul class="navmenu">
             <li class="navitem">
-                <a class="navlink" href="services">
+                <a class="navlink" href="services.php">
                     <span class="menutext">Services</span>
                 </a>
                 <ul class="navitem-list">
@@ -37,7 +37,7 @@
                 </ul>
             </li>
             <li class="navitem">
-                <a class="navlink" href="trainings">
+                <a class="navlink" href="trainings.php">
                     <span class="menutext">Trainings</span>
                 </a>
                 <ul class="navitem-list">
@@ -55,17 +55,17 @@
                 </ul>
             </li>
             <li class="navitem">
-                <a class="navlink" href="aboutus">
+                <a class="navlink" href="aboutus.php">
                     <span class="menutext">About us</span>
                 </a>
             </li>
             <li class="navitem">
-                <a class="navlink" href="contactus">
+                <a class="navlink" href="contactus.php">
                     <span class="menutext">Contact us</span>
                 </a>
             </li>
             <li class="navitem">
-                <a class="navlink" href="blog">
+                <a class="navlink" href="blog.php">
                     <span class="menutext">Blog</span>
                 </a>
             </li>

@@ -1,10 +1,14 @@
 <?php
 
     include_once "back/dbconn.php";
+    include_once "back/stringSanitizing.php";
 
     $db_connection = new Db_Connect();
     $conn = $db_connection->get_connection();
 
+    if(!isset($_GET['name'])){
+
+//************* Training Menu Code Starts ***************************//
 ?>
 
 <!DOCTYPE html>
@@ -133,3 +137,167 @@
 </script>
 
 </html>
+
+<?php
+
+//*************************** Training Menu code ends **************************//
+
+    }
+    else if(isset($_GET['name'])){
+
+        $name = implode(' ',explode('_', $_GET['name']));
+
+        $name = sanitizeStringOstyle($conn, $name);
+
+        if(filter_var($name, FILTER_SANITIZE_STRING)){
+            $query = "select * from trainings where name = '$name'";
+        
+            $data = $conn->query($query);
+        
+            $row_returned = $data->num_rows;
+        }
+        else{
+            $row_returned = 0;
+        }
+
+        if($row_returned){
+
+            $training = $data->fetch_array(MYSQLI_ASSOC);
+
+//*************************** Selected training code starts **************************//
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/xlogo.ico">
+    <link rel="stylesheet" href="./css/styl.css">
+    <link rel="stylesheet" href="./css/trainings.css">
+    <title><?php echo $training['name'] ?></title>
+</head>
+
+<body>
+    <div id="page-wrapper">
+        <?php include_once "shared/header.php" ?>
+
+        <div class="content content-wrap">
+            <div class="main-content">
+
+                <section class="section-main">
+                    <div class="training-head">
+                        <p><?php echo $training['name'] ?></p>
+                    </div>
+                    <div class="training-info">
+                        <p><?php echo $training['description'] ?></p>
+                    </div>
+                </section>
+
+                <section class="section-sec">
+
+                    <h2 class="perks-head">Perks of Completing our training!</h2>
+                    <div class="perks">
+                        <div class="perk p1">
+                            <?php certificatesvg("perk-icon") ?>
+                            <p class="perk-name">Certification</p>
+                        </div>
+                        <div class="perk p2">
+                            <?php skillupsvg("perk-icon") ?>
+                            <p class="perk-name">Skill Development</p>
+                        </div>
+                        <div class="perk p3">
+                            <?php studymatsvg("perk-icon") ?>
+                            <p class="perk-name">Study Material</p>
+                        </div>
+                        <div class="perk p4">
+                            <?php communitysvg("perk-icon") ?>
+                            <p class="perk-name">Reliable Community</p>
+                        </div>
+                    </div>
+
+                    <div class="training-content">
+                        <h2 class="content-head">Contents of training</h2>
+                        <ul class="content-list">
+                        <?php
+                            $head_query = "select * from content_heads where training_id ='".$training["id"]."'";
+
+                            $head_data = $conn->query($head_query);
+
+                            while($head = $head_data->fetch_array(MYSQLI_ASSOC)){
+                        ?>
+                            <li class="topics"><?php echo $head['head_name'] ?>
+
+                                <ul class="topic-sublist">
+                                    <?php
+                                        $content_query = "select * from content where head_id ='".$head["id"]."'";
+
+                                        $content_data = $conn->query($content_query);
+
+                                        while($content = $content_data->fetch_array(MYSQLI_ASSOC)){
+                                    ?>
+                                    <li class="subtopics"><?php echo $content['content_name'] ?></li>
+                                    <?php } ?>
+                                </ul>
+
+                            </li>
+
+                            <?php } ?>
+                        </ul>
+                    </div>
+
+                </section>
+
+            </div>
+
+            <div class="training-card">
+                <img src=<?php echo $training['img_url'] ?>></img>
+                <div class="training-name"><span class="training-btn"><?php echo $training['name'] ?></span></div>
+                <div class="card-body">
+                    <p class="body-head"><strike class="head-sec">&#8377;<?php echo $training['cp'] ?></strike><span
+                            class="head-main">&#8377;<?php echo $training['sp'] ?>/--</span></p>
+                    <p class="body-para">Starts from 10th September to 15th September</p>
+                    <p class="body-para">2hrs/Day</p>
+                </div>
+                <div class="training-action"><span data-name="<?php echo $training['name'] ?>"
+                        class="training-btn btn-action" onclick="btnClickHandler(this)" title="Register Here">Register
+                        Here</span></div>
+            </div>
+
+        </div>
+
+        <?php include_once "shared/register.php"; ?>
+
+
+        <?php include_once "shared/footer.php" ?>
+
+    </div>
+
+    <?php include_once "shared/preloader.php" ?>
+</body>
+
+<script src="./js/scroll.js"></script>
+<script src="./js/preloader.js"></script>
+<script src="./js/modal.js"></script>
+<script>
+    createObserver(1, "section-main");
+    createObserver(0.3, "training-card");
+    createObserver(0.1, "topics");
+    createObserver(1, "subtopics");
+    createObserver(1, "perk");
+</script>
+
+</html>
+
+<?php 
+
+//*************************** Selected training code ends **************************//
+
+    }else{
+        include_once "shared/notfound.php";
+    }
+}
+?>

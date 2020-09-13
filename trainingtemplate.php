@@ -5,27 +5,18 @@
     $db_connection = new Db_Connect();
     $conn = $db_connection->get_connection();
 
-    $query = "select * from trainings";
+    $name = implode(' ',explode('_', $_GET['name']));
 
-    $data = $conn->query($query);
-
-    $rows = $data->num_rows;
-
-    $id = $_GET['id'];
-
-    filter_var($id, FILTER_SANITIZE_STRING);
-
-    if(gettype($id) != "string" && (strlen($id) > $rows || strlen($id) <= 0)){
-        $row_returned = 0;
-    }
-    else{
-    $query = "select * from trainings where id = $id";
+    if(filter_var($name, FILTER_SANITIZE_STRING)){
+        $query = "select * from trainings where name = $name";
     
         $data = $conn->query($query);
     
         $row_returned = $data->num_rows;
     }
-
+    else{
+        $row_returned = 0;
+    }
 
     if($row_returned){
 
