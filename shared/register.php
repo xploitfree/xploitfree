@@ -9,7 +9,7 @@
                 </div>
             <?php } ?>
 
-            <?php if(get_heading() == "Trainings"){ ?>
+            <?php if(get_heading() == "Trainings" || get_heading() == "Secure Web Development" || get_heading() == "Secure Android Development" || get_heading() == "Ethical Hacking"){ ?>
                 <div class="modal-heading">
                     <p class="heading">Get Ready for any cyber threat!</p>
                     <p class="subheading">Register now to </p>
@@ -22,7 +22,7 @@
         <div class="modal-body">
             <form method="POST" name="registration_form" class="modal-form" onsubmit="formValidation(event)">
                 <p class="form-msg error-msg"></p>
-                <?php if(get_heading() == "Trainings"){ ?>
+                <?php if(get_heading() == "Trainings" || get_heading() == "Secure Web Development" || get_heading() == "Secure Android Development" || get_heading() == "Ethical Hacking"){ ?>
                     <div class="form-field">
                         <label for="cname" class="form-label">Your Name(To be printed on Certificate):</label>
                         <input type="text" name="name" class="form-input" placeholder="Enter name"/>
@@ -53,7 +53,7 @@
                         </select>
                     </div>
                 <?php } ?>
-                <?php if(get_heading() == "Trainings"){ ?>
+                <?php if(get_heading() == "Trainings" || get_heading() == "Secure Web Development" || get_heading() == "Secure Android Development" || get_heading() == "Ethical Hacking"){ ?>
                     <div class="form-field">
                         <label for="training" class="form-label">Training:</label>
                         <select name="training" class="form-select form-input">

@@ -1,6 +1,7 @@
 <?php
 
     include_once "back/dbconn.php";
+    include_once "back/funcs.php";
 
     $db_connection = new Db_Connect();
     $conn = $db_connection->get_connection();
