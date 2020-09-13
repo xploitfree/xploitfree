@@ -3,8 +3,8 @@
     include_once './shared/svgs.php'; 
     include_once "back/dbconn.php";
 
-    $db_connection = new Db_Connect();
-    $conn = $db_connection->get_connection();
+    $db_head_connection = new Db_Connect();
+    $head_conn = $db_head_connection->get_connection();
 ?>
 <header class="navheader">
     <div class="content content-wrap">
@@ -44,7 +44,7 @@
                     <?php
                         $query_trainings = "select name, training_url from trainings";
 
-                        $trainings_data = $conn->query($query_trainings);
+                        $trainings_data = $head_conn->query($query_trainings);
 
                         while($trng = $trainings_data->fetch_array(MYSQLI_ASSOC)){
                     ?>
@@ -87,4 +87,5 @@
     if( get_heading() != "home"){
         echo "<div class='pichead'></div>";
     }
+    $head_conn->close();
 ?>

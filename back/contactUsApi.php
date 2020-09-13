@@ -1,4 +1,5 @@
 <?php
+    include_once "funcs.php";
     $con = mysqli_connect("localhost","root","","xploitfree");
     $response = array();
     $body= file_get_contents('php://input');
@@ -12,26 +13,31 @@
         $sub = $string->sub;
         $phone = $string->phone;
         if ($name != "") {
+            $name = sanitizeStringPstyle($con, $name);
             $name = filter_var($name, FILTER_SANITIZE_STRING);
             if ($name == "") {
                 $response['message'] = "Invalid Name";
                 $response['success'] = false;
                 echo json_encode($response);
+                mysqli_close($con);
                 exit();
             }
         } else {
             $response['message'] = "Invalid Name";
             $response['success'] = false;
             echo json_encode($response);
+            mysqli_close($con);
             exit();
         }
          //message
         if ($message != "") {
+            $message = sanitizeStringPstyle($con, $message);
             $message = filter_var($message, FILTER_SANITIZE_STRING);
             if ($message == "") {
                 $response['message'] = "Invalid message";
                 $response['success'] = false;
                 echo json_encode($response);
+                mysqli_close($con);
                 exit();
             }
         } else {
@@ -43,28 +49,33 @@
         //email
         if ($email != "") {
             $email = $string->email;
+            $email = sanitizeStringPstyle($con, $email);
             $email = filter_var($email, FILTER_SANITIZE_EMAIL);
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 $response['message'] = "email is not a valid email address.";
                 $response['success'] = false;
                 $email = "";
                 echo json_encode($response);
+                mysqli_close($con);
                 exit();
             }
         } else {
             $response['message'] = "Not a valid email address.";
             $response['success'] = false;
             echo json_encode($response);
+                mysqli_close($con);
                 exit();
         }
         //phone
         if($phone != ""){
             $phone = (int)$phone;
+            $phone = sanitizeStringPstyle($con, $phone);
             $phone = filter_var($phone, FILTER_SANITIZE_NUMBER_INT);
             if (strlen($phone) > 10) {
                 $response['message'] = "Phone is not valid.";
                 $response['success'] = false;
                 echo json_encode($response);
+                mysqli_close($con);
                 exit();
                 $phone = "";
             }else {
@@ -74,21 +85,25 @@
             $response['message'] = 'Please enter your Number.';
             $response['success'] = false;
             echo json_encode($response);
+            mysqli_close($con);
             exit();
         }
         //subject
    if($sub != ""){
-    $sub = filter_var($sub, FILTER_SANITIZE_STRING);
-    if ($sub == "") {
-        $response['message'] = "Invalid subject";
-        $response['success'] = false;
-        echo json_encode($response);
-        exit();
-     }
-   }else {
+        $sub = sanitizeStringPstyle($con, $sub);
+        $sub = filter_var($sub, FILTER_SANITIZE_STRING);
+        if ($sub == "") {
+            $response['message'] = "Invalid subject";
+            $response['success'] = false;
+            echo json_encode($response);
+            mysqli_close($con);
+            exit();
+        }
+    }else {
        $response['message'] = "Subject cannot be null";
        $response['success'] = false;
        echo json_encode($response);
+       mysqli_close($con);
        exit();
    }
 
@@ -102,6 +117,7 @@
         $response['success'] = true;
         $response['message'] = "Thank You for contacting us! Your message was successfully received.";  
         echo json_encode($response); 
+        mysqli_close($con);
         exit();
     }
     else{
@@ -109,6 +125,7 @@
         $response['success'] = false;
         $response['message'] = "Something went wrong";
         echo json_encode($response);
+        mysqli_close($con);
         exit();
     }
 
@@ -116,6 +133,7 @@
 }else {
     $response['message'] = "Please fill all fields or else we won't be able to contact you";
     echo json_encode($response);
+    mysqli_close($con);
 }
 
 ?>
