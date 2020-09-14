@@ -60,7 +60,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="card-action"><span data-name="Red Teaming" class="card-btn btn-action" onclick="btnClickHandler(this, event)" title="Audit Now">Audit Now</span></div>
+                            <div class="card-action"><span data-name="Red Teaming" class="card-btn btn-action" onclick="btnClickHandler(this, 1,event)" title="Audit Now">Audit Now</span></div>
                         </div>
                     </a>
                     <a href="networksecurity.php" class="card-link">
@@ -87,7 +87,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="card-action"><span data-name="Network Security" class="card-btn btn-action" onclick="btnClickHandler(this, event)" title="Audit Now">Audit Now</span></div>
+                            <div class="card-action"><span data-name="Network Security" class="card-btn btn-action" onclick="btnClickHandler(this, 1, event)" title="Audit Now">Audit Now</span></div>
                         </div>
                     </a>
                 </div>
@@ -119,7 +119,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="card-action"><span data-name="Web Security" class="card-btn btn-action" onclick="btnClickHandler(this, event)" title="Audit Now">Audit Now</span></div>
+                            <div class="card-action"><span data-name="Web Security" class="card-btn btn-action" onclick="btnClickHandler(this, 1,event)" title="Audit Now">Audit Now</span></div>
                         </div>
                     </a>
                     <a href="socialengg.php" class="card-link">
@@ -146,7 +146,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="card-action"><span data-name="Social Engineering" class="card-btn btn-action" onclick="btnClickHandler(this, event)" title="Audit Now">Audit Now</span></div>
+                            <div class="card-action"><span data-name="Social Engineering" class="card-btn btn-action" onclick="btnClickHandler(this, 1, event)" title="Audit Now">Audit Now</span></div>
                         </div>
                     </a>
                 </div>

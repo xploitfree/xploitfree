@@ -26,12 +26,12 @@ html,body {
     height: 100%;
     position: absolute;
     top: 0;
-    animation: spin 1s linear infinite;
 }
 
 .active{
     opacity: 1;
     visibility: visible;
+    animation: spin 1s linear infinite;
 }
 
 .inactive{
@@ -574,11 +574,13 @@ p {
     position: fixed;
     background: white;
     border-radius: 5px;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     width: 35%;
     z-index: 10;
     display: flex;
     flex-direction: column;
+    max-height: 100%;
 }
 
 .modal-body{
@@ -772,4 +774,36 @@ p {
     to{
         transform: rotate(360deg);
     }
+}
+
+/********************************** In site Scrollbar Styling ****************************************/
+
+.pop-up{
+    overflow: hidden;
+}
+
+.pop-up:hover{
+    overflow-y: auto;
+    scrollbar-width: thin;                                /* for mozilla scrollbar */
+    scrollbar-color: #70882ec4 transparent;                  /* for mozilla scrollbar */
+}
+
+/* width */
+.pop-up::-webkit-scrollbar {
+    width: .3em;
+}
+  
+  /* Track */
+.pop-up::-webkit-scrollbar-track {
+    background: transparent;
+}
+  
+  /* Handle */
+.pop-up::-webkit-scrollbar-thumb {
+    background: #70882ec4;
+}
+  
+  /* Handle on hover */
+.pop-up::-webkit-scrollbar-thumb:hover {
+    background: #70882e;
 }

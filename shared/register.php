@@ -1,5 +1,5 @@
 <div class="modal-overlay modal-inactive">
-    <div class="modal-container">
+    <div class="modal-container pop-up">
         <div class="modal-head">
 
             <?php if(get_heading() == "Services" || get_heading() == "Red Teaming" || get_heading() == "Web Security" || get_heading() == "Network Security" || get_heading() == "Social Engineering"){ ?>

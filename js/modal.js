@@ -111,7 +111,7 @@ function formValidation(event){
     
 }
 
-function btnClickHandler(btn, isAvailable = null, event){
+function btnClickHandler(btn, isAvailable, event){
 
     if(event != undefined){
         event.preventDefault();
