@@ -5,6 +5,8 @@
     }
     else{
 
+        include_once 'dbconn.php';
+
         function get_page(){
 
             $db_p_conn = new Db_Connect();
@@ -99,9 +101,63 @@
 
             $val = $data->fetch_array(MYSQLI_ASSOC);
 
+            $ta_conn->close();
+
             return (int)$val["isAvailable"];
 
         }
+
+        function set_workshopKey($training_name){
+
+            $db_ta_conn = new Db_Connect();
+            $ta_conn = $db_ta_conn->get_connection();
+            
+            $qry = "select * from trainings where name = '$training_name'";
+            $data = $ta_conn->query($qry);
+            $dates = $data->fetch_array(MYSQLI_ASSOC);
+    
+            $sdate = (int)$dates['start_date'];
+           
+            $edate = (int)$dates['end_date'];
+            
+            $key = (string)$sdate.(string)$training_name.(string)$edate;
+            
+            $ta_conn->close();
+
+            return $key;
+        }
+    
+        function user_registration($phone) {
+            $db_ta_conn = new Db_Connect();
+            $ta_conn = $db_ta_conn->get_connection();
+            
+            $qry = "SELECT * FROM RegisteredStudents WHERE phone = $phone";
+            $qry_result = $ta_conn->query($qry);
+            
+            $user = $qry_result->fetch_array(MYSQLI_ASSOC);
+
+            $ta_conn->close();
+
+            return (int)$user['phone'];
+        }
+    
+    
+        function workshop_registration($phone,$key) {
+
+            $db_ta_conn = new Db_Connect();
+            $ta_conn = $db_ta_conn->get_connection();
+            
+            $qry = "select * from StudentInterests where phone = '$phone' and workshop_key = '$key'";
+            $qry_result = $ta_conn->query($qry);
+            
+            $key = $qry_result->fetch_array(MYSQLI_ASSOC);
+
+            $ta_conn->close();
+        
+            return (int)$key['phone'];
+            
+        }
+
     }
     
 ?>

@@ -174,100 +174,94 @@
 </head>
 
 <body>
-    <div id="page-wrapper">
-        <?php include_once "shared/header.php" ?>
+    <?php include_once "shared/header.php" ?>
 
-        <div class="content content-wrap">
-            <div class="main-content">
+    <div class="content content-wrap">
+        <div class="main-content">
 
-                <section class="section-main">
-                    <div class="training-head">
-                        <p><?php echo $training['name'] ?></p>
-                    </div>
-                    <div class="training-info">
-                        <p><?php echo $training['description'] ?></p>
-                    </div>
-                </section>
-
-                <section class="section-sec">
-
-                    <h2 class="perks-head">Perks of Completing our training!</h2>
-                    <div class="perks">
-                        <div class="perk p1">
-                            <?php certificatesvg("perk-icon") ?>
-                            <p class="perk-name">Certification</p>
-                        </div>
-                        <div class="perk p2">
-                            <?php skillupsvg("perk-icon") ?>
-                            <p class="perk-name">Skill Development</p>
-                        </div>
-                        <div class="perk p3">
-                            <?php studymatsvg("perk-icon") ?>
-                            <p class="perk-name">Study Material</p>
-                        </div>
-                        <div class="perk p4">
-                            <?php communitysvg("perk-icon") ?>
-                            <p class="perk-name">Reliable Community</p>
-                        </div>
-                    </div>
-
-                    <div class="training-content">
-                        <h2 class="content-head">Contents of training</h2>
-                        <ul class="content-list">
-                        <?php
-                            $head_query = "select * from content_heads where training_id ='".$training["id"]."'";
-
-                            $head_data = $conn->query($head_query);
-
-                            while($head = $head_data->fetch_array(MYSQLI_ASSOC)){
-                        ?>
-                            <li class="topics"><?php echo $head['head_name'] ?>
-
-                                <ul class="topic-sublist">
-                                    <?php
-                                        $content_query = "select * from content where head_id ='".$head["id"]."'";
-
-                                        $content_data = $conn->query($content_query);
-
-                                        while($content = $content_data->fetch_array(MYSQLI_ASSOC)){
-                                    ?>
-                                    <li class="subtopics"><?php echo $content['content_name'] ?></li>
-                                    <?php } ?>
-                                </ul>
-
-                            </li>
-
-                            <?php } ?>
-                        </ul>
-                    </div>
-
-                </section>
-
-            </div>
-
-            <div class="training-card">
-                <img src=<?php echo $training['img_url'] ?>></img>
-                <div class="training-name"><span class="training-btn"><?php echo $training['name'] ?></span></div>
-                <div class="card-body">
-                    <p class="body-head"><strike class="head-sec">&#8377;<?php echo $training['cp'] ?></strike><span
-                            class="head-main">&#8377;<?php echo $training['sp'] ?>/--</span></p>
-                    <p class="body-para">Starts from 10th September to 15th September</p>
-                    <p class="body-para">2hrs/Day</p>
+            <section class="section-main">
+                <div class="training-head">
+                    <p><?php echo $training['name'] ?></p>
                 </div>
-                <div class="training-action">
-                    <span data-name="<?php echo $training['name'] ?>" class="training-btn btn-action" onclick="btnClickHandler(this, <?php echo is_training_available($training['name']) ?>, event)" title="Register Here">Register Here</span>
+                <div class="training-info">
+                    <p><?php echo $training['description'] ?></p>
                 </div>
-            </div>
+            </section>
+
+            <section class="section-sec">
+
+                <h2 class="perks-head">Perks of Completing our training!</h2>
+                <div class="perks">
+                    <div class="perk p1">
+                        <?php certificatesvg("perk-icon") ?>
+                        <p class="perk-name">Certification</p>
+                    </div>
+                    <div class="perk p2">
+                        <?php skillupsvg("perk-icon") ?>
+                        <p class="perk-name">Skill Development</p>
+                    </div>
+                    <div class="perk p3">
+                        <?php studymatsvg("perk-icon") ?>
+                        <p class="perk-name">Study Material</p>
+                    </div>
+                    <div class="perk p4">
+                        <?php communitysvg("perk-icon") ?>
+                        <p class="perk-name">Reliable Community</p>
+                    </div>
+                </div>
+
+                <div class="training-content">
+                    <h2 class="content-head">Contents of training</h2>
+                    <ul class="content-list">
+                    <?php
+                        $head_query = "select * from content_heads where training_id ='".$training["id"]."'";
+
+                        $head_data = $conn->query($head_query);
+
+                        while($head = $head_data->fetch_array(MYSQLI_ASSOC)){
+                    ?>
+                        <li class="topics"><?php echo $head['head_name'] ?>
+
+                            <ul class="topic-sublist">
+                                <?php
+                                    $content_query = "select * from content where head_id ='".$head["id"]."'";
+
+                                    $content_data = $conn->query($content_query);
+
+                                    while($content = $content_data->fetch_array(MYSQLI_ASSOC)){
+                                ?>
+                                <li class="subtopics"><?php echo $content['content_name'] ?></li>
+                                <?php } ?>
+                            </ul>
+
+                        </li>
+
+                        <?php } ?>
+                    </ul>
+                </div>
+
+            </section>
 
         </div>
 
-        <?php include_once "shared/register.php"; ?>
-
-
-        <?php include_once "shared/footer.php" ?>
+        <div class="training-card">
+            <img src=<?php echo $training['img_url'] ?>></img>
+            <div class="training-name"><span class="training-btn"><?php echo $training['name'] ?></span></div>
+            <div class="card-body">
+                <p class="body-head"><strike class="head-sec">&#8377;<?php echo $training['cp'] ?></strike><span
+                        class="head-main">&#8377;<?php echo $training['sp'] ?>/--</span></p>
+                <p class="body-para">Starts from 10th September to 15th September</p>
+                <p class="body-para">2hrs/Day</p>
+            </div>
+            <div class="training-action">
+                <span data-name="<?php echo $training['name'] ?>" class="training-btn btn-action" onclick="btnClickHandler(this, <?php echo is_training_available($training['name']) ?>, event)" title="Register Here">Register Here</span>
+            </div>
+        </div>
 
     </div>
 
+    <?php include_once "shared/register.php"; ?>
+    <?php include_once "shared/footer.php" ?>
     <?php include_once "shared/preloader.php" ?>
 </body>
 
