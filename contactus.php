@@ -70,12 +70,14 @@
         </form>
 </div>
 
-        <?php
+<?php
     include 'shared/footer.php';
+    include 'shared/preloader.php';
 ?>
 
 </body>
 
 <script src="./js/contact.js"></script>
+<script src="./js/preloader.js"></script>
 
 </html>

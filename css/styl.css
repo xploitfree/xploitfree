@@ -15,14 +15,7 @@ html,body {
 
 .loading{
     visibility: hidden;
-    opacity: 0;
-}
-
-.loaded{
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.5s ease-out;
-    transition-delay: 0.2s;
+    overflow: hidden;
 }
 
 #preloader{
@@ -33,6 +26,7 @@ html,body {
     height: 100%;
     position: absolute;
     top: 0;
+    animation: spin 1s linear infinite;
 }
 
 .active{
@@ -40,25 +34,8 @@ html,body {
     visibility: visible;
 }
 
-.inactivated{
-    animation: zoomout 0.7s ease-out forwards;
-}
-
-@keyframes zoomout{
-    0%{
-        transform: scale(1);
-        display: block;
-    }
-    99.9%{
-        transform: scale(15);
-        display: none;
-        visibility: hidden;
-    }
-    100%{
-        transform: scale(1);
-        display: none;
-        visibility: hidden;
-    }
+.inactive{
+    visibility: hidden;
 }
 
 .content{

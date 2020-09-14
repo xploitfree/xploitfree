@@ -100,10 +100,12 @@
 
 <?php
     include 'shared/footer.php';
+    include 'shared/preloader.php';
 ?>
 
     </body>
     <script src="./js/scroll.js"></script>
+    <script src="./js/preloader.js"></script>
     <script>
         createObserver(.5, "infosdata");
         createObserver(.5, "infosimg");

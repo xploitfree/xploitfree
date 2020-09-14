@@ -25,32 +25,30 @@
 
 <body>
 
-    <div id="page-wrapper">
+    <?php include_once "shared/header.php" ?>
 
-        <?php include_once "shared/header.php" ?>
+    <div class="content">
+        <div class="section">
+            <section class="sub-section1">
+                <div class="section-head">
+                    <h1 class="section-head-text">
+                        Battle Harden your network with no threat to your data
+                    </h1>
+                </div>
+                <div class="section-para">
+                    <p class="section-para-text">
+                        Our experts will use extensive cutting edge methods to launch a
+                        full scale cyber attack . A complete analysis of the network security
+                        from an outsider’s Perspective to know the flaws and performance
+                        of the security protocol and the people faced with real world
+                        threats.We will provide you with the tactics to cover the security holes we
+                        discovered and exploited.
+                    </p>
+                </div>
+            </section>
+            <section class="sub-section2">
 
-        <div class="content">
-            <div class="section">
-                <section class="sub-section1">
-                    <div class="section-head">
-                        <h1 class="section-head-text">
-                            Battle Harden your network with no threat to your data
-                        </h1>
-                    </div>
-                    <div class="section-para">
-                        <p class="section-para-text">
-                            Our experts will use extensive cutting edge methods to launch a
-                            full scale cyber attack . A complete analysis of the network security
-                            from an outsider’s Perspective to know the flaws and performance
-                            of the security protocol and the people faced with real world
-                            threats.We will provide you with the tactics to cover the security holes we
-                            discovered and exploited.
-                        </p>
-                    </div>
-                </section>
-                <section class="sub-section2">
-
-                    <?php
+        <?php
 
             $query_trainings = "select * from trainings";
 
@@ -64,66 +62,63 @@
                 if($counter % 2 == 0){
         ?>
 
-                    <div class="sec-row">
+                <div class="sec-row">
 
-                        <?php } ?>
+                    <?php } ?>
 
-                        <a href=<?php echo $training['training_url'] ?> class="card-link">
-                            <div class="card <?php echo ($counter % 2 == 0) ? "left": "right" ?> ">
-                                <img src=<?php echo $training['img_url'] ?>></img>
-                                <div class="card-name"><span class="card-btn"><?php echo $training['name'] ?></span>
-                                </div>
-                                <div class="card-overlay">
-                                    <ul class="card-list">
-                                        <?php 
-                                        $query_features = "select feature_name from features_of_training where training_id ='".$training["id"]."'";
-
-                                        $features_data = $conn->query($query_features);
-
-                                        while($feature = $features_data->fetch_array(MYSQLI_ASSOC)){
-                                    ?>
-                                        <li class="list-item">
-                                            <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
-                                            <span class="item-text"><?php echo $feature['feature_name'] ?></span>
-                                        </li>
-                                        <?php } ?>
-                                    </ul>
-                                </div>
-                                <div class="card-action">
-                                    <span data-name="<?php echo $training['name'] ?>" class="card-btn btn-action" onclick="btnClickHandler(this, <?php echo is_training_available($training['name']) ?>, event)" title="Register Now">Register Now</span>
-                                </div>
+                    <a href=<?php echo $training['training_url'] ?> class="card-link">
+                        <div class="card <?php echo ($counter % 2 == 0) ? "left": "right" ?> ">
+                            <img src=<?php echo $training['img_url'] ?>></img>
+                            <div class="card-name"><span class="card-btn"><?php echo $training['name'] ?></span>
                             </div>
-                        </a>
+                            <div class="card-overlay">
+                                <ul class="card-list">
+                                    <?php 
+                                    $query_features = "select feature_name from features_of_training where training_id ='".$training["id"]."'";
 
-                        <?php 
+                                    $features_data = $conn->query($query_features);
 
-                        $counter++;
-                        if($counter == 2){
-                    ?>
+                                    while($feature = $features_data->fetch_array(MYSQLI_ASSOC)){
+                                ?>
+                                    <li class="list-item">
+                                        <span class="item-icon"> <?php ticksvg(13, 13) ?> </span>
+                                        <span class="item-text"><?php echo $feature['feature_name'] ?></span>
+                                    </li>
+                                    <?php } ?>
+                                </ul>
+                            </div>
+                            <div class="card-action">
+                                <span data-name="<?php echo $training['name'] ?>" class="card-btn btn-action" onclick="btnClickHandler(this, <?php echo is_training_available($training['name']) ?>, event)" title="Register Now">Register Now</span>
+                            </div>
+                        </div>
+                    </a>
 
-                    </div>
+                    <?php 
 
-                    <div class="sec-row logo-sec">
-                        <?php trainingsvg(238, 148) ?>
-                    </div>
+                    $counter++;
+                    if($counter == 2){
+                ?>
 
-                    <?php } 
-                    if($counter == $no_of_trainings && $no_of_trainings % 2 == 0){
-                        echo '</div>';
-                    }
-                    else if($counter == $no_of_trainings && $no_of_trainings %2 != 0){
-                        echo '<a class="card-link"></a></div>';
-                    }
-                } ?>
-                </section>
-            </div>
+                </div>
+
+                <div class="sec-row logo-sec">
+                    <?php trainingsvg(238, 148) ?>
+                </div>
+
+                <?php } 
+                if($counter == $no_of_trainings && $no_of_trainings % 2 == 0){
+                    echo '</div>';
+                }
+                else if($counter == $no_of_trainings && $no_of_trainings %2 != 0){
+                    echo '<a class="card-link"></a></div>';
+                }
+            } ?>
+            </section>
         </div>
-
-        <?php include_once "shared/footer.php" ?>
-        <?php include_once "shared/register.php"; ?>
-
     </div>
 
+    <?php include_once "shared/footer.php" ?>
+    <?php include_once "shared/register.php"; ?>
     <?php include_once "shared/preloader.php" ?>
 
 </body>
