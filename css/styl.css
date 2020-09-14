@@ -700,9 +700,10 @@ p {
 }
 
 .notice{
-    background: indianred;
+    background: #e90000;
     padding: 1rem;
     color: white;
+    box-shadow: 0px 2px 3px 0px black;
 }
 
 .form-input:focus, .form-select:focus{
@@ -773,6 +774,7 @@ p {
 }
 
 .submit-msg{
+    color: #323232;
     padding: 2rem;
     box-sizing: border-box;
 }

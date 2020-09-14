@@ -1,11 +1,18 @@
 <?php
-    include_once "./back/funcs.php";
-    include_once './shared/svgs.php'; 
-    include_once "back/dbconn.php";
 
-    $db_head_connection = new Db_Connect();
-    $head_conn = $db_head_connection->get_connection();
+    if(basename($_SERVER['SCRIPT_FILENAME']) == "header.php"){
+        include_once "../shared/notfound.php";
+    }
+    else{
+
+        include_once "./back/funcs.php";
+        include_once './shared/svgs.php'; 
+        include_once "back/dbconn.php";
+
+        $db_head_connection = new Db_Connect();
+        $head_conn = $db_head_connection->get_connection();
 ?>
+
 <header class="navheader">
     <div class="content content-wrap">
         <div class="navlogo-section">
@@ -88,4 +95,6 @@
         echo "<div class='pichead'></div>";
     }
     $head_conn->close();
+
+}
 ?>
