@@ -2,18 +2,20 @@
 include_once "funcs.php";
 
 $key = set_workshopKey($training);
-if(is_training_available($training)){                  //training is available i.e. dates are updated
+if(is_training_available($training)){              //training is available i.e. dates are updated
 
-    if(user_registration($phone)){                   //user registered in table 1               
-            if(workshop_registration($phone,$key)){ //user already registered for particular workshop in table 2
+    
+    if(is_user_registered($email)){            //user registered in table 1               
+            if(is_workshop_registered($email,$key)){ //user already registered for particular workshop in table 2
                 $response['success'] = true;
-                $response['message'] = "You are already registered for $training workshop user registered in table 1 a";
+                $response['message'] = "You are already registered for $training workshop.";
+
                 echo json_encode($response);
                 exit();
             }else{                            //user not registered for particular workshop in table 2
               
-                $query = "INSERT INTO StudentInterests(phone,interest,workshop_key,standby,ispaid) 
-                VALUES ('$phone', '$training','$key',0,0)" or die(mysqli_error($con));
+                $query = "INSERT INTO StudentInterests(email,interest,workshop_key,standby,ispaid) 
+                VALUES ('$email', '$training','$key',0,0)" or die(mysqli_error($con));
                 $q = mysqli_query($con,$query) or die(mysqli_error($con));
 
                 if($q){
@@ -23,7 +25,7 @@ if(is_training_available($training)){                  //training is available i
                     echo json_encode($response);
                     exit();
                 }else{
-                    $response['message'] = "Some error occured!";
+                    $response['message'] = "fatal";
                 }
 
             }
@@ -31,9 +33,9 @@ if(is_training_available($training)){                  //training is available i
             $query1 = "INSERT INTO RegisteredStudents(name,email,phone)
             values('$name','$email','$phone')";
             $q1 = mysqli_query($con,$query1) or die(mysqli_error($con));
-            $query2 = "INSERT INTO StudentInterests(phone,interest,workshop_key,standby,ispaid) 
+            $query2 = "INSERT INTO StudentInterests(email,interest,workshop_key,standby,ispaid) 
+            VALUES ('$email', '$training','$key',1,0)";
             $q2 = mysqli_query($con,$query2) or die(mysqli_error($con));
-            VALUES ('$phone', '$training','$key',1,0)";
            
             if($q2){
             
@@ -64,8 +66,8 @@ else{                                          //training is not available i.e d
 
     $key = set_workshopKey($training);
     
-    if(user_registration($phone)){            //user registered in table 1               
-            if(workshop_registration($phone,$key)){ //user already registered for particular workshop in table 2
+    if(is_user_registered($email)){            //user registered in table 1               
+            if(is_workshop_registered($email,$key)){ //user already registered for particular workshop in table 2
                 $response['success'] = true;
                 $response['message'] = "You are already registered for $training workshop from user registered in table 1 ";
 
@@ -73,8 +75,8 @@ else{                                          //training is not available i.e d
                 exit();
             }else{                            //user not registered for particular workshop in table 2
               
-                $Query = "INSERT INTO StudentInterests (phone,interest,workshop_key,standby,ispaid) 
-                VALUES ('$phone', '$training','$key',0,0)" or die(mysqli_error($con));
+                $Query = "INSERT INTO StudentInterests (email,interest,workshop_key,standby,ispaid) 
+                VALUES ('$email', '$training','$key',0,0)" or die(mysqli_error($con));
 
                 $q4 = mysqli_query($con,$Query) or die(mysqli_error($con));
 
@@ -100,11 +102,11 @@ else{                                          //training is not available i.e d
             }
     }else{                                            //user not registered in table any table
         
-            echo "I;m here";
+        
             $query1 = "INSERT INTO RegisteredStudents (name,email,phone) VALUES ('$name','$email','$phone')";
             $q1 = mysqli_query($con,$query1) or die(mysqli_error($con));
-            $query2 = "INSERT INTO StudentInterests(phone,interest,workshop_key,standby,ispaid) 
-            VALUES ('$phone', '$training','$key',1,0)";
+            $query2 = "INSERT INTO StudentInterests(email,interest,workshop_key,standby,ispaid) 
+            VALUES ('$email', '$training','$key',1,0)";
 
             $q2 = mysqli_query($con,$query2) or die(mysqli_error($con));
         

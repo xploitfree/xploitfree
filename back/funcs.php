@@ -116,45 +116,49 @@
             $data = $ta_conn->query($qry);
             $dates = $data->fetch_array(MYSQLI_ASSOC);
     
-            $sdate = (int)$dates['start_date'];
+            $sdate = (string)$dates['start_date'];
            
-            $edate = (int)$dates['end_date'];
+            $edate = (string)$dates['end_date'];
             
-            $key = (string)$sdate.(string)$training_name.(string)$edate;
+            $key = implode('',explode('-',$sdate)).implode('',explode(' ',$training_name)).implode('',explode('-',$edate));
             
             $ta_conn->close();
 
             return $key;
         }
     
-        function user_registration($phone) {
+        function is_user_registered($email) {
             $db_ta_conn = new Db_Connect();
             $ta_conn = $db_ta_conn->get_connection();
             
-            $qry = "SELECT * FROM RegisteredStudents WHERE phone = $phone";
+            $qry = "SELECT * FROM RegisteredStudents WHERE email = '$email'";
             $qry_result = $ta_conn->query($qry);
+    
+            $num = mysqli_num_rows($qry_result);
             
-            $user = $qry_result->fetch_array(MYSQLI_ASSOC);
-
-            $ta_conn->close();
-
-            return (int)$user['phone'];
+            if($num){
+                return true;
+            }else{
+                return false;
+            }
         }
     
     
-        function workshop_registration($phone,$key) {
-
+        function is_workshop_registered($email,$key) {
             $db_ta_conn = new Db_Connect();
             $ta_conn = $db_ta_conn->get_connection();
             
-            $qry = "select * from StudentInterests where phone = '$phone' and workshop_key = '$key'";
+            $qry = "SELECT * FROM StudentInterests WHERE email = '$email' AND workshop_key = '$key'";
             $qry_result = $ta_conn->query($qry);
             
-            $key = $qry_result->fetch_array(MYSQLI_ASSOC);
-
-            $ta_conn->close();
-        
-            return (int)$key['phone'];
+            $num = mysqli_num_rows($qry_result);
+            
+            echo $num;
+            if($num){
+                return true;
+            }else{
+                return false;
+            }
             
         }
 
