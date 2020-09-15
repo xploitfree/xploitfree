@@ -82,8 +82,7 @@ else{                                          //training is not available i.e d
 
 
                 if($q4){
-                    if(send_mail($email,"Registration Successfull!" , "You are successfully registered for ".$training.".
-                     Our team will contact you in 24hrs. for further details.")){
+                    if(send_mail($email,"Registration Successfull!" , "You are successfully registered for ".$training.".Our team will contact you in 24hrs for further details.")){
                     $response['success'] = true;
                     $response['message'] = "Successfully registered for $training workshop";
                     echo json_encode($response);

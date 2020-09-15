@@ -5,6 +5,9 @@
     }
     else{
 
+        $db_foot_connection = new Db_Connect();
+        $foot_conn = $db_foot_connection->get_connection();
+
 ?>
 
     <div class="picfoot"></div>
@@ -29,19 +32,29 @@
             <div class="footcol sinfo">
                 <p class="footcolhead">Services</p>
                 <ul class="footcollist">
-                    <a href="/" class="navlink navitem"><li class="footcolitem"><span class="footcoltext">Web Security</span></li></a>
-                    <a href="/" class="navlink navitem"><li class="footcolitem"><span class="footcoltext">Network Security</span></li></a>
-                    <a href="/" class="navlink navitem"><li class="footcolitem"><span class="footcoltext">Social Engineering</span></li></a>
-                    <a href="/" class="navlink navitem"><li class="footcolitem"><span class="footcoltext">Red Teaming</span></li></a>
+                    <a href="websecurity.php" class="navlink navitem"><li class="footcolitem"><span class="footcoltext">Web Security</span></li></a>
+                    <a href="networksecurity.php" class="navlink navitem"><li class="footcolitem"><span class="footcoltext">Network Security</span></li></a>
+                    <a href="socialengg.php" class="navlink navitem"><li class="footcolitem"><span class="footcoltext">Social Engineering</span></li></a>
+                    <a href="redteaming.php" class="navlink navitem"><li class="footcolitem"><span class="footcoltext">Red Teaming</span></li></a>
                 </ul>
             </div>
 
             <div class="footcol tinfo">
                 <p class="footcolhead">Trainings</p>
                 <ul class="footcollist">
-                    <a href="/" class="navlink navitem"><li class="footcolitem"><span class="footcoltext">Ethical Hacking</span></li></a>
-                    <a href="/" class="navlink navitem"><li class="footcolitem"><span class="footcoltext">Secure Web Development</span></li></a>
-                    <a href="/" class="navlink navitem"><li class="footcolitem"><span class="footcoltext">Secure Android Development</span></li></a>
+                    <?php
+                        $query_trainings = "select name, training_url from trainings";
+
+                        $trainings_data = $foot_conn->query($query_trainings);
+
+                        while($trng = $trainings_data->fetch_array(MYSQLI_ASSOC)){
+                    ?>
+                        <a href="./<?php echo $trng["training_url"] ?>" class="navlink navitem">
+                            <li class="footcolitem">
+                                <span class="footcoltext"><?php echo $trng["name"] ?></span>
+                            </li>
+                        </a>
+                    <?php } ?>
                 </ul>
             </div>
 
@@ -84,4 +97,7 @@
         </div>
     </footer>
 
-<?php } ?>
+<?php
+        $foot_conn->close();
+    } 
+ ?>

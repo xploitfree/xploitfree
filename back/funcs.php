@@ -153,7 +153,6 @@
             
             $num = mysqli_num_rows($qry_result);
             
-            echo $num;
             if($num){
                 return true;
             }else{

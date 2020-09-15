@@ -95,6 +95,5 @@
         echo "<div class='pichead'></div>";
     }
     $head_conn->close();
-
 }
 ?>
