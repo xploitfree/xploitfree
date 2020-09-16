@@ -40,7 +40,7 @@
                 <div class="col-6 cformcol">
                     <p class="dropp">Or drop a message below</p>
                     <p class="form-msg error-msg"></p>
-                    <input name="yname" class="cforminp" type="text" placeholder="Your Name" />
+                    <input name="name" class="cforminp" type="text" placeholder="Your Name" />
                     <input name="email" class="cforminp" type="text" placeholder="Email" />
                     <input name="phone" class="cforminp" type="text" placeholder="Phone Number" />
                 </div>
@@ -57,13 +57,13 @@
             <div class="biginp">
                 <div class="row biginpr">
                     <div class="col-12 biginpc">
-                        <textarea name="message" class="txtara" placeholder="message" name="" id="" cols="30"
+                        <textarea name="message" class="txtara pop-up" placeholder="message" name="" id="" cols="30"
                             rows="10"></textarea>
                     </div>
                 </div>
                 <div class="row biginprb justify-content-end">
                     <div class="c2ccolb col-2 d-flex flex-column justify-content-start align-items-center">
-                        <button name="submit" class="c2csub">Submit&nbsp<?php smspinner(20, 20, "spinner") ?></button>
+                        <button type="submit" class="c2csub">Submit&nbsp<?php smspinner(20, 20, "spinner") ?></button>
                     </div>
                 </div>
             </div>

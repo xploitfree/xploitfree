@@ -9,13 +9,13 @@
     }
     else{
 
-        function send_mail($customer_email, $subject, $message){
+        function send_mail($customer_email, $subject, $message, $replyto = "xploitfree@gmail.com", $name = "Xploitfree Team"){
 
             $mail = new PHPMailer(TRUE);
 
             $mail->setFrom('xploitfree@gmail.com', 'Xploitfree Team');
             $mail->clearReplyTos();
-            // $mail->addReplyto('18bcs054@smvdu.ac.in', 'Puneet Saraswat');
+            $mail->addReplyto($replyto, $name);
             $mail->addAddress($customer_email);
             $mail->Subject = $subject;
             $mail->Body = $message;

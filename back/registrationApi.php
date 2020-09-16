@@ -39,14 +39,14 @@
             $name = sanitizeStringPstyle($con, $name);
             $name = filter_var($name, FILTER_SANITIZE_STRING);
             if ($name == "") {
-                $response['message'] = "Invalid Name";
+                $response['message'] = "Character limit exceeded.(Limit: 30)";
                 $response['success'] = false;
                 echo json_encode($response);
                 mysqli_close($con);
                 exit();
             }
         } else {
-            $response['message'] = "Invalid Name";
+            $response['message'] = "Please enter valid name(to be printed on Certificate).";
             $response['success'] = false;
             echo json_encode($response);
             mysqli_close($con);
@@ -58,7 +58,7 @@
             $email = sanitizeStringPstyle($con, $email);
             $email = filter_var($email, FILTER_SANITIZE_EMAIL);
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                $response['message'] = "email is not a valid email address.";
+                $response['message'] = "Enter valid email!";
                 $response['success'] = false;
                 echo json_encode($response);
                 mysqli_close($con);
@@ -66,7 +66,7 @@
                 $email = "";
             }
         } else {
-            $response['message'] = "Not a valid email address.";
+            $response['message'] = "Enter valid email!";
             $response['success'] = false;
             echo json_encode($response);
             mysqli_close($con);
@@ -77,8 +77,8 @@
             $phone = (int)$phone;
             $phone = sanitizeStringPstyle($con, $phone);
             $phone = filter_var($phone, FILTER_SANITIZE_NUMBER_INT);
-            if (strlen($phone) > 10) {
-                $response['message'] = "Number is not valid.";
+            if (strlen($phone) != 10) {
+                $response['message'] = "Enter valid contact!";
                 $response['success'] = false;
                 echo json_encode($response);
                 mysqli_close($con);
@@ -86,7 +86,7 @@
                 $phone = "";
             }
         }else {
-            $response['message'] = 'Please enter your Number.';
+            $response['message'] = 'Enter valid contact!';
             $response['success'] = false;
             echo json_encode($response);
             mysqli_close($con);
@@ -105,7 +105,7 @@
                 exit();
         }
         }else {
-       $response['message'] = "training cannot be null";
+       $response['message'] = "Training cannot be null";
        $response['success'] = false;
        echo json_encode($response);
        mysqli_close($con);
@@ -139,6 +139,12 @@
             mysqli_close($con);
             exit();
         }
+    }else{
+        $response['message'] = 'Please enter desired service.';
+        $response['success'] = false;
+        echo json_encode($response);
+        mysqli_close($con);
+        exit();
     }
 }
 
@@ -150,26 +156,8 @@
 
     if ($phone != "" && $service != "" && $email != "" && $domain != ""){
     
-        $query1 = "INSERT INTO registration_services(email, contact, domain, service_name) values('$email','$phone','$domain','$service')";
-        $query_result1 = mysqli_query($con,$query1);
-    
-    
-        if($query_result1){
-            if(send_mail($email,"Registration Successfull!" , "You are successfully registered for ".$service." service. Our team will contact you in 24hrs. for further details.")){
-                $response['success'] = true;
-                $response['message'] = "Thankyou for registering our service. Our team will soon contact you.";   
-            }
-            else{
-                $response['success'] = true;
-                $response['message'] = "Regsitration successful but we were unable to send you email due to technical error!";  
-            }
-        }
-        else{
-            $response['success'] = false;
-            $response['message'] = "Could not register";
-        }
-        echo json_encode($response);
-        mysqli_close($con);
+        include_once './serviceRegistration.php';
+
     }
 }else {
     $response['message'] = "credentials cannot be null";

@@ -127,14 +127,16 @@
             return $key;
         }
     
-        function is_user_registered($email) {
+        function is_user_registered($email, $table1_name) {
             $db_ta_conn = new Db_Connect();
             $ta_conn = $db_ta_conn->get_connection();
             
-            $qry = "SELECT * FROM RegisteredStudents WHERE email = '$email'";
+            $qry = "SELECT * FROM $table1_name WHERE email = '$email'";
             $qry_result = $ta_conn->query($qry);
     
             $num = mysqli_num_rows($qry_result);
+
+            $ta_conn->close();
             
             if($num){
                 return true;
@@ -142,7 +144,6 @@
                 return false;
             }
         }
-    
     
         function is_workshop_registered($email,$key) {
             $db_ta_conn = new Db_Connect();
@@ -152,13 +153,128 @@
             $qry_result = $ta_conn->query($qry);
             
             $num = mysqli_num_rows($qry_result);
+
+            $ta_conn->close();
             
             if($num){
                 return true;
             }else{
                 return false;
-            }
+            }  
+        }
+    
+        function is_service_reg_n_dne($email,$service, $domain) {
+            $db_ta_conn = new Db_Connect();
+            $ta_conn = $db_ta_conn->get_connection();
             
+            $qry = "SELECT * FROM registrationtable2 WHERE email = '$email' AND service_name = '$service' and domain = '$domain' and isAudited = '0'";
+            $qry_result = $ta_conn->query($qry);
+            
+            $num = mysqli_num_rows($qry_result);
+
+            $ta_conn->close();
+            
+            if($num){
+                return true;
+            }else{
+                return false;
+            }  
+        }
+
+        function get_client_ip()
+        {
+            // foreach (array(
+            //             'HTTP_CLIENT_IP',
+            //             'HTTP_X_FORWARDED_FOR',
+            //             'HTTP_X_FORWARDED',
+            //             'HTTP_X_CLUSTER_CLIENT_IP',
+            //             'HTTP_FORWARDED_FOR',
+            //             'HTTP_FORWARDED',
+            //             'REMOTE_ADDR') as $key) {
+            //     if (array_key_exists($key, $_SERVER)) {
+            //         foreach (explode(',', $_SERVER[$key]) as $ip) {
+            //             $ip = trim($ip);
+            //             if (filter_var($ip, FILTER_VALIDATE_IP,
+            //                             FILTER_FLAG_IPV4 |
+            //                             FILTER_FLAG_IPV6 |
+            //                             FILTER_FLAG_NO_PRIV_RANGE |
+            //                             FILTER_FLAG_NO_RES_RANGE)) {
+            //                 return $ip;
+            //             }
+            //         }
+            //     }
+            // }
+            // return null;
+            return $_SERVER['REMOTE_ADDR'];
+        }
+
+        function check_client_ip($ip, $con){
+
+            $query = "select * from ip_check where ip = '$ip'";
+            $result = mysqli_query($con, $query);
+
+            if(mysqli_num_rows($result)){
+                $data = mysqli_fetch_assoc($result);
+                $counter = $data['counter'];
+                            
+                if(!reset_counter($data['first_request_time'], $ip, "ip", "ip_check", $counter, $con)){          //if error occurs in resetting counter
+                    $response['success'] = false;
+                    $response['message'] = "Something went wrong on our side. Try again.";
+                    echo json_encode($response);
+                    mysqli_close($con);
+                    exit();
+                }                
+
+                if($counter < 10){
+                    
+                    $counter++;
+
+                    $sub_q = "UPDATE `ip_check` SET `counter` = '$counter' WHERE `ip_check`.`ip` = '$ip'";
+                    $sub_q_result = mysqli_query($con, $sub_q);
+                    if($sub_q_result){
+                        return true;
+                    }
+                    else{
+                        return false;
+                    }
+                }
+                else{
+                    return false;
+                }
+            }
+            else{
+                $sub_q = "insert into ip_check(ip, counter) values('$ip', '1')";
+                $sub_q_result = mysqli_query($con, $sub_q);
+
+                if($sub_q_result){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+        }
+
+        function reset_counter($stored_time, $email, $pk_field, $table1_name, &$counter, $con){
+
+            date_default_timezone_set("Asia/Kolkata");
+            $current_time = time();
+
+            if($current_time - strtotime($stored_time) >= 5*60){
+                $current_time = date("Y-m-d H:i:s", $current_time);
+                $sub_q = "UPDATE `$table1_name` SET `counter` = '0', `first_request_time` = '$current_time' WHERE `$table1_name`.`$pk_field` = '$email'";
+                $sub_q_result = mysqli_query($con, $sub_q);
+        
+                if($sub_q_result){
+                    $counter = 0;
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+
+            return true;
         }
 
     }

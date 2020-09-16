@@ -34,7 +34,7 @@
                     <input type="email" name="email" class="form-input" placeholder="Enter email"/>
                 </div>
                 <div class="form-field">
-                    <label for="phn" class="form-label">Contact number:</label>
+                    <label for="phone" class="form-label">Contact number:</label>
                     <input type="tel" name="phone" class="form-input" placeholder="Enter phone"/>
                 </div>
                 <?php if(get_heading() == "Services" || get_heading() == "Red Teaming" || get_heading() == "Web Security" || get_heading() == "Network Security" || get_heading() == "Social Engineering"){ ?>

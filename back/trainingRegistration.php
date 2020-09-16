@@ -5,7 +5,7 @@ $key = set_workshopKey($training);
 if(is_training_available($training)){              //training is available i.e. dates are updated
 
     
-    if(is_user_registered($email)){            //user registered in table 1               
+    if(is_user_registered($email, "RegisteredStudents")){            //user registered in table 1               
             if(is_workshop_registered($email,$key)){ //user already registered for particular workshop in table 2
                 $response['success'] = true;
                 $response['message'] = "You are already registered for $training workshop.";
@@ -44,7 +44,8 @@ if(is_training_available($training)){              //training is available i.e. 
                 $response['message'] = "Thank you for registering with our training. Our team will soon contact you";  
                 echo json_encode($response);
                 exit();
-                }else{
+                }
+                else{
                     $response['success'] = true;
                     $response['message'] = "Regsitration successful but we were unable to send you email due to technical error!";
                     echo json_encode($response);

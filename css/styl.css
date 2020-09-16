@@ -293,6 +293,7 @@ p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    filter: drop-shadow(5px 5px 8px black);
 }
 
 .pichead {
@@ -301,6 +302,7 @@ p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    filter: drop-shadow(5px 5px 8px black);
 }
 
 .testimony {

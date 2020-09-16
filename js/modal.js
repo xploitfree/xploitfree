@@ -21,17 +21,19 @@ document.addEventListener("click", (event) => {
 function formValidation(event){
 
     event.preventDefault();
-    
+
+    document.querySelector(".form-msg").classList.add("error-msg");
+    document.querySelector(".form-msg").classList.remove("success-msg");
 
     const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     const phnRegExp = /^[0-9]+$/;
     const nameRegExp = /^[A-Za-z ]+$/;
     const urlRegExp = /^((?!-)[A-Za-z0-9-]{1, 63}(?<!-)\\.)+[A-Za-z]{2, 6}$/;
 
-    const fields = document.getElementsByClassName("form-input");
+    const fields = document.forms["registration_form"];
 
     const emailField = document.forms['registration_form']['email'];
-    const phnField = document.forms['registration_form']['phn'];
+    const phnField = document.forms['registration_form']['phone'];
     const nameField = document.forms['registration_form']['name'];
     const domainField = document.forms['registration_form']['domain'];
     const trainingField = document.forms['registration_form']['training'];
@@ -43,7 +45,7 @@ function formValidation(event){
 
     if(emailField != undefined && emailField.value == '' || phnField != undefined && phnField.value == '' || nameField != undefined && nameField.value == '' || domainField != undefined && domainField.value == '' || trainingField != undefined && trainingField.value == '' || serviceField != undefined && serviceField.value == ''){
         for(i=0; i<fields.length; i++){
-            if(fields[i].value =='')
+            if(fields[i].value =='' && fields[i].type != "submit")
                 fields[i].classList.add("invalid");
         }
         document.querySelector(".form-msg").style.display = "block";
@@ -54,12 +56,22 @@ function formValidation(event){
         document.querySelector(".form-msg").style.display = "block";
         document.querySelector(".form-msg").textContent = "Enter valid email!";
     }
+    else if(emailField != undefined && emailField.value.length > 50){
+        emailField.classList.add("invalid");
+        document.querySelector(".form-msg").style.display = "block";
+        document.querySelector(".form-msg").textContent = "Character limit exceeded.(Limit: 50)";
+    }
     else if(nameField != undefined && !nameRegExp.test(nameField.value)){
         nameField.classList.add("invalid");
         document.querySelector(".form-msg").style.display = "block";
         document.querySelector(".form-msg").textContent = "Please enter valid name(to be printed on Certificate).";
     }
-    else if(phnField != undefined && !phnRegExp.test(phnField.value)){
+    // else if(nameField != undefined && nameField.value.length > 20){
+    //     nameField.classList.add("invalid");
+    //     document.querySelector(".form-msg").style.display = "block";
+    //     document.querySelector(".form-msg").textContent = "Character limit exceeded.(Limit: 30)";
+    // }
+    else if(phnField != undefined && !phnRegExp.test(phnField.value) && phnField.value != 10){
         phnField.classList.add("invalid");
         document.querySelector(".form-msg").style.display = "block";
         document.querySelector(".form-msg").textContent = "Enter valid contact!";
